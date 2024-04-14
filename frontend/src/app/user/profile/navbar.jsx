@@ -1,13 +1,39 @@
 'use client'
-import React, { useState } from 'react'
+import { useState } from "react";
 
-const Navbar = () => {
+
+export const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div class="bg-gray-900">
       <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-        <div class="relative flex grid items-center grid-cols-2 lg:grid-cols-3">
+        <div class="relative flex items-center justify-between">
+          <a
+            href="/"
+            aria-label="Company"
+            title="Company"
+            class="inline-flex items-center"
+          >
+            <svg
+              class="w-8 text-teal-accent-400"
+              viewBox="0 0 24 24"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeMiterlimit="10"
+              stroke="currentColor"
+              fill="none"
+            >
+              <rect x="3" y="1" width="7" height="12" />
+              <rect x="3" y="17" width="7" height="6" />
+              <rect x="14" y="1" width="7" height="6" />
+              <rect x="14" y="11" width="7" height="12" />
+            </svg>
+            <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
+              Company
+            </span>
+          </a>
           <ul class="flex items-center hidden space-x-8 lg:flex">
             <li>
               <a
@@ -39,41 +65,14 @@ const Navbar = () => {
                 Pricing
               </a>
             </li>
-          </ul>
-          <a
-            href="/"
-            aria-label="Company"
-            title="Company"
-            class="inline-flex items-center lg:mx-auto"
-          >
-            <svg
-              class="w-8 text-teal-accent-400"
-              viewBox="0 0 24 24"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeMiterlimit="10"
-              stroke="currentColor"
-              fill="none"
-            >
-              <rect x="3" y="1" width="7" height="12" />
-              <rect x="3" y="17" width="7" height="6" />
-              <rect x="14" y="1" width="7" height="6" />
-              <rect x="14" y="11" width="7" height="12" />
-            </svg>
-            <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
-              Company
-            </span>
-          </a>
-          <ul class="flex items-center hidden ml-auto space-x-8 lg:flex">
             <li>
               <a
                 href="/"
-                aria-label="Sign in"
-                title="Sign in"
+                aria-label="About us"
+                title="About us"
                 class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >
-                Sign in
+                About us
               </a>
             </li>
             <li>
@@ -87,7 +86,7 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-          <div class="ml-auto lg:hidden">
+          <div class="lg:hidden">
             <button
               aria-label="Open Menu"
               title="Open Menu"
@@ -191,11 +190,11 @@ const Navbar = () => {
                       <li>
                         <a
                           href="/"
-                          aria-label="Sign in"
-                          title="Sign in"
+                          aria-label="About us"
+                          title="About us"
                           class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
-                          Sign in
+                          About us
                         </a>
                       </li>
                       <li>
@@ -219,5 +218,3 @@ const Navbar = () => {
     </div>
   );
 };
-
-export default Navbar;
