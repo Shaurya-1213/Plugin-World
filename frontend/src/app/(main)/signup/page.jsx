@@ -40,7 +40,7 @@ const Signup = () => {
       </h1>
       <form className="pb-1 space-y-4">
         <label className="block">
-          <span className="block mb-1 text-xs font-medium text-gray-700">
+          <span className="block mb-1 text-m font-medium text-gray-900">
             Name
           </span>
           <input
@@ -51,7 +51,7 @@ const Signup = () => {
           />
         </label>
         <label className="block">
-          <span className="block mb-1 text-xs font-medium text-gray-700">
+          <span className="block mb-1 text-m font-medium text-gray-900">
             Your Email
           </span>
           <input
@@ -63,7 +63,7 @@ const Signup = () => {
           />
         </label>
         <label className="block">
-          <span className="block mb-1 text-xs font-medium text-gray-700">
+          <span className="block mb-1 text-m font-medium text-gray-900">
             Create a password
           </span>
           <input
