@@ -2,7 +2,10 @@ import React from 'react'
 
 const ResetPassword = () => {
   return (
-    <div>ResetPassword</div>
+    <div>
+
+      <div>ResetPassword</div>
+    </div>
   )
 }
 
