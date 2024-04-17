@@ -5,7 +5,7 @@ const Home = () => {
   return (
       <>
   {/* hero - start */}
-  <div className="bg-white pb-6 sm:pb-8 lg:pb-12">
+  <div className="bg-voilet-50 text-black pb-6 sm:pb-8 lg:pb-12">
     <header className="mb-8 border-b">
       <div className="mx-auto flex max-w-screen-2xl items-center justify-between px-4 md:px-8">
         {/* logo - start */}

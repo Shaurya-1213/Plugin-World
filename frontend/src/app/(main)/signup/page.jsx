@@ -1,83 +1,111 @@
 'use client';
-import React from 'react'
+import { useFormik } from 'formik';
+import React from 'react';
+import * as Yup from 'yup';
+
+
+const SignupSchema = Yup.object().shape({
+  name: Yup.string().min(4, 'Name pura likho').required('Naam nhi hai kya?'),
+  email: Yup.string().email('Invalid email').required('Required'),
+  password: Yup.string().required('Password is required')
+    .min(6, 'Too small')
+});
 
 const Signup = () => {
-  return (
-   <div>
-    <form className="max-w-sm mx-auto mt-10">
-  <div className="mb-5">
-    <label
-      htmlFor="email"
-      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-    >
-      Your email
-    </label>
-    <input
-      type="email"
-      id="email"
-      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-      placeholder="name@flowbite.com"
-      required=""
-    />
-  </div>
-  <div className="mb-5">
-    <label
-      htmlFor="password"
-      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-    >
-      Your password
-    </label>
-    <input
-      type="password"
-      id="password"
-      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-      required=""
-    />
-  </div>
-  <div className="mb-5">
-    <label
-      htmlFor="repeat-password"
-      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-    >
-      Repeat password
-    </label>
-    <input
-      type="password"
-      id="repeat-password"
-      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-      required=""
-    />
-  </div>
-  <div className="flex items-start mb-5">
-    <div className="flex items-center h-5">
-      <input
-        id="terms"
-        type="checkbox"
-        defaultValue=""
-        className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
-        required=""
-      />
-    </div>
-    <label
-      htmlFor="terms"
-      className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-    >
-      I agree with the{" "}
-      <a href="#" className="text-blue-600 hover:underline dark:text-blue-500">
-        terms and conditions
-      </a>
-    </label>
-  </div>
-  <button
-    type="submit"
-    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-  >
-    Register new account
-  </button>
-</form>
 
-   </div>
+  const signupForm = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      password: '',
+      confirmPassword: ''
+    },
+    onSubmit: (values) => {
+      console.log(values);
+      // send values to backend
+    },
+    validationSchema: SignupSchema
+  })
+
+
+  return (
+    <div>
+      <div className="bg-white py-6 sm:py-8 lg:py-12">
+  <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+    <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl">
+      Sign Up
+    </h2>
+    <form className="mx-auto max-w-lg rounded-lg border-4">
+      <div className="flex flex-col gap-4 p-4 md:p-8">
+        <div>
+          <label
+            htmlFor="name"
+            className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+          >
+            Name
+          </label>
+          <input
+            name="email"
+            className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+          />
+        </div><div>
+          <label
+            htmlFor="email"
+            className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+          >
+            Email
+          </label>
+          <input
+            name="email"
+            className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+          />
+        </div>
+        <div>
+          <label
+            htmlFor="password"
+            className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+          >
+            Password
+          </label>
+          <input
+            name="password"
+            className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+          />
+        </div>
+        <div>
+          <label
+            htmlFor="confirmPassword"
+            className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+          >
+            Confirm Password
+          </label>
+          <input
+            name="confirmPassword"
+            className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+          />
+        </div>
+        <button className="block rounded-lg bg-gray-800 px-8 py-3 text-center text-sm font-bold text-white outline-none ring-gray-300 transition duration-100 hover:bg-blue-700 focus-visible:ring active:bg-blue-600 md:text-base">
+          Sign Up
+        </button>
+        
+      </div>
+      <div className="flex items-center justify-center bg-gray-100 p-4">
+        <p className="text-center text-sm text-gray-500">
+          Already have an account?{" "}
+          <a
+            href="/login"
+            className="text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700"
+          >
+            Login
+          </a>
+        </p>
+      </div>
+    </form>
+  </div>
+</div>
+
+    </div>
   )
 }
 
-export default Signup
+export default Signup;
