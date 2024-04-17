@@ -1,8 +1,8 @@
 'use client';
 import { useFormik } from 'formik';
+import Link from 'next/link';
 import React from 'react';
 import * as Yup from 'yup';
-
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string().min(4, 'Name pura likho').required('Naam nhi hai kya?'),
@@ -27,84 +27,129 @@ const Signup = () => {
     validationSchema: SignupSchema
   })
 
-
   return (
-    <div>
-      <div className="bg-white py-6 sm:py-8 lg:py-12">
-  <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-    <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl">
-      Sign Up
-    </h2>
-    <form className="mx-auto max-w-lg rounded-lg border-4">
-      <div className="flex flex-col gap-4 p-4 md:p-8">
-        <div>
-          <label
-            htmlFor="name"
-            className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
-          >
-            Name
-          </label>
-          <input
-            name="email"
-            className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
-          />
-        </div><div>
-          <label
-            htmlFor="email"
-            className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
-          >
-            Email
-          </label>
-          <input
-            name="email"
-            className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
-          />
-        </div>
-        <div>
-          <label
-            htmlFor="password"
-            className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
-          >
-            Password
-          </label>
-          <input
-            name="password"
-            className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
-          />
-        </div>
-        <div>
-          <label
-            htmlFor="confirmPassword"
-            className="mb-2 inline-block text-sm text-gray-800 sm:text-base"
-          >
-            Confirm Password
-          </label>
-          <input
-            name="confirmPassword"
-            className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
-          />
-        </div>
-        <button className="block rounded-lg bg-gray-800 px-8 py-3 text-center text-sm font-bold text-white outline-none ring-gray-300 transition duration-100 hover:bg-blue-700 focus-visible:ring active:bg-blue-600 md:text-base">
-          Sign Up
-        </button>
-        
-      </div>
-      <div className="flex items-center justify-center bg-gray-100 p-4">
-        <p className="text-center text-sm text-gray-500">
-          Already have an account?{" "}
-          <a
-            href="/login"
-            className="text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700"
-          >
-            Login
-          </a>
-        </p>
-      </div>
-    </form>
-  </div>
-</div>
+    <section className="vh-100 bg-primary-subtle">
+      <div className="container py-5 h-100">
+        <div className="row d-flex justify-content-center align-items-center h-100">
+          <div className="col">
+            <div className="card shadow my-4">
+              <div className="row g-0">
+                <div className="col-xl-6 d-none d-xl-block">
+                  <div style={{
+                    backgroundImage: `url('https://assets.materialup.com/uploads/7563d4bc-0ed9-4202-a86c-ac8dc46e73ef/preview.jpg')`,
+                    height: '100%',
+                    backgroundPosition: 'center',
+                    backgroundSize: 'contain',
+                    backgroundRepeat: 'no-repeat'
+                  }}>
 
-    </div>
+                  </div>
+                  {/* <img
+                    src="https://assets.materialup.com/uploads/7563d4bc-0ed9-4202-a86c-ac8dc46e73ef/preview.jpg"
+                    alt="Sample"
+                    className="img-fluid"
+                  /> */}
+                </div>
+                <div className="col-xl-6">
+
+                  <div className="card-body p-md-5">
+                    <h3 className="mb-5 text-primary fw-bold">
+                      Registration Form
+                    </h3>
+                    <form onSubmit={signupForm.handleSubmit} >
+
+                      <div class="mb-3">
+                        <label for="" class="form-label">Email Address</label>
+                        <input
+                          type="text"
+                          id="email"
+                          onChange={signupForm.handleChange}
+                          value={signupForm.values.email}
+                          class="form-control"
+                          placeholder=""
+                        />
+                        {signupForm.touched.email && (
+                          <small class="text-danger">{signupForm.errors.email}</small>
+                        )}
+                      </div>
+                      <div class="mb-3">
+                        <label for="" class="form-label">Name</label>
+                        <input
+                          type="text"
+                          id="name"
+                          onChange={signupForm.handleChange}
+                          value={signupForm.values.name}
+                          class="form-control"
+                          placeholder=""
+                        />
+                        {signupForm.touched.name && (
+                          <small class="text-danger">{signupForm.errors.name}</small>
+                        )}
+                      </div>
+                      <div class="mb-3">
+                        <label for="" class="form-label">Password</label>
+                        <input
+                          type="password"
+                          id="password"
+                          onChange={signupForm.handleChange}
+                          value={signupForm.values.password}
+                          class="form-control"
+                          placeholder=""
+                        />
+                        {signupForm.touched.password && (
+                          <small class="text-danger">{signupForm.errors.password}</small>
+                        )}
+                      </div>
+                      <div class="mb-3">
+                        <label for="" class="form-label">Confirm Password</label>
+                        <input
+                          type="password"
+                          id="confirmPassword"
+                          onChange={signupForm.handleChange}
+                          value={signupForm.values.confirmPassword}
+                          class="form-control"
+                          placeholder=""
+                        />
+                        {signupForm.touched.confirmPassword && (
+                          <small class="text-danger">{signupForm.errors.confirmPassword}</small>
+                        )}
+                      </div>
+                      <div className="form-check mb-4">
+                        <input
+                          className="form-check-input me-2"
+                          type="checkbox"
+                          defaultValue=""
+                          id="form2Example33"
+                          defaultChecked=""
+                        />
+                        <label
+                          className="form-check-label"
+                          htmlFor="form2Example33"
+                        >
+                          I Agree to Terms & Conditions
+                        </label>
+                      </div>
+                      <div className="d-flex justify-content-end pt-3">
+                        <button type="button" className="btn btn-light">
+                          Reset all
+                        </button>
+                        <button type="submit" className="btn btn-primary ms-2">
+                          Submit form
+                        </button>
+                      </div>
+                    </form>
+
+                    <p>Already Registered? <Link href='/login'>Login Here</Link></p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   )
 }
 

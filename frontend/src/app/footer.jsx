@@ -4,7 +4,7 @@ const footer = () => {
       return (
         <div>
           {/* newsletter - start */}
-  <div className="bg-voilet-800 mx-12 text-white py-6 sm:py-8 lg:py-12">
+  <div className="bg-voilet-500 mx-12 text-white py-6 sm:py-8 lg:py-12">
     <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
       <div className="flex flex-col items-center rounded-lg bg-gray-100 p-4 sm:p-8 lg:flex-row lg:justify-between">
         <div className="mb-4 sm:mb-8 lg:mb-0">
