@@ -10,7 +10,7 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'blue': '#1fb6ff',
+      'blue': '#0D72CC',
       'purple': '#7e5bef',
       'pink': '#ff49db',
       'orange': '#ff7849',
@@ -43,7 +43,9 @@ module.exports = {
     },
     extend: {
       colors:{
-      'blue': '#1fb6ff',
+      'darkpurple':'#6049D8',
+      'darkblue': '#2D3A45',
+      'blue': '#0D72CC',
       'purple': '#7e5bef',
       'pink': '#ff49db',
       'green': '#ff7849',

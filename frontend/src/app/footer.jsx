@@ -4,14 +4,14 @@ const footer = () => {
       return (
         <div>
           {/* newsletter - start */}
-  <div className="bg-voilet-500 mx-12 text-white py-6 sm:py-8 lg:py-12">
+  <div className="bg-voilet-500  text-black py-3 sm:py-8 lg:py-12">
     <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
       <div className="flex flex-col items-center rounded-lg bg-gray-100 p-4 sm:p-8 lg:flex-row lg:justify-between">
         <div className="mb-4 sm:mb-8 lg:mb-0">
           <h2 className="text-center text-xl font-bold text-indigo-500 sm:text-2xl lg:text-left lg:text-3xl">
           Want to learn about new plugins ahead of the rest?
           </h2>
-          <p className="text-center text-gray-500 lg:text-left sm:text-xl">
+          <p className="text-center text-black lg:text-left sm:text-xl">
             Sign up for our newsletter
           </p>
         </div>
@@ -19,13 +19,13 @@ const footer = () => {
           <form className="mb-3 flex w-full max-w-md gap-2">
             <input
               placeholder="Email"
-              className="bg-gray-white w-full flex-1 rounded border border-gray-300 px-3 py-2 text-gray-800 placeholder-gray-400 outline-none ring-indigo-300 transition duration-100 focus:ring"
+              className="bg-gray-white w-full flex-1 rounded border border-gray-300 px-3 py-2 text-white placeholder-gray-400 outline-none ring-indigo-300 transition duration-100 focus:ring"
             />
             <button className="inline-block rounded bg-indigo-500 px-8 py-2 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">
               Send
             </button>
           </form>
-          <p className="text-center text-xs text-gray-400 lg:text-right">
+          <p className="text-center text-xs text-gray-900 lg:text-right">
             By signing up to our newsletter you agree to our{" "}
             <a
               href="#"
@@ -64,21 +64,21 @@ const footer = () => {
             </a>
           </div>
           {/* logo - end */}
-          <p className="mb-6 text-gray-500 sm:pr-8">
+          <p className="mb-6 text-black sm:pr-8">
             Providing the best plugins for your E-commerce website. Easy , Fast and safe.
           </p>
           
         </div>
         {/* nav - start */}
         <div>
-          <div className="mb-4 font-bold uppercase tracking-widest text-gray-800">
+          <div className="mb-4 font-bold uppercase tracking-widest text-black">
             Company
           </div>
           <nav className="flex flex-col gap-4">
             <div>
               <a
                 href="#"
-                className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                className="text-black transition duration-100 hover:text-indigo-500 active:text-indigo-600"
               >
                 About
               </a>
@@ -86,7 +86,7 @@ const footer = () => {
             <div>
               <a
                 href="#"
-                className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                className="text-black transition duration-100 hover:text-indigo-500 active:text-indigo-600"
               >
                 Plugins
               </a>
@@ -94,7 +94,7 @@ const footer = () => {
             <div>
               <a
                 href="#"
-                className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                className="text-black transition duration-100 hover:text-indigo-500 active:text-indigo-600"
               >
                 Informations
               </a>
@@ -104,14 +104,14 @@ const footer = () => {
         {/* nav - end */}
         {/* nav - start */}
         <div>
-          <div className="mb-4 font-bold uppercase tracking-widest text-gray-800">
+          <div className="mb-4 font-bold uppercase tracking-widest text-black">
             Support
           </div>
           <nav className="flex flex-col gap-4">
             <div>
               <a
                 href="#"
-                className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                className="text-black transition duration-100 hover:text-indigo-500 active:text-indigo-600"
               >
                 Contact
               </a>
@@ -119,7 +119,7 @@ const footer = () => {
             <div>
               <a
                 href="#"
-                className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                className="text-black transition duration-100 hover:text-indigo-500 active:text-indigo-600"
               >
                 Chat
               </a>
@@ -127,7 +127,7 @@ const footer = () => {
             <div>
               <a
                 href="#"
-                className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                className="text-black transition duration-100 hover:text-indigo-500 active:text-indigo-600"
               >
                 FAQ
               </a>
@@ -137,14 +137,14 @@ const footer = () => {
         {/* nav - end */}
         {/* nav - start */}
         <div>
-          <div className="mb-4 font-bold uppercase tracking-widest text-gray-800">
+          <div className="mb-4 font-bold uppercase tracking-widest text-black">
             Legal
           </div>
           <nav className="flex flex-col gap-4">
             <div>
               <a
                 href="#"
-                className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                className="text-black transition duration-100 hover:text-indigo-500 active:text-indigo-600"
               >
                 Terms of Service
               </a>
@@ -152,7 +152,7 @@ const footer = () => {
             <div>
               <a
                 href="#"
-                className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                className="text-black transition duration-100 hover:text-indigo-500 active:text-indigo-600"
               >
                 Privacy Policy
               </a>
@@ -160,7 +160,7 @@ const footer = () => {
             <div>
               <a
                 href="#"
-                className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                className="text-black transition duration-100 hover:text-indigo-500 active:text-indigo-600"
               >
                 Cookie settings
               </a>
@@ -173,7 +173,7 @@ const footer = () => {
             <a
               href="#"
               target="_blank"
-              className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
+              className="text-black transition duration-100 hover:text-gray-500 active:text-gray-600"
             >
               <svg
                 className="h-5 w-5"
@@ -189,7 +189,7 @@ const footer = () => {
             <a
               href="#"
               target="_blank"
-              className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
+              className="text-black transition duration-100 hover:text-gray-500 active:text-gray-600"
             >
               <svg
                 className="h-5 w-5"
@@ -205,7 +205,7 @@ const footer = () => {
             <a
               href="#"
               target="_blank"
-              className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
+              className="text-black transition duration-100 hover:text-gray-500 active:text-gray-600"
             >
               <svg
                 className="h-5 w-5"
@@ -221,7 +221,7 @@ const footer = () => {
           </div>
           {/* social - end */}
       </div>
-      <div className="border-t py-8 text-center text-sm text-gray-400">
+      <div className="border-t py-8 text-center text-sm text-black">
         © 2024 - Present Pluginworld. All rights reserved.
       </div>
     </footer>

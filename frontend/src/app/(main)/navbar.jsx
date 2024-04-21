@@ -17,7 +17,7 @@ const Navbar = () => {
         {/* logo - end */}
         {/* nav - start */}
         <nav className="hidden gap-12 lg:flex 2xl:ml-16 p-8">
-          <a href="#" className="text-lg font-semibold text-indigo-500">
+          <a href="/" className="text-lg font-semibold text-indigo-500">
             Home
           </a>
           <a
