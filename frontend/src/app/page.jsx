@@ -4,48 +4,41 @@ import React from 'react'
 const Home = () => {
   return (
     <>
-      {/* hero - start */}
-      <div className="bg-voilet-50 text-black pb-6 sm:pb-8 lg:pb-12">
-        <header className="mb-8 border-b">
+    {/*Hero*/}
+  <div className="pt-2 bg-voilet">
+  <header className="mb-8 border-b">
           <div className="mx-auto flex max-w-screen-2xl items-center justify-between px-4 md:px-8">
             {/* logo - start */}
             <div className='flex'>
-              <img style={{ height: 50 }} src="/shortlogoblack.png" alt="" />
-              {/* <a
-              href="/"
-              className="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl"
-              aria-label="logo"
-            >
-              Pluginworld
-            </a> */}
+              <img style={{ height: 50 }} src="/shortlogowhite.png" alt="" />
             </div>
             {/* logo - end */}
             {/* nav - start */}
             <nav className="hidden gap-12 lg:flex  2xl:ml-16 p-8">
-              <a href="#" className="text-lg font-semibold text-black">
+              <a href="#" className="text-lg font-semibold text-white">
                 Home
               </a>
               <a
                 href="/login"
-                className="text-lg font-semibold text-black transition duration-100 hover:text-indigo-500 active:text-indigo-700"
+                className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
                 Login
               </a>
               <a
                 href="/signup"
-                className="text-lg font-semibold text-black transition duration-100 hover:text-indigo-500 active:text-indigo-700"
+                className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
                 Signup
               </a>
               <a
                 href="about"
-                className="text-lg font-semibold text-black transition duration-100 hover:text-indigo-500 active:text-indigo-700"
+                className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
                 About
               </a>
               <a
                 href="contact"
-                className="text-lg font-semibold text-black transition duration-100 hover:text-indigo-500 active:text-indigo-700"
+                className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
                 Contact Us
               </a>
@@ -54,44 +47,65 @@ const Home = () => {
 
           </div>
         </header>
-        <section className="mx-auto max-w-screen-2xl px-4 md:px-8">
-          <div className="mb-8 flex flex-wrap justify-between md:mb-16">
-            <div className="mb-6 flex w-full flex-col justify-center sm:mb-12 lg:mb-0 lg:w-1/3 lg:pb-24 lg:pt-48">
-              <h1 className="mb-4 text-4xl font-bold text-black sm:text-5xl md:mb-8 md:text-6xl">
+    <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+      {/*Left Col*/}
+      <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+      <h1 className="mb-4 text-4xl font-bold text-white ps-10 sm:text-5xl md:mb-8 md:text-6xl">
                 Find the
                 <br />
                 perfect fit
               </h1>
-              <p className="max-w-md leading-relaxed text-gray-500 xl:text-lg">
+              <p className="max-w-md text-white ps-10 leading-relaxed text-gray-500 xl:text-lg">
                 The functionality you want for your E-commerce website.
                 Among hundreds of design tool plugins.
               </p>
-            </div>
-            <div className="mb-12 flex w-full md:mb-16 lg:w-2/3">
-              <div className="relative left-12 top-12 z-10 -ml-12 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:left-16 md:top-16 lg:ml-0">
-                <img
-                  src="https://wpsocialninja.com/wp-content/uploads/2022/05/Five-best-WordPress-rebiew-plugins-for-your-business-768x402.jpg"
-                  loading="lazy"
-                  alt="Cart Plugin"
-                  className="h-full w-full object-cover object-center"
-                />
-              </div>
-              <div className="overflow-hidden rounded-lg bg-gray-100 shadow-lg">
-                <img
-                  src="https://wpmanageninja.com/wp-content/uploads/2020/09/FT-1-1.png"
-                  loading="lazy"
-                  alt="Payment Gateway Plugin"
-                  className="h-full w-full object-cover object-center"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="text-center text-2xl font-bold text-gray-900">
-            OR DISCOVER THE CATEGORIES BELOW
-
-          </div>
-        </section>
+              <div className='ms-20'>
+        <button className="mx-auto lg:mx-0 hover:underline bg-voilet-900 text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+          Signup
+        </button>
+        </div>
       </div>
+      {/*Right Col*/}
+    </div>
+  </div>
+  <div className="relative mt-12 lg:-mt-24">
+    <svg
+      viewBox="0 0 1428 174"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+    >
+      <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
+        <g
+          transform="translate(-2.000000, 44.000000)"
+          fill="#FFFFFF"
+          fillRule="nonzero"
+        >
+          <path
+            d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+            opacity="0.100000001"
+          />
+          <path
+            d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+            opacity="0.100000001"
+          />
+          <path
+            d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+            id="Path-4"
+            opacity="0.200000003"
+          />
+        </g>
+        <g
+          transform="translate(-4.000000, 76.000000)"
+          fill="#FFFFFF"
+          fillRule="nonzero"
+        >
+          <path d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z" />
+        </g>
+      </g>
+    </svg>
+  </div>
+      {/* hero - start */}
       {/* hero - end */}
       {/* product-grid - start */}
       <div className="bg-white py-6 sm:py-8 lg:py-12">
