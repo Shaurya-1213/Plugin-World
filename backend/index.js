@@ -3,12 +3,13 @@ const express = require('express');
 const userRouter = require('./routers/userrouters');
 
 
-//initilize exress
+//initilize express
 const app= express();
 const port= 5000;
 
 //middleware
 app.use('/user',userRouter)
+
 //end point
 app.get('/',(req,res)=>{
   res.send('Response from express');

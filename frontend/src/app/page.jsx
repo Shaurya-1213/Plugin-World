@@ -31,13 +31,13 @@ const Home = () => {
                 Signup
               </a>
               <a
-                href="about"
+                href="/about"
                 className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
                 About
               </a>
               <a
-                href="contact"
+                href="/contact"
                 className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
                 Contact Us
