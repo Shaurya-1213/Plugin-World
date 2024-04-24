@@ -2,20 +2,20 @@ import React from 'react'
 
 
 const Home = () => {
-  return (
+  return (  
     <>
     {/*Hero*/}
   <div className="pt-2 bg-voilet">
-  <header className="mb-8 border-b">
+  <header className=" border-b">
           <div className="mx-auto flex max-w-screen-2xl items-center justify-between px-4 md:px-8">
             {/* logo - start */}
             <div className='flex'>
-              <img style={{ height: 50 }} src="/shortlogowhite.png" alt="" />
+            <a href="/"> <img style={{ height: 50 }} src="/shortlogowhite.png"  alt="" /></a>
             </div>
             {/* logo - end */}
             {/* nav - start */}
             <nav className="hidden gap-12 lg:flex  2xl:ml-16 p-8">
-              <a href="#" className="text-lg font-semibold text-white">
+              <a href="/" className="text-lg font-semibold text-white">
                 Home
               </a>
               <a
@@ -50,7 +50,7 @@ const Home = () => {
     <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
       {/*Left Col*/}
       <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-      <h1 className="mb-4 text-4xl font-bold text-white ps-10 sm:text-5xl md:mb-8 md:text-6xl">
+      <h1 className="mt-8 mb-4 text-4xl font-bold text-white ps-10 sm:text-5xl md:mb-8 md:text-6xl">
                 Find the
                 <br />
                 perfect fit
@@ -60,9 +60,12 @@ const Home = () => {
                 Among hundreds of design tool plugins.
               </p>
               <div className='ms-20'>
-        <button className="mx-auto lg:mx-0 hover:underline bg-voilet-900 text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-          Signup
-        </button>
+        <a
+        href="/signup"
+        className="inline-block mt-8 rounded-full bg-blue px-8 py-4 text-center text-sm font-bold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:text-base"
+                >
+                  Sign Up
+                </a>
         </div>
       </div>
       {/*Right Col*/}
@@ -97,7 +100,7 @@ const Home = () => {
         </g>
         <g
           transform="translate(-4.000000, 76.000000)"
-          fill="#FFFFFF"
+          fill="#D3D3D3"
           fillRule="nonzero"
         >
           <path d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z" />
@@ -108,7 +111,7 @@ const Home = () => {
       {/* hero - start */}
       {/* hero - end */}
       {/* product-grid - start */}
-      <div className="bg-white py-6 sm:py-8 lg:py-12">
+      <div className="bg-voilet-100 py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           {/* text - start */}
           <div className="mb-10 md:mb-16">
@@ -223,7 +226,7 @@ const Home = () => {
       </div>
       {/* product-grid - end */}
       {/* call to action - start */}
-      <div className="bg-white py-6 sm:py-8 lg:py-12">
+      <div className="bg-voilet-400 py-6 shadow-lg sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           <div className="flex flex-col overflow-hidden rounded-lg bg-gray-900 sm:flex-row md:h-80">
             {/* content - start */}
@@ -240,7 +243,7 @@ const Home = () => {
               <div className="mt-auto">
                 <a
                   href="/signup"
-                  className="inline-block rounded-lg bg-white px-8 py-3 text-center text-sm font-semibold text-purple outline-none ring-indigo-300 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:text-base"
+                  className="inline-block rounded-lg bg-voilet-200 px-8 py-3 text-center text-sm font-semibold text-purple outline-none ring-indigo-300 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:text-base"
                 >
                   Sign Up
                 </a>
@@ -248,7 +251,7 @@ const Home = () => {
             </div>
             {/* content - end */}
             {/* image - start */}
-            <div className="order-first h-48 w-full bg-gray-700 sm:order-none sm:h-auto sm:w-1/2 lg:w-3/5">
+            <div className="order-first h-48 w-full bg-voilet-400 sm:order-none sm:h-auto sm:w-1/2 lg:w-3/5">
               <img
                 src="https://www.bounteous.com/sites/default/files/insights/2023-07/previews/2023_innovation_lab_twitter.png"
                 loading="lazy"
@@ -262,7 +265,7 @@ const Home = () => {
       </div>
       {/* call to action - end */}
       {/* collections - start */}
-      <div className="bg-white py-6 sm:py-8 lg:py-12">
+      <div className="bg-voilet-100 py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           <h2 className="mb-8 text-center text-2xl font-bold text-black md:mb-12 lg:text-3xl">
             Best Plugin COllection for your e-commerce website
@@ -280,8 +283,8 @@ const Home = () => {
                   alt="Photo by Austin Wade"
                   className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 />
-                <div className="relative flex w-full flex-col rounded-lg bg-white p-4 text-center">
-                  <span className="text-lg font-bold text-gray-800 lg:text-xl">
+                <div className="relative flex w-full flex-col rounded-lg bg-voilet-300 p-4 text-center">
+                  <span className="text-lg font-bold text-white lg:text-xl">
                     SEO Plugin
                   </span>
                 </div>
@@ -300,8 +303,8 @@ const Home = () => {
                   alt="Photo by engin akyurt"
                   className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 />
-                <div className="relative flex w-full flex-col rounded-lg bg-white p-4 text-center">
-                  <span className="text-lg font-bold text-gray-800 lg:text-xl">
+                <div className="relative flex w-full flex-col rounded-lg bg-voilet-300 p-4 text-center">
+                  <span className="text-lg font-bold text-white lg:text-xl">
                     Live Chat Plugin
                   </span>
                 </div>
@@ -320,8 +323,8 @@ const Home = () => {
                   alt="Photo by Austin Wade"
                   className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 />
-                <div className="relative flex w-full flex-col rounded-lg bg-white p-4 text-center">
-                  <span className="text-lg font-bold text-gray-800 lg:text-xl">
+                <div className="relative flex w-full flex-col rounded-lg bg-voilet-300 p-4 text-center">
+                  <span className="text-lg font-bold text-white lg:text-xl">
                     Rating And Review Plugin
                   </span>
                 </div>
@@ -340,8 +343,8 @@ const Home = () => {
                   alt="Photo by Austin Wade"
                   className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 />
-                <div className="relative flex w-full flex-col rounded-lg bg-white p-4 text-center">
-                  <span className="text-lg font-bold text-gray-800 lg:text-xl">
+                <div className="relative flex w-full flex-col rounded-lg bg-voilet-300 p-4 text-center">
+                  <span className="text-lg font-bold text-white lg:text-xl">
                     Email Marketing Plugin
                   </span>
                 </div>
@@ -352,7 +355,7 @@ const Home = () => {
         </div>
       </div>
       {/* collections - end */}
-      <div className="bg-white py-6 sm:py-8 lg:py-12">
+      <div className="bg-voilet-100 py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-xl px-4 md:px-8">
           <h2 className="mb-8 text-center text-2xl font-bold text-black md:mb-12 lg:text-3xl">
             What others say about us
@@ -361,8 +364,7 @@ const Home = () => {
             {/* quote - start */}
             <div className="flex flex-col items-center gap-4 rounded-lg bg-darkpurple px-8 py-6 md:gap-6">
               <div className="max-w-md text-center text-white lg:text-lg">
-                “This is a section of some simple filler text, also known as
-                placeholder text.”
+                “Easy to use plaugins ready at your disposal. Very Helpfull.”
               </div>
               <div className="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
                 <div className="h-12 w-12 overflow-hidden rounded-full border-2 border-indigo-100 bg-gray-100 md:h-14 md:w-14">
@@ -375,7 +377,7 @@ const Home = () => {
                 </div>
                 <div>
                   <div className="text-center text-sm font-bold text-indigo-50 sm:text-left md:text-base">
-                    John McCulling
+                    Avijeet Yadav
                   </div>
                   <p className="text-center text-sm text-indigo-200 sm:text-left md:text-sm">
                     CEO / Datadrift
@@ -387,13 +389,12 @@ const Home = () => {
             {/* quote - start */}
             <div className="flex flex-col items-center gap-4 rounded-lg bg-darkpurple px-8 py-6 md:gap-6">
               <div className="max-w-md text-center text-white lg:text-lg">
-                “This is a section of some simple filler text, also known as
-                placeholder text.”
+                “Nice to have a helping hand, only need to copy and paste. Appreciate it.”
               </div>
               <div className="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
                 <div className="h-12 w-12 overflow-hidden rounded-full border-2 border-indigo-100 bg-gray-100 md:h-14 md:w-14">
                   <img
-                    src="https://images.unsplash.com/photo-1532073150508-0c1df022bdd1?auto=format&q=75&fit=crop&w=112"
+                    src="https://images.unsplash.com/photo-1567515004624-219c11d31f2e??auto=format&q=75&fit=crop&w=112"
                     loading="lazy"
                     alt="Photo by christian ferrer"
                     className="h-full w-full object-cover object-center"
@@ -401,7 +402,7 @@ const Home = () => {
                 </div>
                 <div>
                   <div className="text-center text-sm font-bold text-indigo-50 sm:text-left md:text-base">
-                    Kate Berg
+                    Abhay Gupta
                   </div>
                   <p className="text-center text-sm text-indigo-200 sm:text-left md:text-sm">
                     CFO / Dashdash

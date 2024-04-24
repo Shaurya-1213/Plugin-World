@@ -3,113 +3,72 @@ import React from 'react'
 const Contact = () => {
   return (
     <div>
-      <div className="bg-white py-6 sm:py-8 lg:py-12">
-  <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-    {/* text - start */}
-    <div className="mb-10 md:mb-16">
-      <h2 className="mb-4 text-center text-2xl font-bold text-black md:mb-6 lg:text-3xl">
-        Reach Out To Us
-      </h2>
-      <p className="mx-auto max-w-screen-md text-center text-black md:text-lg">
-        Share your views and ideas to us. We are always open for feedback , suggestions or just a chat. Your feeback will help us grow. We respect your opinions.
-      </p>
+      <>
+  {/* component */}
+  <div className="py-4 bg-black text-white">
+    <div className="container mx-auto flex flex-col md:flex-row my-12 md:my-36">
+      <div className="flex flex-col w-full lg:w-2/5 p-8">
+        <p className="text-3xl md:text-5xl text-yellow-500 my-4 leading-relaxed md:leading-snug">
+          Contact our team
+        </p>
+        <p className="font-sans text-sm md:text-lg my-2 md:my-4">
+          <svg
+            className="inline-block fill-current mr-2"
+            xmlns="http://www.w3.org/2000/svg"
+            width={24}
+            height={24}
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" />
+          </svg>
+          Guru Nank Dev Engineering College, Ludhiana
+        </p>
+        <p className="font-sans text-sm md:text-lg my-2 md:my-4">
+          <svg
+            className="inline-block fill-current mr-2"
+            xmlns="http://www.w3.org/2000/svg"
+            width={24}
+            height={24}
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z" />
+          </svg>{" "}
+          techfestgndec@gmail.com
+        </p>
+        <p className="font-sans text-sm md:text-lg my-2 md:my-4">
+          <svg
+            className="inline-block fill-current mr-2"
+            xmlns="http://www.w3.org/2000/svg"
+            width={24}
+            height={24}
+            viewBox="0 0 24 24"
+          >
+            <path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z" />
+          </svg>
+          +91745435433
+        </p>{" "}
+        <br /> <br />
+        <p className="font-sans text-sm md:text-lg my-2 md:my-4">
+          Press the chat icon at the right bottom corner to have a live chat
+          with our team.
+        </p>
+      </div>
+      <div className=" flex flex-col lg:w-3/5 justify-center w-full lg:-mt-12">
+        <div className="container">
+          <div className="relative flex flex-col min-w-0 break-words w-full">
+            <div className="flex-auto p-5 lg:p-10">
+              <img
+                src="https://user-images.githubusercontent.com/54521023/152731049-cc744a56-1d6f-4945-9566-0fa3b7ad1d24.png"
+                alt="contact image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    {/* text - end */}
-    {/* form - start */}
-    <form className="mx-auto grid max-w-screen-md gap-4 sm:grid-cols-2">
-      <div>
-        <label
-          htmlFor="first-name"
-          className="mb-2 inline-block text-sm text-black sm:text-base"
-        >
-          First name*
-        </label>
-        <input
-          name="first-name"
-          className="w-full rounded border bg-white px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
-        />
-      </div>
-      <div>
-        <label
-          htmlFor="last-name"
-          className="mb-2 inline-block text-sm text-black sm:text-base"
-        >
-          Last name*
-        </label>
-        <input
-          name="last-name"
-          className="w-full rounded border bg-white px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
-        />
-      </div>
-      <div className="sm:col-span-2">
-        <label
-          htmlFor="company"
-          className="mb-2 inline-block text-sm text-black sm:text-base"
-        >
-          Company
-        </label>
-        <input
-          name="company"
-          className="w-full rounded border bg-white px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
-        />
-      </div>
-      <div className="sm:col-span-2">
-        <label
-          htmlFor="email"
-          className="mb-2 inline-block text-sm text-black sm:text-base"
-        >
-          Email*
-        </label>
-        <input
-          name="email"
-          className="w-full rounded border bg-white px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
-        />
-      </div>
-      <div className="sm:col-span-2">
-        <label
-          htmlFor="subject"
-          className="mb-2 inline-block text-sm text-black sm:text-base"
-        >
-          Subject*
-        </label>
-        <input
-          name="subject"
-          className="w-full rounded border bg-white px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
-        />
-      </div>
-      <div className="sm:col-span-2">
-        <label
-          htmlFor="message"
-          className="mb-2 inline-block text-sm text-black sm:text-base"
-        >
-          Message*
-        </label>
-        <textarea
-          name="message"
-          className="h-64 w-full rounded border bg-white px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
-          defaultValue={""}
-        />
-      </div>
-      <div className="flex items-center justify-between sm:col-span-2">
-        <button className="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">
-          Send
-        </button>
-        <span className="text-sm text-black">*Required</span>
-      </div>
-      <p className="text-xs text-black">
-        By signing up to our newsletter you agree to our{" "}
-        <a
-          href="#"
-          className="underline transition duration-100 hover:text-darkblue active:text-blue"
-        >
-          Privacy Policy
-        </a>
-        .
-      </p>
-    </form>
-    {/* form - end */}
   </div>
-</div>
+</>
+
 
     </div>
   )

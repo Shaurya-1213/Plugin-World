@@ -19,7 +19,7 @@ const footer = () => {
           <form className="mb-3 flex w-full max-w-md gap-2">
             <input
               placeholder="Email"
-              className="bg-gray-white w-full flex-1 rounded border border-gray-300 px-3 py-2 text-white placeholder-gray-400 outline-none ring-indigo-300 transition duration-100 focus:ring"
+              className="bg-voilet-950 w-full flex-1 rounded border border-blue px-3 py-2 text-white placeholder-gray-400 outline-none ring-indigo-300 transition duration-100 focus:ring"
             />
             <button className="inline-block rounded bg-indigo-500 px-8 py-2 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">
               Send
@@ -49,7 +49,7 @@ const footer = () => {
   {/* newsletter - end */}
   
        {/* footer - start */}
-  <div className="bg-white pt-5 sm:pt-10 lg:pt-12 pl-12 pr-12">
+  <div className="bg-voilet-100 pt-5 sm:pt-10 lg:pt-12 pl-12 pr-12">
     <footer className="mx-auto max-w-screen-2xl px-4 md:px-8">
       <div className="mb-16 grid grid-cols-2 gap-12 border-t pt-10 md:grid-cols-4 lg:grid-cols-6 lg:gap-8 lg:pt-12">
         <div className="col-span-full lg:col-span-2">
