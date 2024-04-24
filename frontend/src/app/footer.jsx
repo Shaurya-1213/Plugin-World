@@ -118,10 +118,10 @@ const footer = () => {
             </div>
             <div>
               <a
-                href="#"
+                href="/"
                 className="text-black transition duration-100 hover:text-indigo-500 active:text-indigo-600"
               >
-                Chat
+                Feedback
               </a>
             </div>
             <div>
@@ -227,8 +227,6 @@ const footer = () => {
     </footer>
   </div>
   {/* footer - end */}
-
-        
         </div>
       );
     };

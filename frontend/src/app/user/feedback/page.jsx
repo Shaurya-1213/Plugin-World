@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Nav } from '../navbar'
 const feedback = () => {
   return (
     <div>
@@ -110,6 +110,7 @@ const feedback = () => {
     {/* form - end */}
   </div>
 </div>    
+<Nav />
     </div>
   )
 }

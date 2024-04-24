@@ -1,10 +1,10 @@
 import React from 'react'
-import { Nav } from './navbar'
+import { Nav } from '../navbar'
 
 const UserProfile = () => {
   return (
     <div> 
-     <Nav />
+     
     <>
       <main>
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center"
@@ -357,6 +357,7 @@ const UserProfile = () => {
             </div>
           </div>
         </section>
+        <Nav />
       </main>
     </>
     </div>
