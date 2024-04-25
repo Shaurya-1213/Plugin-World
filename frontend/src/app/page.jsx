@@ -421,7 +421,7 @@ const Home = () => {
 /* 1- Request method = get,post,put,delete
    2- JSON
    3- Response Status Codes (200,404,500)
-   4-REST ful API
+   4- REST ful API
 */
 
 export default Home

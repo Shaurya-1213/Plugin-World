@@ -1,6 +1,29 @@
+'use client'
 import React from 'react';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+
+const LoginSchema = Yup.object().shape({
+  username : Yup.string().min(4, 'Enter Full Name').required('Required*'),
+  email : Yup.string().email('Invalid email').required('Required*'),
+  password : Yup.string().min(6,'Password should be at least  6 characters').required('Required*')
+  .matches(/a-z/, 'Must Use Lowercase').matches(/A-Z/, 'Must Use Uppercase').matches(/0-9/, 'Must Use Number')
+  .matches(/\w/, 'Must Use Special Character'),
+});
 
 const Login = () => {
+  const loginForm = useFormik({  
+    initialValues : {
+      username : '',
+      email : '',
+      password : ''
+    },
+    onSubmit : (values) => {
+      console.log(values);//send values to backend
+      alert('Login Successful');
+    },
+    validationSchema : LoginSchema
+  })
   return (
     <div>
        <>
@@ -13,7 +36,7 @@ const Login = () => {
         <h1 className="text-sm font-semibold mb-6 text-gray-500 text-center">
           Join to Our Community with all time access and free{" "}
         </h1>
-        <form action="#" method="POST" className="space-y-4">
+        <form action="#" onSubmit={loginForm.handleSubmit} method="POST" className="space-y-4">
           {/* Your form elements go here */}
           <div>
             <label
@@ -24,10 +47,15 @@ const Login = () => {
             </label>
             <input
               type="text"
+              onChange={loginForm.handleChange} 
+              value={loginForm.values.username}
               id="username"
               name="username"
               className="mt-1 p-2 w-full bg-white border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"
             />
+            {loginForm.touched.username &&(
+          <small className="text-red">{loginForm.errors.username}</small>
+        )}
           </div>
           <div>
             <label
@@ -38,10 +66,15 @@ const Login = () => {
             </label>
             <input
               type="text"
+              onChange={loginForm.handleChange} 
+              value={loginForm.values.email}
               id="email"
               name="email"
               className="mt-1 p-2 w-full bg-white border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"
             />
+            {loginForm.touched.email &&(
+          <small className="text-red">{loginForm.errors.email}</small>
+        )}
           </div>
           <div>
             <label
@@ -52,10 +85,15 @@ const Login = () => {
             </label>
             <input
               type="password"
+              onChange={loginForm.handleChange} 
+              value={loginForm.values.password}
               id="password"
               name="password"
               className="mt-1 p-2 w-full bg-white border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"
             />
+            {loginForm.touched.password &&(
+          <small className="text-red">{loginForm.errors.password}</small>
+        )}
           </div>
           <div>
             <button

@@ -28,6 +28,7 @@ module.exports = {
       'silver': '#ecebff',
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
+      'red':'#E50404',
       'voilet': {
          50: '#DCDCDC',
         100: '#D3D3D3',
@@ -64,6 +65,7 @@ module.exports = {
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
       'black':  '#000',
+      'red':'#E50404',
     },
     }
   },
