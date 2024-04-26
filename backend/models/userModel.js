@@ -1,9 +1,9 @@
 const { model, Schema } = require('../connection');
 
 const mySchema = new Schema({
-  name : { type: String , required: true },
-  pswd : String,
-  email : { type:String, uniqure:true }, // password is required and must be unique
+  username : { type: String , required: true },
+  email : { type:String, unique:true }, // email is required and must be unique
+  password : String,
   createdAt : { type: Date, default: Date.now}
 });
 

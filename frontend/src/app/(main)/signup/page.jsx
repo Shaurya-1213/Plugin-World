@@ -5,24 +5,42 @@ import React from 'react';
 import * as Yup from 'yup';
 
 const SignupSchema = Yup.object().shape({
-  name: Yup.string().min(4, 'Name pura likho').required('Naam nhi hai kya?'),
-  email: Yup.string().email('Invalid email').required('Required'),
-  password: Yup.string().required('Password is required')
-    .min(6, 'Too small')
+  username: Yup.string().min(4, 'Enter Full Name').required('Required*'),
+  email: Yup.string().email('Invalid email').required('Required*'),
+  password: Yup.string().required('Required*').min(6, 'Too small')
+  .matches(/[a-z]/, 'Must Use Lowercase').matches(/[A-Z]/, 'Must Use Uppercase').matches(/[0-9]/, 'Must Use Number')
+  .matches(/\w/, 'Must Use Special Character'),
 });
 
 const Signup = () => {
 
   const signupForm = useFormik({
     initialValues: {
-      name: '',
+      username: '',
       email: '',
-      password: '',
-      confirmPassword: ''
+      password: ''
     },
     onSubmit: (values) => {
       console.log(values);
-      // send values to backend
+      /*1- send request to backend
+        2- recieve request at backend
+        3- process the request
+        4- send response back to frontend
+        {
+          1-GET: Data is sent with URL.(to fetch data)
+          2-POST: Data is sent in request body.(to store data)
+          3-PUT:To upload data.
+          4-DELETE:To delete data.
+        }
+        */
+        fetch('http://localhost:5000/user/add',
+      {
+        method:'POST',
+        body:JSON.stringify(values),
+        headers: {
+          'Content-Type':'application/json'
+        }
+      })
     },
     validationSchema: SignupSchema
   })
@@ -310,7 +328,7 @@ const Signup = () => {
         <div className="mt-4 text-sm text-gray-600 text-center">
           <p>or with email</p>
         </div>
-        <form action="#" method="POST" className="space-y-4">
+        <form onSubmit={signupForm.handleSubmit} className="space-y-4">
           {/* Your form elements go here */}
           <div>
             <label
@@ -321,10 +339,14 @@ const Signup = () => {
             </label>
             <input
               type="text"
+              onChange={signupForm.handleChange} 
+              value={signupForm.values.username}
               id="username"
               name="username"
               className="mt-1 p-2 w-full bg-white border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"
-            />
+            />{signupForm.touched.username &&(
+              <small className="text-red">{signupForm.errors.username}</small>
+            )}
           </div>
           <div>
             <label
@@ -335,10 +357,14 @@ const Signup = () => {
             </label>
             <input
               type="text"
+              onChange={signupForm.handleChange} 
+              value={signupForm.values.email}
               id="email"
               name="email"
               className="mt-1 p-2 w-full bg-white border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"
-            />
+            />{signupForm.touched.email &&(
+              <small className="text-red">{signupForm.errors.email}</small>
+            )}
           </div>
           <div>
             <label
@@ -349,10 +375,14 @@ const Signup = () => {
             </label>
             <input
               type="password"
+              onChange={signupForm.handleChange} 
+              value={signupForm.values.password}
               id="password"
               name="password"
               className="mt-1 p-2 w-full bg-white border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"
-            />
+            />{signupForm.touched.password &&(
+              <small className="text-red">{signupForm.errors.password}</small>
+            )}
           </div>
           <div>
             <button

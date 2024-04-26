@@ -5,9 +5,8 @@ import * as Yup from 'yup';
 
 const LoginSchema = Yup.object().shape({
   username : Yup.string().min(4, 'Enter Full Name').required('Required*'),
-  email : Yup.string().email('Invalid email').required('Required*'),
   password : Yup.string().min(6,'Password should be at least  6 characters').required('Required*')
-  .matches(/a-z/, 'Must Use Lowercase').matches(/A-Z/, 'Must Use Uppercase').matches(/0-9/, 'Must Use Number')
+  .matches(/[a-z]/, 'Must Use Lowercase').matches(/[A-Z]/, 'Must Use Uppercase').matches(/[0-9]/, 'Must Use Number')
   .matches(/\w/, 'Must Use Special Character'),
 });
 
@@ -15,12 +14,16 @@ const Login = () => {
   const loginForm = useFormik({  
     initialValues : {
       username : '',
-      email : '',
       password : ''
     },
     onSubmit : (values) => {
       console.log(values);//send values to backend
       alert('Login Successful');
+
+      /*1- send request to backend
+        2- recieve request at backend
+        3- process the request
+        4- send response back to frontend*/
     },
     validationSchema : LoginSchema
   })
@@ -57,25 +60,7 @@ const Login = () => {
           <small className="text-red">{loginForm.errors.username}</small>
         )}
           </div>
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Email
-            </label>
-            <input
-              type="text"
-              onChange={loginForm.handleChange} 
-              value={loginForm.values.email}
-              id="email"
-              name="email"
-              className="mt-1 p-2 w-full bg-white border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"
-            />
-            {loginForm.touched.email &&(
-          <small className="text-red">{loginForm.errors.email}</small>
-        )}
-          </div>
+         
           <div>
             <label
               htmlFor="password"
@@ -98,9 +83,9 @@ const Login = () => {
           <div>
             <button
               type="submit"
-              className="w-full bg-darkblue text-white p-2 rounded-md hover:bg-gray-800 focus:outline-none focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300"
+              className="w-full bg-blue text-white p-2 rounded-md hover:bg-gray-800 focus:outline-none focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300"
             >
-              Sign Up
+            Login
             </button>
           </div>
         </form>
