@@ -33,10 +33,10 @@ const Login = () => {
        <div className="flex h-screen bg-voilet-50 ">
        <div className="w-full bg-gray-100 lg:w-1/2 flex items-center justify-center">
       <div className="max-w-md w-full p-6">
-        <h1 className="text-3xl font-semibold mb-6 text-black text-center">
+        <h1 className="text-5xl font-semibold mb-6 text-black text-center">
           Login
         </h1>
-        <h1 className="text-sm font-semibold mb-6 text-gray-500 text-center">
+        <h1 className="text-l font-semibold mb-6 text-black text-center">
           Join to Our Community with all time access and free{" "}
         </h1>
         <form action="#" onSubmit={loginForm.handleSubmit} method="POST" className="space-y-4">
@@ -44,7 +44,7 @@ const Login = () => {
           <div>
             <label
               htmlFor="username"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-l font-medium text-black"
             >
               Username
             </label>
@@ -64,7 +64,7 @@ const Login = () => {
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-l font-medium text-black"
             >
               Password
             </label>
@@ -80,6 +80,11 @@ const Login = () => {
           <small className="text-red">{loginForm.errors.password}</small>
         )}
           </div>
+          <div className="mt-4 text-l text-black">
+            <a href="/signup" className="text-blue hover:underline">
+            Forget Password?
+            </a>
+        </div>
           <div>
             <button
               type="submit"
@@ -89,7 +94,7 @@ const Login = () => {
             </button>
           </div>
         </form>
-        <div className="mt-4 text-sm text-gray-600 text-center">
+        <div className="mt-4 text-sm text-black text-center">
           <p>
             Already have an account?{" "}
             <a href="/signup" className="text-blue hover:underline">

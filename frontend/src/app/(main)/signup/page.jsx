@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import Link from 'next/link';
 import React from 'react';
 import * as Yup from 'yup';
+import toast from 'react-hot-toast';
 
 const SignupSchema = Yup.object().shape({
   username: Yup.string().min(4, 'Enter Full Name').required('Required*'),
@@ -41,6 +42,17 @@ const Signup = () => {
           'Content-Type':'application/json'
         }
       })
+      .then((response) => {
+        console.log(response.status);
+        if(response.status===200){
+          toast.success('User Registered Successfully');
+        }else{
+          toast.error('User Redistered Failed');
+        }
+      }).catch((err) => {
+        console.log(err);
+        toast.error('Registration Failed')
+      });
     },
     validationSchema: SignupSchema
   })

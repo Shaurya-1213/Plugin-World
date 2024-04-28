@@ -2,165 +2,405 @@ import React from 'react'
 
 const AdminProfile = () => {
   return (
-    <div>
     <>
-  {/* component */}
-  <link
-    rel="stylesheet"
-    href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"
-  />
-  <link
-    rel="stylesheet"
-    href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
-  />
-  <main className="profile-page">
-    <section className="relative block h-500-px">
-      <div
-        className="absolute top-0 w-full h-full bg-center bg-cover"
-        style={{
-          backgroundImage:
-            'url("https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80")'
-        }}
-      >
-        <span
-          id="blackOverlay"
-          className="w-full h-full absolute opacity-50 bg-black"
-        />
-      </div>
-      <div
-        className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
-        style={{ transform: "translateZ(0px)" }}
-      >
-        <svg
-          className="absolute bottom-0 overflow-hidden"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          version="1.1"
-          viewBox="0 0 2560 100"
-          x={0}
-          y={0}
-        >
-          <polygon
-            className="text-blueGray-200 fill-current"
-            points="2560 0 2560 100 0 100"
-          />
-        </svg>
-      </div>
-    </section>
-    <section className="relative py-16 bg-blueGray-200">
-      <div className="container mx-auto px-4">
-        <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
-          <div className="px-6">
-            <div className="flex flex-wrap justify-center">
-              <div className="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
-                <div className="relative">
-                  <img
-                    alt="..."
-                    src="https://demos.creative-tim.com/notus-js/assets/img/team-2-800x800.jpg"
-                    className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px"
-                  />
-                </div>
-              </div>
-              <div className="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
-                <div className="py-6 px-3 mt-32 sm:mt-0">
-                  <button
-                    className="bg-pink-500 active:bg-pink-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                  >
-                    Connect
-                  </button>
-                </div>
-              </div>
-              <div className="w-full lg:w-4/12 px-4 lg:order-1">
-                <div className="flex justify-center py-4 lg:pt-4 pt-8">
-                  <div className="mr-4 p-3 text-center">
-                    <span className="text-xl font-bold block uppercase tracking-wide text-blueGray-600">
-                      22
-                    </span>
-                    <span className="text-sm text-blueGray-400">Friends</span>
-                  </div>
-                  <div className="mr-4 p-3 text-center">
-                    <span className="text-xl font-bold block uppercase tracking-wide text-blueGray-600">
-                      10
-                    </span>
-                    <span className="text-sm text-blueGray-400">Photos</span>
-                  </div>
-                  <div className="lg:mr-4 p-3 text-center">
-                    <span className="text-xl font-bold block uppercase tracking-wide text-blueGray-600">
-                      89
-                    </span>
-                    <span className="text-sm text-blueGray-400">Comments</span>
-                  </div>
-                </div>
-              </div>
+      {/* feature section */}
+      <section className="bg-white py-10 md:py-16 xl:relative">
+        <div className="container max-w-screen-xl mx-auto px-4">
+          <div className="flex flex-col xl:flex-row justify-end">
+            <div className="hidden xl:block xl:absolute left-0 bottom-0 w-full">
+              <img src="assets/image/feature-img.png" alt="Feature img" />
             </div>
-            <div className="text-center mt-12">
-              <h3 className="text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
-                Jenna Stones
-              </h3>
-              <div className="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
-                <i className="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400" />
-                Los Angeles, California
+            <div className="">
+              <h1 className="font-semibold text-gray-900 text-xl md:text-4xl text-center leading-normal mb-6">
+                Choice of various types of <br /> house
+              </h1>
+              <p className="font-normal text-gray-400 text-md md:text-xl text-center mb-16">
+                We provide a wide of selection of home types for you and your <br />{" "}
+                family and are free to choose a home model
+              </p>
+              <div className="flex flex-col md:flex-row justify-center xl:justify-start space-x-4 mb-20">
+                <div className="px-8 h-20 mx-auto md:mx-0 bg-gray-200 rounded-lg flex items-center justify-center mb-5 md:mb-0">
+                  <i data-feather="check-circle" className=" text-green-900" />
+                </div>
+                <div className="text-center md:text-left">
+                  <h4 className="font-semibold text-gray-900 text-2xl mb-2">
+                    Best Home Guarantee
+                  </h4>
+                  <p className="font-normal text-gray-400 text-xl leading-relaxed">
+                    We guarantees the quality of your home you bought <br /> from
+                    D’house
+                  </p>
+                </div>
               </div>
-              <div className="mb-2 text-blueGray-600 mt-10">
-                <i className="fas fa-briefcase mr-2 text-lg text-blueGray-400" />
-                Solution Manager - Creative Tim Officer
+              <div className="flex flex-col md:flex-row justify-center xl:justify-start space-x-4 mb-20">
+                <div className="px-8 h-20 mx-auto md:mx-0 bg-gray-200 rounded-lg flex items-center justify-center mb-5 md:mb-0">
+                  <i data-feather="lock" className=" text-green-900" />
+                </div>
+                <div className="text-center md:text-left">
+                  <h4 className="font-semibold text-gray-900 text-2xl mb-2">
+                    Safe Transaction
+                  </h4>
+                  <p className="font-normal text-gray-400 text-xl leading-relaxed">
+                    Your transactions will always be kept confidential <br /> and
+                    will get discounted
+                  </p>
+                </div>
               </div>
-              <div className="mb-2 text-blueGray-600">
-                <i className="fas fa-university mr-2 text-lg text-blueGray-400" />
-                University of Computer Science
-              </div>
-            </div>
-            <div className="mt-10 py-10 border-t border-blueGray-200 text-center">
-              <div className="flex flex-wrap justify-center">
-                <div className="w-full lg:w-9/12 px-4">
-                  <p className="mb-4 text-lg leading-relaxed text-blueGray-700">
-                    An artist of considerable range, Jenna the name taken by
-                    Melbourne-raised, Brooklyn-based Nick Murphy writes,
-                    performs and records all of his own music, giving it a warm,
-                    intimate feel with a solid groove structure. An artist of
-                    considerable range.
+              <div className="flex flex-col md:flex-row justify-center xl:justify-start space-x-4">
+                <div className="px-8 h-20 mx-auto md:mx-0 bg-gray-200 rounded-lg flex items-center justify-center mb-5 md:mb-0">
+                  <i data-feather="credit-card" className=" text-green-900" />
+                </div>
+                <div className="text-center md:text-left">
+                  <h4 className="font-semibold text-gray-900 text-2xl mb-2">
+                    Low and Cost Home Taxes
+                  </h4>
+                  <p className="font-normal text-gray-400 text-xl leading-relaxed">
+                    By buying a house from D’house, you will get a tax <br />{" "}
+                    discount
                   </p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <footer className="relative bg-blueGray-200 pt-8 pb-6 mt-8">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap items-center md:justify-between justify-center">
-            <div className="w-full md:w-6/12 px-4 mx-auto text-center">
-              <div className="text-sm text-blueGray-500 font-semibold py-1">
-                Made with{" "}
-                <a
-                  href="https://www.creative-tim.com/product/notus-js"
-                  className="text-blueGray-500 hover:text-gray-800"
-                  target="_blank"
-                >
-                  Notus JS
-                </a>{" "}
-                by{" "}
-                <a
-                  href="https://www.creative-tim.com"
-                  className="text-blueGray-500 hover:text-blueGray-800"
-                  target="_blank"
-                >
-                  {" "}
-                  Creative Tim
-                </a>
-                .
+        </div>{" "}
+        {/* container.// */}
+      </section>
+      {/* feature section //end */}
+      {/* gallery section */}
+      <section className="bg-white py-10 md:py-16">
+        <div className="container max-w-screen-xl mx-auto px-4">
+          <h1 className="font-semibold text-gray-900 text-4xl text-center mb-10">
+            Our Gallery
+          </h1>
+          <div className="hidden md:block flex items-center text-center space-x-10 lg:space-x-20 mb-12">
+            <a
+              href="#"
+              className="px-6 py-2 bg-green-800 text-white font-semibold text-xl rounded-lg hover:bg-green-600 transition ease-in-out duration-500"
+            >
+              All
+            </a>
+            <a
+              href="#"
+              className="px-6 py-2 text-gray-900 font-normal text-xl rounded-lg hover:bg-gray-200 hover:text-gray-400 transition ease-in-out duration-500"
+            >
+              Exterior
+            </a>
+            <a
+              href="#"
+              className="px-6 py-2 text-gray-900 font-normal text-xl rounded-lg hover:bg-gray-200 hover:text-gray-400 transition ease-in-out duration-500"
+            >
+              Interior
+            </a>
+            <a
+              href="#"
+              className="px-6 py-2 text-gray-900 font-normal text-xl rounded-lg hover:bg-gray-200 hover:text-gray-400 transition ease-in-out duration-500"
+            >
+              Building
+            </a>
+          </div>
+          <div className="flex space-x-4 md:space-x-6 lg:space-x-8">
+            <div>
+              <img
+                src="/image/gallery-1.png"
+                alt="image"
+                className="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500"
+              />
+              <img
+                src="assets/image/gallery-4.png"
+                alt="image"
+                className="hover:opacity-75 transition ease-in-out duration-500"
+              />
+            </div>
+            <div>
+              <img
+                src="assets/image/gallery-2.png"
+                alt="image"
+                className="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500"
+              />
+              <img
+                src="assets/image/gallery-5.png"
+                alt="image"
+                className="mb-3 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500"
+              />
+              <img
+                src="assets/image/gallery-6.png"
+                alt="image"
+                className="hover:opacity-75 transition ease-in-out duration-500"
+              />
+            </div>
+            <div>
+              <img
+                src="assets/image/gallery-3.png"
+                alt="image"
+                className="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500"
+              />
+              <img
+                src="assets/image/gallery-7.png"
+                alt="image"
+                className="hover:opacity-75 transition ease-in-out duration-500"
+              />
+            </div>
+          </div>
+        </div>{" "}
+        {/* container.// */}
+      </section>
+      {/* gallery section //end */}
+      {/* testimoni section */}
+      <section className="bg-white py-10 md:py-16">
+        <div className="container max-w-screen-xl mx-auto px-4 xl:relative">
+          <p className="font-normal text-gray-400 text-lg md:text-xl text-center uppercase mb-6">
+            Testimonial
+          </p>
+          <h1 className="font-semibold text-gray-900 text-2xl md:text-4xl text-center leading-normal mb-14">
+            What People Say <br /> About D’house
+          </h1>
+          <div className="hidden xl:block xl:absolute top-0">
+            <img src="assets/image/testimoni-1.png" alt="Image" />
+          </div>
+          <div className="hidden xl:block xl:absolute top-32">
+            <img src="assets/image/testimoni-2.png" alt="Image" />
+          </div>
+          <div className="flex flex-col md:flex-row md:items-center justify-center md:space-x-8 lg:space-x-12 mb-10 md:mb-20">
+            <div className="bg-gray-100 rounded-lg mb-10 md:mb-0">
+              <img
+                src="assets/image/testimoni-3.png"
+                alt="Image"
+                className="mx-8 my-8"
+              />
+              <div className="flex items-center gap-5 mx-8">
+                <i data-feather="star" className="text-yellow-500" />
+                <i data-feather="star" className="text-yellow-500" />
+                <i data-feather="star" className="text-yellow-500" />
+                <i data-feather="star" className="text-yellow-500" />
+                <i data-feather="star" className="text-yellow-500" />
+              </div>
+              <p className="font-normal text-sm lg:text-md text-gray-400 mx-8 my-8">
+                I recommend anyone to buy house on <br /> D’house. I received great
+                customer service <br /> from the specialists who helped me.
+              </p>
+              <h3 className="font-semibold text-gray-900 text-xl md:text-2xl lg:text-3xl mx-8 mb-8">
+                Brooklyn Simmons
+              </h3>
+            </div>
+            <div className="bg-gray-100 rounded-lg">
+              <img
+                src="assets/image/testimoni-4.png"
+                alt="Image"
+                className="mx-8 my-8"
+              />
+              <div className="flex items-center gap-5 mx-8">
+                <i data-feather="star" className="text-yellow-500" />
+                <i data-feather="star" className="text-yellow-500" />
+                <i data-feather="star" className="text-yellow-500" />
+                <i data-feather="star" className="text-yellow-500" />
+                <i data-feather="star" className="text-yellow-500" />
+              </div>
+              <p className="font-normal text-sm lg:text-md text-gray-400 mx-8 my-8">
+                D’house is the best property agent in the <br /> world. I received
+                great customer service <br /> from the D’house agent
+              </p>
+              <h3 className="font-semibold text-gray-900 text-xl md:text-2xl lg:text-3xl mx-8 mb-8">
+                Ralph Edwards
+              </h3>
+            </div>
+          </div>
+        </div>{" "}
+        {/* container.// */}
+      </section>
+      {/* testimoni section //end */}
+      {/* book section */}
+      <section className="bg-white py-10 md:py-16">
+        <div className="container max-w-screen-xl mx-auto px-4 xl:relative">
+          <div className="bg-green-800 flex flex-col lg:flex-row items-center justify-evenly py-14 rounded-3xl">
+            <div className="text-center lg:text-left mb-10 lg:mb-0">
+              <h1 className="font-semibold text-white text-4xl md:text-5xl lg:text-7xl leading-normal mb-4">
+                Talk to us <br /> to discuss
+              </h1>
+              <p className="font-normal text-white text-md md:text-xl">
+                Need more time to discuss? Won’t worry, we are <br /> ready to help
+                you. You can fill in the column on the <br /> right to book a
+                meeting with us. Totally free.
+              </p>
+            </div>
+            <div className="hidden xl:block xl:absolute right-0">
+              <img src="assets/image/book.png" alt="Image" />
+            </div>
+            <div className="hidden md:block bg-white xl:relative px-6 py-3 rounded-3xl">
+              <div className="py-3">
+                <h3 className="font-semibold text-gray-900 text-3xl">
+                  Book a meeting
+                </h3>
+              </div>
+              <div className="py-3">
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  className="px-4 py-4 w-96 bg-gray-100 placeholder-gray-400 rounded-xl outline-none"
+                />
+              </div>
+              <div className="py-3">
+                <input
+                  type="text"
+                  placeholder="Email"
+                  className="px-4 py-4 w-96 bg-gray-100 placeholder-gray-400 rounded-xl outline-none"
+                />
+              </div>
+              <div className="py-3 relative">
+                <input
+                  type="text"
+                  placeholder="Date"
+                  className="px-4 py-4 w-96 bg-gray-100 font-normal text-lg placeholder-gray-400 rounded-xl outline-none"
+                />
+                <div className="absolute inset-y-0 left-80 ml-6 flex items-center text-xl text-gray-600">
+                  <i data-feather="calendar" />
+                </div>
+              </div>
+              <div className="py-3 relative">
+                <input
+                  type="text"
+                  placeholder="Virtual Meeting"
+                  className="px-4 py-4 w-96 bg-gray-100 placeholder-gray-400 rounded-xl outline-none"
+                />
+                <div className="absolute inset-y-0 left-80 ml-6 flex items-center text-xl text-gray-600">
+                  <i data-feather="chevron-down" />
+                </div>
+              </div>
+              <div className="py-3">
+                <button className="w-full py-4 font-semibold text-lg text-white bg-green-700 rounded-xl hover:bg-green-900 transition ease-in-out duration-500">
+                  Booking
+                </button>
               </div>
             </div>
           </div>
-        </div>
+        </div>{" "}
+        {/* container.// */}
+      </section>
+      {/* book section //end */}
+      {/* footer */}
+      <footer className="bg-white py-10 md:py-16">
+        <div className="container max-w-screen-xl mx-auto px-4">
+          <div className="flex flex-col lg:flex-row justify-between">
+            <div className="text-center lg:text-left mb-10 lg:mb-0">
+              <div className="flex justify-center lg:justify-start mb-5">
+                <img src="assets/image/footer-logo.png" alt="Image" />
+              </div>
+              <p className="font-light text-gray-400 text-xl mb-10">
+                Get your dream house with <br /> D’house
+              </p>
+              <div className="flex items-center justify-center lg:justify-start space-x-5">
+                <a
+                  href="#"
+                  className="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-green-800 hover:text-white transition ease-in-out duration-500"
+                >
+                  <i data-feather="facebook" />
+                </a>
+                <a
+                  href="#"
+                  className="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-green-800 hover:text-white transition ease-in-out duration-500"
+                >
+                  <i data-feather="twitter" />
+                </a>
+                <a
+                  href="#"
+                  className="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-green-800 hover:text-white transition ease-in-out duration-500"
+                >
+                  <i data-feather="linkedin" />
+                </a>
+              </div>
+            </div>
+            <div className="text-center lg:text-left mb-10 lg:mb-0">
+              <h4 className="font-semibold text-gray-900 text-2xl mb-6">Sitemap</h4>
+              <a
+                href="#"
+                className="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300"
+              >
+                Home
+              </a>
+              <a
+                href="#"
+                className="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300"
+              >
+                Features
+              </a>
+              <a
+                href="#"
+                className="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300"
+              >
+                Gallery
+              </a>
+              <a
+                href="#"
+                className="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300"
+              >
+                Testimoni
+              </a>
+              <a
+                href="#"
+                className="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300"
+              >
+                Book a meeting
+              </a>
+            </div>
+            <div className="text-center lg:text-left mb-10 lg:mb-0">
+              <h4 className="font-semibold text-gray-900 text-2xl mb-6">Landing</h4>
+              <a
+                href="#"
+                className="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300"
+              >
+                Mobile App
+              </a>
+              <a
+                href="#"
+                className="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300"
+              >
+                Property
+              </a>
+              <a
+                href="#"
+                className="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300"
+              >
+                Personal Website
+              </a>
+              <a
+                href="#"
+                className="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300"
+              >
+                Web Developer
+              </a>
+              <a
+                href="#"
+                className="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300"
+              >
+                Online Course
+              </a>
+              <a
+                href="#"
+                className="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300"
+              >
+                Donation
+              </a>
+            </div>
+            <div className="text-center lg:text-left">
+              <h4 className="font-semibold text-gray-900 text-2xl mb-6">Utility</h4>
+              <a
+                href="#"
+                className="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300"
+              >
+                FAQ
+              </a>
+              <a
+                href="#"
+                className="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300"
+              >
+                Terms &amp; Conditions
+              </a>
+            </div>
+          </div>
+        </div>{" "}
+        {/* container.// */}
       </footer>
-    </section>
-  </main>
-</>
+    </>
 
-
-    </div>
   )
 }
 
