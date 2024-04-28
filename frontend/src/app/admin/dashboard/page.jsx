@@ -4,24 +4,6 @@ const AdminDashboard = () => {
   return (
     <div>
     <>
-  {/* component */}
-  <meta charSet="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="preconnect" href="https://fonts.bunny.net" />
-  <link
-    href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-    rel="stylesheet"
-  />
-  <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-    rel="stylesheet"
-  />
-  <title>Admin Panel</title>
   <style
     dangerouslySetInnerHTML={{
       __html:
@@ -31,17 +13,17 @@ const AdminDashboard = () => {
   {/*sidenav */}
   <div className="fixed left-0 top-0 w-64 h-full bg-[#f8f4f3] p-4 z-50 sidebar-menu transition-transform">
     <a href="#" className="flex items-center pb-4 border-b border-b-gray-800">
-      <h2 className="font-bold text-2xl">
-        LOREM{" "}
-        <span className="bg-[#f84525] text-white px-2 rounded-md">IPSUM</span>
+      <h2 className="font-bold text-black text-2xl">
+        Plugin-{" "}
+        <span className="bg-[#f84525] text-white px-3 rounded-md">World</span>
       </h2>
     </a>
     <ul className="mt-4">
-      <span className="text-gray-400 font-bold">ADMIN</span>
+      <span className="text-black font-bold">ADMIN</span>
       <li className="mb-1 group">
         <a
           href=""
-          className="flex font-semibold items-center py-2 px-4 text-gray-900 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100"
+          className="flex font-semibold items-center py-2 px-4 text-black hover:bg-blue hover:text-gray-100 rounded-md group-[.active]:bg-blue group-[.active]:text-white group-[.selected]:bg-blue group-[.selected]:text-gray-100"
         >
           <i className="ri-home-2-line mr-3 text-lg" />
           <span className="text-sm">Dashboard</span>
@@ -50,87 +32,31 @@ const AdminDashboard = () => {
       <li className="mb-1 group">
         <a
           href=""
-          className="flex font-semibold items-center py-2 px-4 text-gray-900 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle"
+          className="flex font-semibold items-center py-2 px-4 text-black hover:bg-blue hover:text-gray-100 rounded-md group-[.active]:bg-blue group-[.active]:text-white group-[.selected]:bg-blue group-[.selected]:text-gray-100 sidebar-dropdown-toggle"
         >
           <i className="bx bx-user mr-3 text-lg" />
           <span className="text-sm">Users</span>
           <i className="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90" />
         </a>
-        <ul className="pl-7 mt-2 hidden group-[.selected]:block">
-          <li className="mb-4">
-            <a
-              href=""
-              className="text-gray-900 text-sm flex items-center hover:text-[#f84525] before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3"
-            >
-              All
-            </a>
-          </li>
-          <li className="mb-4">
-            <a
-              href=""
-              className="text-gray-900 text-sm flex items-center hover:text-[#f84525] before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3"
-            >
-              Roles
-            </a>
-          </li>
-        </ul>
       </li>
       <li className="mb-1 group">
         <a
           href=""
-          className="flex font-semibold items-center py-2 px-4 text-gray-900 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100"
+          className="flex font-semibold items-center py-2 px-4 text-black hover:bg-blue hover:text-gray-100 rounded-md group-[.active]:bg-blue group-[.active]:text-white group-[.selected]:bg-blue group-[.selected]:text-gray-100"
         >
           <i className="bx bx-list-ul mr-3 text-lg" />
           <span className="text-sm">Activities</span>
-        </a>
-      </li>
-      <span className="text-gray-400 font-bold">BLOG</span>
-      <li className="mb-1 group">
-        <a
-          href=""
-          className="flex font-semibold items-center py-2 px-4 text-gray-900 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle"
-        >
-          <i className="bx bxl-blogger mr-3 text-lg" />
-          <span className="text-sm">Post</span>
-          <i className="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90" />
-        </a>
-        <ul className="pl-7 mt-2 hidden group-[.selected]:block">
-          <li className="mb-4">
-            <a
-              href=""
-              className="text-gray-900 text-sm flex items-center hover:text-[#f84525] before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3"
-            >
-              All
-            </a>
-          </li>
-          <li className="mb-4">
-            <a
-              href=""
-              className="text-gray-900 text-sm flex items-center hover:text-[#f84525] before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3"
-            >
-              Categories
-            </a>
-          </li>
-        </ul>
-      </li>
-      <li className="mb-1 group">
-        <a
-          href=""
-          className="flex font-semibold items-center py-2 px-4 text-gray-900 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100"
-        >
-          <i className="bx bx-archive mr-3 text-lg" />
-          <span className="text-sm">Archive</span>
         </a>
       </li>
       <span className="text-gray-400 font-bold">PERSONAL</span>
       <li className="mb-1 group">
         <a
           href=""
-          className="flex font-semibold items-center py-2 px-4 text-gray-900 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100"
+          className="flex font-semibold items-center py-2 px-4 text-black hover:bg-blue hover:text-gray-100 rounded-md group-[.active]:bg-blue group-[.active]:text-white group-[.selected]:bg-blue group-[.selected]:text-gray-100"
         >
           <i className="bx bx-bell mr-3 text-lg" />
           <span className="text-sm">Notifications</span>
-          <span className=" md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-600 bg-red-200 rounded-full">
+          <span className=" md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red bg-pink rounded-full">
             5
           </span>
         </a>
