@@ -1,72 +1,85 @@
 import React from 'react'
 
 const AdminNavbar = () => {
-    return (
-     
-         <div>
-          <>
-  {/* component */}
-  <nav className="bg-darkblue pt-5 pb-5 sm:px-4 py-2.5 rounded dark:bg-gray-800 shadow">
-    <div className="container flex flex-wrap justify-between items-center mx-auto">
-      <a href="/" className="flex items-center">
-        {/* logo - start */}
-        <div className='flex'>
-        <img style={{ height: 50 }} src="/shortlogowhite.png" alt="" />
-        </div>
-        {/* logo - end */}
-      </a>
-      
-      <div className="w-full md:block md:w-auto hidden" id="mobile-menu">
-        <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-          <li>
-            <a
-              href="#"
-              className="block py-2 pr-4 pl-3 text-white text-xl bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
-              aria-current="page"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="block py-2 pr-4 pl-3 text-gray-700 text-xl md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="block py-2 pr-4 pl-3 text-gray-700 text-xl border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-            >
-              Services
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="block py-2 pr-4 pl-3 text-gray-700 text-xl border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-            >
-              Pricing
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="block pr-14 pl-1 text-gray-700 text-xl hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:text-white md:dark:hover:bg-transparent"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</>
+  return (
 
-         </div>
-        );
-      };
-  
+    <div>
+
+      {/* navbar */}
+      <div className='fixed w-full z-10'>
+        <div className="w-full py-2 px-6 bg-[#f8f4f3] flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
+          <a href="#" className="flex items-center pb-4 border-b border-b-gray-800">
+            <h2 className="font-bold text-black text-2xl">
+              Plugin-{" "}
+              <span className="bg-[#f84525] text-white px-3 rounded-md">World</span>
+            </h2>
+          </a>
+          <button
+            type="button"
+            className="text-lg text-gray-900 font-semibold sidebar-toggle"
+          >
+            <i className="ri-menu-line" />
+          </button>
+          <ul className="ml-auto flex items-center">
+            <li className="mr-1 dropdown">
+              <a
+                href="/admin/plugins"
+                className="text-black mr-4 rounded flex items-center justify-center  hover:text-gray-600"
+              >
+                Add Plugin
+              </a>
+            </li>
+            <li className="mr-1 dropdown">
+              <a
+                href="/admin/manageuser"
+                className="text-black mr-4 rounded flex items-center justify-center  hover:text-gray-600"
+              >
+                Users
+              </a>
+            </li>
+
+            <li className="dropdown ml-3">
+              <button type="button" className="dropdown-toggle flex items-center">
+                <div className="flex-shrink-0 w-10 h-10 relative">
+                  <div className="p-1 bg-white rounded-full focus:outline-none focus:ring">
+                    <img
+                      className="w-8 h-8 rounded-full"
+                      src="https://laravelui.spruko.com/tailwind/ynex/build/assets/images/faces/9.jpg"
+                      alt=""
+                    />
+                    <div className="top-0 left-7 absolute w-3 h-3 bg-lime-400 border-2 border-white rounded-full animate-ping" />
+                    <div className="top-0 left-7 absolute w-3 h-3 bg-lime-500 border-2 border-white rounded-full" />
+                  </div>
+                </div>
+                <div className="p-2 md:block text-left">
+                  <h2 className="text-sm font-semibold text-gray-800">Shaurya Singh</h2>
+                  <p className="text-xs text-gray-500">Administrator</p>
+                </div>
+              </button>
+            </li>
+            <li className="mr-1 dropdown">
+              <a
+                href="/"
+                className="text-black mr-4 rounded flex items-center justify-center  hover:text-gray-600"
+              >
+                <a
+                  href="/"
+                  className="text-black mr-4 rounded flex items-center justify-center  hover:text-gray-600"
+                >
+                  <a
+                    href="/"
+                    className="text-black mr-4 rounded flex items-center justify-center  hover:text-gray-600"
+                  > </a>
+                </a>
+                Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      {/* end navbar */}
+    </div>
+  );
+};
+
 export default AdminNavbar;

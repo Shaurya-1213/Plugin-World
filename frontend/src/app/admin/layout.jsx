@@ -1,8 +1,10 @@
 import React from 'react'
+import Navbar from '../admin/navbar';
 
 const Layout = ({ children }) => {
     return (
         <>
+        <Navbar />
             {children}
         </>
     )
