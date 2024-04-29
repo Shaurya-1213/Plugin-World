@@ -128,6 +128,15 @@ const AdminDashboard = () => {
           href="/"
             className="text-black mr-4 rounded flex items-center justify-center  hover:text-gray-600"
           >
+            <a
+          href="/"
+            className="text-black mr-4 rounded flex items-center justify-center  hover:text-gray-600"
+          >
+            <a
+          href="/"
+            className="text-black mr-4 rounded flex items-center justify-center  hover:text-gray-600"
+          ></a>
+          </a>
            Logout
           </a>
         </li>
