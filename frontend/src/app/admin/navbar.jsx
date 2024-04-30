@@ -6,8 +6,8 @@ const AdminNavbar = () => {
     <div>
 
       {/* navbar */}
-      <div className='fixed w-full z-10'>
-        <div className="w-full py-2 px-6 bg-[#f8f4f3] flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
+      <div className='fixed w-full z-30 top-0'>
+        <div className="w-full py-2 px-6 bg-[#f8f4f3] flex items-center shadow-md shadow-black/5 sticky left-0">
           <a href="#" className="flex items-center pb-4 border-b border-b-gray-800">
             <h2 className="font-bold text-black text-2xl">
               Plugin-{" "}
@@ -60,18 +60,9 @@ const AdminNavbar = () => {
             <li className="mr-1 dropdown">
               <a
                 href="/"
-                className="text-black mr-4 rounded flex items-center justify-center  hover:text-gray-600"
+                className="text-black mr-1 rounded flex items-center justify-center  hover:text-gray-600"
               >
-                <a
-                  href="/"
-                  className="text-black mr-4 rounded flex items-center justify-center  hover:text-gray-600"
-                >
-                  <a
-                    href="/"
-                    className="text-black mr-4 rounded flex items-center justify-center  hover:text-gray-600"
-                  > </a>
-                </a>
-                Logout
+              <img style={{height:45}}src="/logout.png" alt="" />
               </a>
             </li>
           </ul>

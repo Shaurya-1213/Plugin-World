@@ -1,5 +1,4 @@
 import React from 'react'
-import { Nav } from '../navbar'
 
 const UserProfile = () => {
   return (
@@ -79,12 +78,11 @@ const UserProfile = () => {
                   </div>
                 </div>
               </div>
-
               <div className="pt-6 w-full md:w-4/12 px-4 text-center">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-8 py-8 flex-auto">
                     <h4 className="text-xl text-black font-bold mb-5">
-                      Verified Plugins
+                    Verified Plugins
                     </h4>
                     <p className="mt-2 mb-4 text-black">
                       We provide verified plugins to ensure the safety of your server. And  we are constantly updating our plugin library with new and best plugins.
@@ -357,7 +355,6 @@ const UserProfile = () => {
             </div>
           </div>
         </section>
-        <Nav />
       </main>
     </>
     </div>

@@ -1,8 +1,7 @@
 import React from 'react'
-import { Nav } from '../navbar'
 const feedback = () => {
   return (
-    <div>
+    <div> 
       <div className="bg-white py-6 sm:py-8 lg:py-12">
   <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
     {/* text - start */}
@@ -26,7 +25,7 @@ const feedback = () => {
         </label>
         <input
           name="first-name"
-          className="w-full rounded border bg-white px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+          className="w-full rounded border bg-white px-3 py-2 text-black outline-none ring-indigo-300 transition duration-100 focus:ring"
         />
       </div>
       <div>
@@ -38,7 +37,7 @@ const feedback = () => {
         </label>
         <input
           name="last-name"
-          className="w-full rounded border bg-white px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+          className="w-full rounded border bg-white px-3 py-2 text-black outline-none ring-indigo-300 transition duration-100 focus:ring"
         />
       </div>
       <div className="sm:col-span-2">
@@ -50,7 +49,7 @@ const feedback = () => {
         </label>
         <input
           name="company"
-          className="w-full rounded border bg-white px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+          className="w-full rounded border bg-white px-3 py-2 text-black outline-none ring-indigo-300 transition duration-100 focus:ring"
         />
       </div>
       <div className="sm:col-span-2">
@@ -62,7 +61,7 @@ const feedback = () => {
         </label>
         <input
           name="email"
-          className="w-full rounded border bg-white px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+          className="w-full rounded border bg-white px-3 py-2 text-black outline-none ring-indigo-300 transition duration-100 focus:ring"
         />
       </div>
       <div className="sm:col-span-2">
@@ -74,7 +73,7 @@ const feedback = () => {
         </label>
         <input
           name="subject"
-          className="w-full rounded border bg-white px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+          className="w-full rounded border bg-white px-3 py-2 text-black outline-none ring-indigo-300 transition duration-100 focus:ring"
         />
       </div>
       <div className="sm:col-span-2">
@@ -86,15 +85,15 @@ const feedback = () => {
         </label>
         <textarea
           name="message"
-          className="h-64 w-full rounded border bg-white px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+          className="h-64 w-full rounded border bg-white px-3 py-2 text-black outline-none ring-indigo-300 transition duration-100 focus:ring"
           defaultValue={""}
         />
       </div>
       <div className="flex items-center justify-between sm:col-span-2">
-        <button className="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">
+        <button className="inline-block rounded-lg bg-purple px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">
           Send
         </button>
-        <span className="text-sm text-black">*Required</span>
+        <span className="text-sm text-red">*Required</span>
       </div>
       <p className="text-xs text-black">
         By signing up to our newsletter you agree to our{" "}
@@ -109,8 +108,7 @@ const feedback = () => {
     </form>
     {/* form - end */}
   </div>
-</div>    
-<Nav />
+</div>  
     </div>
   )
 }
