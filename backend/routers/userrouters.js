@@ -1,8 +1,8 @@
 const express = require('express');
-const router = express.Router();
+const userRouter = express.Router();
 const Model = require('../models/userModel')
 
-router.post('/add',(req,res)=>{
+userRouter.post('/add',(req,res)=>{
   console.log(req.body);
   new Model(req.body).save()
   .then((result) => {
@@ -14,23 +14,23 @@ router.post('/add',(req,res)=>{
 });
   
 //getall
-router.get('/getall',(req,res)=>{
+userRouter.get('/getall',(req,res)=>{
   res.send('Response from user getall');
 });
 
 //getbyid
-router.get('/getbyid',(req,res)=>{
+userRouter.get('/getbyid',(req,res)=>{
   res.send('Response from user getbyid');
 });
 
 //delete
-router.get('/delete',(req,res)=>{
+userRouter.get('/delete',(req,res)=>{
   res.send('Response from user delete');
 });
 
 //update 
-router.get('/update',(req,res)=>{
+userRouter.get('/update',(req,res)=>{
   res.send('Response from user update');
 });
 
-module.exports = router;
+module.exports = userRouter;
