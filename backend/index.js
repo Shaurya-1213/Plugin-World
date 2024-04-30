@@ -2,6 +2,7 @@
 const express = require('express');
 const userRouter = require('./routers/userrouters');
 const cors = require('cors');
+const feedbackRouter = require('./routers/feedbackRouters');
 
 //initilize express
 const app= express();
@@ -16,13 +17,15 @@ app.use(express.json());   //parse incoming requests of content type - applicati
 
 app.use('/user',userRouter)
 
+app.use('/feedback',feedbackRouter)
+
 //end point
 app.get('/',(req,res)=>{
   res.send('Response from express');
 })
 
 app.get('/add',(req,res)=>{
-  res.send('Response from add');
+  res.send('Response from express add');
 })
 
 app.get('/update',(req,res)=>{
