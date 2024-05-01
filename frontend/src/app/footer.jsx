@@ -32,7 +32,7 @@ const footer = () => {
           <nav className="flex flex-col gap-4">
             <div>
               <a
-                href="#"
+                href="/about"
                 className="text-black transition duration-100 hover:text-indigo-500 active:text-indigo-600"
               >
                 About
@@ -40,7 +40,7 @@ const footer = () => {
             </div>
             <div>
               <a
-                href="#"
+                href="#signup-for-plugin"
                 className="text-black transition duration-100 hover:text-indigo-500 active:text-indigo-600"
               >
                 Plugins
@@ -65,26 +65,19 @@ const footer = () => {
           <nav className="flex flex-col gap-4">
             <div>
               <a
-                href="#"
+                href="/contact"
                 className="text-black transition duration-100 hover:text-indigo-500 active:text-indigo-600"
               >
                 Contact
               </a>
             </div>
+            
             <div>
               <a
-                href="/"
+                href="/faq"
                 className="text-black transition duration-100 hover:text-indigo-500 active:text-indigo-600"
               >
-                Feedback
-              </a>
-            </div>
-            <div>
-              <a
-                href="#"
-                className="text-black transition duration-100 hover:text-indigo-500 active:text-indigo-600"
-              >
-                FAQ
+                FAQ's
               </a>
             </div>
           </nav>

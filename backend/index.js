@@ -3,6 +3,7 @@ const express = require('express');
 const userRouter = require('./routers/userrouters');
 const cors = require('cors');
 const feedbackRouter = require('./routers/feedbackRouters');
+const newsletterRouter = require('./routers/newsletterRouters');
 
 //initilize express
 const app= express();
@@ -18,6 +19,8 @@ app.use(express.json());   //parse incoming requests of content type - applicati
 app.use('/user',userRouter)
 
 app.use('/feedback',feedbackRouter)
+
+app.use('/newsletter',newsletterRouter)
 
 //end point
 app.get('/',(req,res)=>{

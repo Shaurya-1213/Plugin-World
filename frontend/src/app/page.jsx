@@ -1,9 +1,134 @@
-import React from 'react'
+'use client';
+import React from 'react';
+import { useFormik } from 'formik';
+import Link from 'next/link';
+import * as Yup from 'yup';
+import toast from 'react-hot-toast';
+import Footer from './footer';
 
+const newsLetterSchema = Yup.object().shape({
+  email: Yup.string().email('Invalid email').required('Required*')
+});
 
 const Home = () => {
+
+  const newsLetter = useFormik({
+    initialValues: {
+      username: '',
+      email: '',
+      password: ''
+    },
+    onSubmit: (values) => {
+      console.log(values);
+      fetch('http://localhost:5000/newsletter/add',
+      {
+        method:'POST',
+        body:JSON.stringify(values),
+        headers: {
+          'Content-Type':'application/json'
+        }
+      })
+      .then((response) => {
+        console.log(response.status);
+        if(response.status===200){
+          toast.success('Successfully Registered');
+        }else{
+          toast.error('Registeration Failed');
+        }
+      }).catch((err) => {
+        console.log(err);
+        toast.error('Registration Failed unfortunately!')
+      });
+    },
+    validationSchema: newsLetterSchema
+  })
   return (  
     <>
+    {/* navbar
+    <header className="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-4 dark:bg-neutral-800">
+  <nav
+    className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
+    aria-label="Global"
+  >
+    <div className="flex items-center justify-between">
+      <a className="flex-none text-xl font-semibold dark:text-white" href="#">
+        Brand
+      </a>
+      <div className="sm:hidden">
+        <button
+          type="button"
+          className="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-neutral-700 dark:text-white dark:hover:bg-white/10"
+          data-hs-collapse="#navbar-with-collapse"
+          aria-controls="navbar-with-collapse"
+          aria-label="Toggle navigation"
+        >
+          <svg
+            className="hs-collapse-open:hidden flex-shrink-0 size-4"
+            xmlns="http://www.w3.org/2000/svg"
+            width={24}
+            height={24}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1={3} x2={21} y1={6} y2={6} />
+            <line x1={3} x2={21} y1={12} y2={12} />
+            <line x1={3} x2={21} y1={18} y2={18} />
+          </svg>
+          <svg
+            className="hs-collapse-open:block hidden flex-shrink-0 size-4"
+            xmlns="http://www.w3.org/2000/svg"
+            width={24}
+            height={24}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      id="navbar-with-collapse"
+      className="hidden transition-all duration-[0.1ms] overflow-hidden basis-full grow sm:block"
+    >
+      <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
+        <a className="font-medium text-blue-500" href="#" aria-current="page">
+          Landing
+        </a>
+        <a
+          className="font-medium text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500"
+          href="#"
+        >
+          Account
+        </a>
+        <a
+          className="font-medium text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500"
+          href="#"
+        >
+          Work
+        </a>
+        <a
+          className="font-medium text-gray-600 hover:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500"
+          href="#"
+        >
+          Blog
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    navbar end */}
+
     {/*Hero*/}
   <div className="pt-0 bg-voilet">
   <header className=" border-b">
@@ -115,11 +240,11 @@ const Home = () => {
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           {/* text - start */}
           <div className="mb-10 md:mb-16">
-            <h2 className="mb-4 text-center text-2xl font-bold text-black md:mb-6 lg:text-3xl">
+            <h2 id="signup-for-plugin" className="mb-4 text-center text-2xl font-bold text-black md:mb-6 lg:text-3xl">
               Selected
             </h2>
             <p className="mx-auto max-w-screen-md text-center text-black md:text-lg">
-              Find the best plugin for your e-commerce website.
+              Find the best plugin for your e-commerce website. <br/>Signup to use our plugins.
             </p>
           </div>
           {/* text - end */}
@@ -415,7 +540,7 @@ const Home = () => {
         </div>
       </div>
        {/* newsletter - start */}
-  <div className="bg-voilet-500  text-black py-3 sm:py-8 lg:py-12">
+  <div className="bg-voilet-500 text-black">
     <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
       <div className="flex flex-col items-center rounded-lg bg-gray-100 p-4 sm:p-8 lg:flex-row lg:justify-between">
         <div className="mb-4 sm:mb-8 lg:mb-0">
@@ -427,12 +552,17 @@ const Home = () => {
           </p>
         </div>
         <div className="flex flex-col items-center lg:items-end">
-          <form className="mb-3 flex w-full max-w-md gap-2">
+          <form onSubmit={newsLetter.handleSubmit} className="mb-3 flex w-full max-w-md gap-3">
             <input
               placeholder="Email"
+              onChange={newsLetter.handleChange} 
+              value={newsLetter.values.email}
+              id="email"
               className="bg-voilet-950 w-full flex-1 rounded border border-blue px-3 py-2 text-white placeholder-gray-400 outline-none ring-indigo-300 transition duration-100 focus:ring"
-            />
-            <button className="inline-block rounded bg-indigo-500 px-8 py-2 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">
+            />{newsLetter.touched.email &&(
+              <small className="text-red">{newsLetter.errors.email}</small>
+            )}
+            <button type="submit" className="inline-block rounded bg-purple px-6 py-2 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">
               Send
             </button>
           </form>
@@ -458,7 +588,7 @@ const Home = () => {
     </div>
   </div>
   {/* newsletter - end */}
-
+  <Footer /> 
     </>
   )
 }

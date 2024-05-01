@@ -12,7 +12,7 @@ const Navbar = () => {
             </div>
             {/* logo - end */}
             {/* nav - start */}
-            <nav className="hidden gap-12 lg:flex  2xl:ml-16 p-8">
+            <nav className="hidden gap-12 lg:flex  2xl:ml-16 p-4">
               <a href="/" className="text-lg font-semibold text-white">
                 Home
               </a>
