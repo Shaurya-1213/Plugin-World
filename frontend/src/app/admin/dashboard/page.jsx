@@ -804,9 +804,7 @@ const AdminDashboard = () => {
     </div>
     {/* End Content */}
   </main>
-</>
-
-
+    </>
   </div>
   )
 }

@@ -5,16 +5,16 @@ const Home = () => {
   return (  
     <>
     {/*Hero*/}
-  <div className="pt-2 bg-voilet">
+  <div className="pt-0 bg-voilet">
   <header className=" border-b">
           <div className="mx-auto flex max-w-screen-2xl items-center justify-between px-4 md:px-8">
             {/* logo - start */}
             <div className='flex'>
-            <a href="/"> <img style={{ height: 50 }} src="/shortlogowhite.png"  alt="" /></a>
+            <a href="/"> <img style={{ height: 45 }} src="/shortlogowhite.png"  alt="" /></a>
             </div>
             {/* logo - end */}
             {/* nav - start */}
-            <nav className="hidden gap-12 lg:flex  2xl:ml-16 p-8">
+            <nav className="hidden gap-12 lg:flex  2xl:ml-16 p-4">
               <a href="/" className="text-lg font-semibold text-white">
                 Home
               </a>
@@ -61,8 +61,8 @@ const Home = () => {
               </p>
               <div className='ms-20'>
         <a
-        href="/signup"
-        className="inline-block mt-8 rounded-full bg-blue px-8 py-4 text-center text-sm font-bold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:text-base"
+        href="/signup" 
+        className="inline-block mt-8 rounded-full bg-gray px-8 py-4 text-center text-sm font-bold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-blue"
                 >
                   Sign Up
                 </a>

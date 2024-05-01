@@ -23,6 +23,14 @@ const AdminNavbar = () => {
           <ul className="ml-auto flex items-center">
             <li className="mr-1 dropdown">
               <a
+                href="/admin/dashboard"
+                className="text-black mr-4 rounded flex items-center justify-center  hover:text-gray-600"
+              >
+                Dashboard
+              </a>
+            </li>
+            <li className="mr-1 dropdown">
+              <a
                 href="/admin/plugins"
                 className="text-black mr-4 rounded flex items-center justify-center  hover:text-gray-600"
               >
@@ -39,7 +47,7 @@ const AdminNavbar = () => {
             </li>
 
             <li className="dropdown ml-3">
-              <button type="button" className="dropdown-toggle flex items-center">
+              <a href="/admin/profile" className="dropdown-toggle flex items-center">
                 <div className="flex-shrink-0 w-10 h-10 relative">
                   <div className="p-1 bg-white rounded-full focus:outline-none focus:ring">
                     <img
@@ -53,9 +61,9 @@ const AdminNavbar = () => {
                 </div>
                 <div className="p-2 md:block text-left">
                   <h2 className="text-sm font-semibold text-gray-800">Shaurya Singh</h2>
-                  <p className="text-xs text-gray-500">Administrator</p>
+                  <p className="text-xs text-gray-800">Administrator</p>
                 </div>
-              </button>
+              </a>
             </li>
             <li className="mr-1 dropdown">
               <a
