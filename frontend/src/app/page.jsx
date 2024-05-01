@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { useFormik } from 'formik';
-import Link from 'next/link';
 import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 import Footer from './footer';
@@ -180,18 +179,10 @@ const Home = () => {
                 <br />
                 perfect fit
               </h1>
-              <p className="max-w-md text-white ps-10 leading-relaxed text-gray-500 xl:text-lg">
+              <p className="max-w-md mb-24 text-white ps-10 leading-relaxed text-gray-500 xl:text-lg">
                 The functionality you want for your E-commerce website.
                 Among hundreds of design tool plugins.
               </p>
-              <div className='ms-20'>
-        <a
-        href="/signup" 
-        className="inline-block mt-8 rounded-full bg-gray px-8 py-4 text-center text-sm font-bold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-blue"
-                >
-                  Sign Up
-                </a>
-        </div>
       </div>
       {/*Right Col*/}
     </div>

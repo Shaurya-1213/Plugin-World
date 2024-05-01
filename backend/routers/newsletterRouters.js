@@ -13,3 +13,5 @@ newsletterRouter.post('/add',(req,res)=>{
   });
 });
   
+
+module.exports = newsletterRouter;

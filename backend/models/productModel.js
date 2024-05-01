@@ -5,4 +5,4 @@ const mySchema = new Schema({
   submittedAt: {type : Date, default: Date.now}
 });
 
-module.exports=model('newsletter',mySchema);
+module.exports=model('product',mySchema);
