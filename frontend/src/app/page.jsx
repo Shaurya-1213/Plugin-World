@@ -185,7 +185,7 @@ const Home = () => {
               </p>
       </div>
       {/*Right Col start*/}
-
+      
       {/*Right Col end */}
     </div>
   </div>
