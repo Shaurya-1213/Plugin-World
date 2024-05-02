@@ -180,11 +180,13 @@ const Home = () => {
                 perfect fit
               </h1>
               <p className="max-w-md mb-24 text-white ps-10 leading-relaxed text-gray-500 xl:text-lg">
-                The functionality you want for your E-commerce website.
+                The functionality you want for your <br/>E-commerce website.
                 Among hundreds of design tool plugins.
               </p>
       </div>
-      {/*Right Col*/}
+      {/*Right Col start*/}
+
+      {/*Right Col end */}
     </div>
   </div>
   <div className="relative mt-12 lg:-mt-24">
@@ -224,8 +226,6 @@ const Home = () => {
       </g>
     </svg>
   </div>
-      {/* hero - start */}
-      {/* hero - end */}
       {/* product-grid - start */}
       <div className="bg-voilet-100 py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
@@ -384,7 +384,7 @@ const Home = () => {
       <div className="bg-voilet-100 py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           <h2 className="mb-8 text-center text-2xl font-bold text-black md:mb-12 lg:text-3xl">
-            Best Plugin COllection for your e-commerce website
+            Best Plugin Collection for your E-Commerce website
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4">
             {/* product - start */}
@@ -583,10 +583,5 @@ const Home = () => {
     </>
   )
 }
-/* 1- Request method = get,post,put,delete
-   2- JSON
-   3- Response Status Codes (200,404,500)
-   4- REST ful API
-*/
 
 export default Home

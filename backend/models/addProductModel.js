@@ -5,4 +5,4 @@ const mySchema = new Schema({
   submittedAt: {type : Date, default: Date.now}
 });
 
-module.exports=model('product',mySchema);
+module.exports=model('addproduct',mySchema);
