@@ -7,39 +7,39 @@ const newsletterRouter = require('./routers/newsletterRouters');
 const addProductRouter = require('./routers/addProductRouters');
 
 //initilize express
-const app= express();
-const port= 5000;
+const app = express();
+const port = 5000;
 
 //middleware
 app.use(cors({
-  origin:['http://localhost:3000']
+  origin: ['*']
 }))  //always at first
 
 app.use(express.json());   //parse incoming requests of content type - application
 
-app.use('/user',userRouter)
+app.use('/user', userRouter)
 
-app.use('/feedback',feedbackRouter)
+app.use('/feedback', feedbackRouter)
 
-app.use('/newsletter',newsletterRouter)
+app.use('/newsletter', newsletterRouter)
 
-app.use('/addproduct',addProductRouter)
+app.use('/addproduct', addProductRouter)
 
 //end point
-app.get('/',(req,res)=>{
+app.get('/', (req, res) => {
   res.send('Response from express');
 })
 
-app.get('/add',(req,res)=>{
+app.get('/add', (req, res) => {
   res.send('Response from express add');
 })
 
-app.get('/update',(req,res)=>{
+app.get('/update', (req, res) => {
   res.send('Response from update');
 })
 
-app.get('/delete',(req,res)=>{
+app.get('/delete', (req, res) => {
   res.send('Response from delete');
 })
 
-app.listen(port, ()=>{console.log('server added');});
+app.listen(port, () => { console.log('server added'); });
