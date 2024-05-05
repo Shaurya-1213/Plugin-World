@@ -1,8 +1,8 @@
 const express = require('express');
-const addProductRouter = express.Router();
-const Model = require('../models/addProductModel')
+const ProductRouter = express.Router();
+const Model = require('../models/ProductModel')
 
-addProductRouter.post('/add',(req,res)=>{
+ProductRouter.post('/add',(req,res)=>{
   console.log(req.body);
   new Model(req.body).save()
   .then((result) => {
@@ -14,23 +14,23 @@ addProductRouter.post('/add',(req,res)=>{
 });
   
 //getall
-addProductRouter.get('/getall',(req,res)=>{
+ProductRouter.get('/getall',(req,res)=>{
   res.send('Response from user getall');
 });
 
 //getbyid
-addProductRouter.get('/getbyid',(req,res)=>{
+ProductRouter.get('/getbyid',(req,res)=>{
   res.send('Response from user getbyid');
 });
 
 //delete
-addProductRouter.get('/delete',(req,res)=>{
+ProductRouter.get('/delete',(req,res)=>{
   res.send('Response from user delete');
 });
 
 //update 
-addProductRouter.get('/update',(req,res)=>{
+ProductRouter.get('/update',(req,res)=>{
   res.send('Response from user update');
 });
 
-module.exports = addProductRouter;
+module.exports = ProductRouter;

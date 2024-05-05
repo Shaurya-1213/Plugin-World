@@ -4,7 +4,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 
-const addProductSchema = Yup.object().shape({
+const ProductSchema = Yup.object().shape({
   username: Yup.string().min(4, 'Enter Full Name').required('Required*'),
   password: Yup.string().min(6, 'Password should be at least  6 characters').required('Required*')
     .matches(/[a-z]/, 'Must Use Lowercase').matches(/[A-Z]/, 'Must Use Uppercase').matches(/[0-9]/, 'Must Use Number')
@@ -13,48 +13,42 @@ const addProductSchema = Yup.object().shape({
 
 const AddProduct = () => {
 
-  const addproductForm = useFormik({
+  const productForm = useFormik({
     initialValues: {
-      username: '',
-      password: ''
+      title:'',
+      brand:'',
+      model:'',
+      features:'',
+      price:'',
+      offer:'',
+      description:'',
+      images:''
     },
     onSubmit: (values) => {
       console.log(values);//send values to backend
-      // alert('Login Successful');
 
-      fetch('http://localhost:5000/user/authenticate', {
-        method: 'POST',
-        body: JSON.stringify(values),
+      fetch('http://localhost:5000/product/add', 
+      {
+        method:'POST',
+        body:JSON.stringify(values),
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type':'application/json'
         }
       })
-        .then((response) => {
-          if (response.status === 200) {
-            toast.success('Login Successfull');
-
-            response.json()
-              .then((data) => {
-                sessionStorage.setItem('user', JSON.stringify(data));
-                router.push('/'); 
-              })
-
-          } else {
-            toast.error('Invalid Credentials');
-          }
-        }).catch((err) => {
-          console.log(err);
-          toast.error('Something went wrong');
-        });
-
-      /*1- send request to backend
-        2- recieve request at backend
-        3- process the request
-        4- send response back to frontend*/
+      .then((response) => {
+        console.log(response.status);
+        if(response.status===200){
+          toast.success('Product added Successfully');
+        }else{
+          toast.error('Process Failed');
+        }
+      }).catch((err) => {
+        console.log(err);
+        toast.error('Process Failed Unfortunately!')
+      });
     },
-    validationSchema: addProductSchema
+    validationSchema: ProductSchema
   })
-
   return (
     <>
       <section className="bg-white dark:bg-voilet-500 mt-14 border-b">
@@ -62,28 +56,30 @@ const AddProduct = () => {
           <h2 className="mb-4 text-2xl font-bold text-white">
             Add Plugin
           </h2>
-          <form action="#" onSubmit={addproductForm.handleSubmit}>
+          <form action="#" onSubmit={productForm.handleSubmit}>
             <div className="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
               <div className="sm:col-span-2">
                 <label
                   htmlFor="name"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  Plugin Name
+                  Title
                 </label>
                 <input
                   type="text"
                   name="name"
-                  onChange={addproductForm.handleChange}
-                  value={addproductForm.values.name}
-                  id="name"
+                  onChange={productForm.handleChange}
+                  value={productForm.values.title}
+                  id="title"
                   className="bg-voilet-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600"
                   placeholder="Type plugin name"
                   required=""
-                />{addproductForm.touched.username && (
-                  <small className="text-red">{addproductForm.errors.username}</small>
+                />{productForm.touched.username && (
+                  <small className="text-red">{productForm.errors.title}</small>
                 )}
               </div>
+
+
               <div className="w-full">
                 <label
                   htmlFor="brand"
@@ -94,16 +90,62 @@ const AddProduct = () => {
                 <input
                   type="text"
                   name="brand"
-                  onChange={addproductForm.handleChange}
-                  value={addproductForm.values.brand}
+                  onChange={productForm.handleChange}
+                  value={productForm.values.brand}
                   id="brand"
                   className="bg-voilet-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700"
-                  placeholder="Product brand"
+                  placeholder="Brand"
                   required=""
-                />{addproductForm.touched.username && (
-                  <small className="text-red">{addproductForm.errors.username}</small>
+                />{productForm.touched.brand && (
+                  <small className="text-red">{productForm.errors.brand}</small>
                 )}
               </div>
+
+
+              <div className="w-full">
+                <label
+                  htmlFor="brand"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Model
+                </label>
+                <input
+                  type="text"
+                  name="model"
+                  onChange={productForm.handleChange}
+                  value={productForm.values.model}
+                  id="model"
+                  className="bg-voilet-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700"
+                  placeholder="Model"
+                  required=""
+                />{productForm.touched.model && (
+                  <small className="text-red">{productForm.errors.model}</small>
+                )}
+              </div>
+
+              
+              <div className="w-full">
+                <label
+                  htmlFor="brand"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  features
+                </label>
+                <input
+                  type="text"
+                  name="features"
+                  onChange={productForm.handleChange}
+                  value={productForm.values.features}
+                  id="features"
+                  className="bg-voilet-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700"
+                  placeholder="Features"
+                  required=""
+                />{productForm.touched.features && (
+                  <small className="text-red">{productForm.errors.features}</small>
+                )}
+              </div>
+
+
               <div className="w-full">
                 <label
                   htmlFor="price"
@@ -114,54 +156,40 @@ const AddProduct = () => {
                 <input
                   type="number"
                   name="price"
-                  onChange={addproductForm.handleChange}
-                  value={addproductForm.values.price}
+                  onChange={productForm.handleChange}
+                  value={productForm.values.price}
                   id="price"
                   className="bg-voilet-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  placeholder="₹299"
+                  placeholder="price"
                   required=""
-                />{addproductForm.touched.username && (
-                  <small className="text-red">{addproductForm.errors.username}</small>
+                />{productForm.touched.username && (
+                  <small className="text-red">{productForm.errors.username}</small>
                 )}
               </div>
-              <div>
+
+
+              <div className="w-full">
                 <label
-                  htmlFor="category"
+                  htmlFor="offer"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  Category
-                </label>
-                <select
-                  id="category"
-                  className="bg-voilet-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                >
-                  <option selected="">Select</option>
-                  <option value="TV">TV/Monitors</option>
-                  <option value="PC">PC</option>
-                  <option value="GA">Gaming/Console</option>
-                  <option value="PH">Phones</option>
-                </select>
-              </div>
-              <div>
-                <label
-                  htmlFor="item-weight"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  Item Weight (kg)
+                  offer
                 </label>
                 <input
-                  type="number"
-                  name="item-weight"
-                  onChange={addproductForm.handleChange}
-                  value={addproductForm.values.item-weight}
-                  id="item-weight"
-                  className="bg-voilet-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  placeholder="Ex. 12"
+                  type="text"
+                  name="offer"
+                  onChange={productForm.handleChange}
+                  value={productForm.values.offer}
+                  id="offer"
+                  className="bg-voilet-50 border border-gray-300 text-black text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700"
+                  placeholder="Offer"
                   required=""
-                />{addproductForm.touched.username && (
-                  <small className="text-red">{addproductForm.errors.username}</small>
+                />{productForm.touched.offer && (
+                  <small className="text-red">{productForm.errors.offer}</small>
                 )}
               </div>
+
+
               <div className="sm:col-span-2">
                 <label
                   htmlFor="description"
@@ -170,14 +198,14 @@ const AddProduct = () => {
                   Description
                 </label>
                 <textarea
-                    onChange={addproductForm.handleChange}
-                    value={addproductForm.values.description}
+                    onChange={productForm.handleChange}
+                    value={productForm.values.description}
                   id="description"
                   rows={8}
                   className="block p-2.5 w-full text-sm text-black bg-voilet-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 "
                   placeholder="Write a plugin description..."
-                />{addproductForm.touched.username && (
-                  <small className="text-red">{addproductForm.errors.username}</small>
+                />{productForm.touched.description && (
+                  <small className="text-red">{productForm.errors.description}</small>
                 )}
               </div>
             </div>

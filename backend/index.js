@@ -4,7 +4,7 @@ const userRouter = require('./routers/userRouters');
 const cors = require('cors');
 const feedbackRouter = require('./routers/feedbackRouters');
 const newsletterRouter = require('./routers/newsletterRouters');
-const addProductRouter = require('./routers/addProductRouters');
+const ProductRouter = require('./routers/ProductRouters');
 
 //initilize express
 const app = express();
@@ -23,7 +23,7 @@ app.use('/feedback', feedbackRouter)
 
 app.use('/newsletter', newsletterRouter)
 
-app.use('/addproduct', addProductRouter)
+app.use('/addproduct', ProductRouter)
 
 //end point
 app.get('/', (req, res) => {
