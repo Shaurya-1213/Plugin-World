@@ -5,15 +5,14 @@ const cors = require('cors');
 const feedbackRouter = require('./routers/feedbackRouters');
 const newsletterRouter = require('./routers/newsletterRouters');
 const ProductRouter = require('./routers/ProductRouters');
+const UtilRouter = require('./routers/util');
 
 //initilize express
 const app = express();
 const port = 5000;
 
 //middleware
-app.use(cors({
-  origin: ['*']
-}))  //always at first
+app.use(cors({ origin: '*'}))  //always at first
 
 app.use(express.json());   //parse incoming requests of content type - application
 
@@ -24,6 +23,7 @@ app.use('/feedback', feedbackRouter)
 app.use('/newsletter', newsletterRouter)
 
 app.use('/addproduct', ProductRouter)
+app.use('/util', UtilRouter)
 
 //end point
 app.get('/', (req, res) => {
