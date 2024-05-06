@@ -22,7 +22,7 @@ app.use('/feedback', feedbackRouter)
 
 app.use('/newsletter', newsletterRouter)
 
-app.use('/addproduct', ProductRouter)
+app.use('/product', ProductRouter)
 app.use('/util', UtilRouter)
 
 //end point
