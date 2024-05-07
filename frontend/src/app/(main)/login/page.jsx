@@ -39,7 +39,7 @@ const Login = () => {
             response.json()
               .then((data) => {
                 sessionStorage.setItem('user', JSON.stringify(data));
-                router.push('/'); 
+                router.push('/user/homepage'); 
               })
 
           } else {

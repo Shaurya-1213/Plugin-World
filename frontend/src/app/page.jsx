@@ -4,6 +4,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 import Footer from './footer';
+import { Fade } from "react-awesome-reveal";
 
 const newsLetterSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required*')
@@ -174,18 +175,17 @@ const Home = () => {
     <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
       {/*Left Col*/}
       <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-      <h1 className="mt-8 mb-4 text-4xl font-bold text-white ps-10 sm:text-5xl md:mb-8 md:text-6xl">
+      <Fade direction="down" triggerOnce={true}><h1 className="mt-8 mb-4 text-4xl font-bold text-white ps-10 sm:text-5xl md:mb-8 md:text-6xl">
                 Find the
                 <br />
                 perfect fit
-              </h1>
-              <p className="max-w-md mb-24 text-white ps-10 leading-relaxed text-gray-500 xl:text-lg">
+              </h1> </Fade> 
+              <Fade direction="up" triggerOnce={true}><p className="max-w-md mb-24 text-white ps-10 leading-relaxed text-gray-500 xl:text-lg">
                 The functionality you want for your <br/>E-commerce website.
                 Among hundreds of design tool plugins.
-              </p>
+              </p></Fade>   
       </div>
       {/*Right Col start*/}
-      
       {/*Right Col end */}
     </div>
   </div>
@@ -231,18 +231,18 @@ const Home = () => {
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           {/* text - start */}
           <div className="mb-10 md:mb-16">
-            <h2 id="signup-for-plugin" className="mb-4 text-center text-2xl font-bold text-black md:mb-6 lg:text-3xl">
+          <Fade direction="up"> <h2 id="signup-for-plugin" className="mb-4 text-center text-2xl font-bold text-black md:mb-6 lg:text-3xl">
               Selected
-            </h2>
-            <p className="mx-auto max-w-screen-md text-center text-black md:text-lg">
+            </h2></Fade>
+            <Fade direction="up"><p className="mx-auto mb-24 max-w-screen-md text-center text-black md:text-lg">
               Find the best plugin for your e-commerce website. <br/>Signup to use our plugins.
-            </p>
+            </p></Fade>
           </div>
           {/* text - end */}
           <div className="grid gap-x-4 gap-y-8 sm:grid-cols-2 md:gap-x-6 lg:grid-cols-3 xl:grid-cols-4">
             {/* product - start */}
-            <div>
-              <a
+            <Fade direction="left" cascade damping={0.1} triggerOnce={true}> <div>
+            <a
                 href="#"
                 className="group relative mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
               >
@@ -263,10 +263,10 @@ const Home = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </div></Fade>
             {/* product - end */}
             {/* product - start */}
-            <div>
+            <Fade direction="left" cascade damping={0.09} triggerOnce={true}><div>
               <a
                 href="#"
                 className="group relative mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
@@ -287,10 +287,10 @@ const Home = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </div></Fade>
             {/* product - end */}
             {/* product - start */}
-            <div>
+            <Fade direction="right" cascade damping={0.09} triggerOnce={true}><div>
               <a
                 href="#"
                 className="group relative mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
@@ -311,10 +311,10 @@ const Home = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </div></Fade>
             {/* product - end */}
             {/* product - start */}
-            <div>
+            <Fade direction="right" cascade damping={0.1} triggerOnce={true}><div>
               <a
                 href="#"
                 className="group relative mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
@@ -335,7 +335,7 @@ const Home = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </div></Fade>
             {/* product - end */}
           </div>
         </div>
