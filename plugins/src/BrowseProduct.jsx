@@ -26,26 +26,26 @@ const BrowseProduct = () => {
   const displayPlugins = () => {
     return pluginList.map(plugin => (
       <>
-       {/* product - start */}
-       <div>
-       
-       <div className="flex items-start justify-between gap-2 rounded-b-lg bg-gray-100 p-4">
-         <div className="flex flex-col">
-           <a
-             href="#"
-             className="font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-lg"
-           >
-             {plugin.title}
-           </a>
-           <span className="text-sm text-gray-500 lg:text-base">
-           {plugin.price}
-           </span>
-         </div>
-         <div className="flex flex-col items-end">
-           <span className="font-bold text-gray-600 lg:text-lg">{plugin.description}</span>
-         </div>
-       </div>
-     </div>
+     {/* product - start */}
+        <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4">
+            <div>
+              <a
+                href="#"
+                className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg">
+              <div className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+              >{plugin.images}</div>
+              <div className="relative flex w-full flex-col rounded-lg bg-voilet-300 text-center">
+                <span className="text-lg font-bold text-white lg:text-xl">
+                  {plugin.title}
+                  </span><br/>  
+                  <span className="text-lg font-bold text-white lg:text-xl">
+                  {plugin.price}
+                  </span>
+                </div>
+              </a>
+            </div>
+            </div>
+      {/* product - end */}
      </>
       ))
   }
@@ -61,16 +61,13 @@ const BrowseProduct = () => {
       </h2>
     </div>
     {/* text - end */}
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {/* product - start */}
       <div>
         {displayPlugins()}
       </div>
       {/* product - end */}
-      
     </div>
   </div>
-</div>
 
     </>
   )

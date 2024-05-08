@@ -175,12 +175,12 @@ const Home = () => {
     <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
       {/*Left Col*/}
       <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-      <Fade direction="down" triggerOnce={true}><h1 className="mt-8 mb-4 text-4xl font-bold text-white ps-10 sm:text-5xl md:mb-8 md:text-6xl">
+      <Fade direction="down"><h1 className="mt-8 mb-4 text-4xl font-bold text-white ps-10 sm:text-5xl md:mb-8 md:text-6xl">
                 Find the
                 <br />
                 perfect fit
               </h1> </Fade> 
-              <Fade direction="up" triggerOnce={true}><p className="max-w-md mb-24 text-white ps-10 leading-relaxed text-gray-500 xl:text-lg">
+              <Fade direction="up"><p className="max-w-md mb-24 text-white ps-10 leading-relaxed text-gray-500 xl:text-lg">
                 The functionality you want for your <br/>E-commerce website.
                 Among hundreds of design tool plugins.
               </p></Fade>   
@@ -232,7 +232,7 @@ const Home = () => {
           {/* text - start */}
           <div className="mb-10 md:mb-16">
           <Fade direction="up"> <h2 id="signup-for-plugin" className="mb-4 text-center text-2xl font-bold text-black md:mb-6 lg:text-3xl">
-              Selected
+              Get The Best
             </h2></Fade>
             <Fade direction="up"><p className="mx-auto mb-24 max-w-screen-md text-center text-black md:text-lg">
               Find the best plugin for your e-commerce website. <br/>Signup to use our plugins.
@@ -347,33 +347,33 @@ const Home = () => {
           <div className="flex flex-col overflow-hidden rounded-lg bg-gray-900 sm:flex-row md:h-80">
             {/* content - start */}
             <div className="flex w-full flex-col p-4 sm:w-1/2 sm:p-8 lg:w-2/5">
-              <h2 className="mb-4 text-xl font-bold text-black md:text-2xl lg:text-3xl">
+             <Fade direction="left" triggerOnce={true}> <h2 className="mb-4 text-xl font-bold text-black md:text-2xl lg:text-3xl">
                 The Best Plugins You Can Get
                 <br />
                 For Your E-commerce Website
-              </h2>
-              <p className="mb-8 max-w-md text-black">
+              </h2></Fade>
+              <Fade direction="left" triggerOnce={true}><p className="mb-8 max-w-md text-black">
                 We're a group of developers who are passionate about creating plugins that makes adding functionality in <br />
                 E-commerce websites easier.
-              </p>
+              </p></Fade>
               <div className="mt-auto">
-                <a
+              <Fade direction="left" triggerOnce={true}><a
                   href="/signup"
                   className="inline-block rounded-lg bg-voilet-200 px-8 py-3 text-center text-sm font-semibold text-purple outline-none ring-indigo-300 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:text-base"
                 >
                   Sign Up
-                </a>
+                </a></Fade>
               </div>
             </div>
             {/* content - end */}
             {/* image - start */}
             <div className="order-first h-48 w-full bg-voilet-400 sm:order-none sm:h-auto sm:w-1/2 lg:w-3/5">
-              <img
+            <Fade direction="right" triggerOnce={true}><img
                 src="https://ideogram.ai/api/images/direct/_fy4mKOgTOS88V7RTrH6FQ.png"
                 loading="lazy"
                 alt="Photo by Dom Hill"
                 className="h-full w-full object-cover object-center"
-              />
+              /></Fade>
             </div>
             {/* image - end */}
           </div>
@@ -383,12 +383,12 @@ const Home = () => {
       {/* collections - start */}
       <div className="bg-voilet-100 py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-          <h2 className="mb-8 text-center text-2xl font-bold text-black md:mb-12 lg:text-3xl">
+        <Fade direction="up"><h2 className="mb-8 text-center text-2xl font-bold text-black md:mb-12 lg:text-3xl">
             Best Plugin Collection for your E-Commerce website
-          </h2>
+          </h2></Fade>
           <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4">
-            {/* product - start */}
-            <div>
+            {/* product 1 - start */}
+            <Fade direction="left" cascade damping={0.1} triggerOnce={true}><div>
               <a
                 href="#"
                 className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg"
@@ -405,10 +405,10 @@ const Home = () => {
                   </span>
                 </div>
               </a>
-            </div>
+            </div></Fade>
             {/* product - end */}
-            {/* product - start */}
-            <div>
+            {/* product 2 - start */}
+            <Fade direction="left" cascade damping={0.09} triggerOnce={true}><div>
               <a
                 href="#"
                 className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg"
@@ -425,10 +425,10 @@ const Home = () => {
                   </span>
                 </div>
               </a>
-            </div>
+            </div></Fade>
             {/* product - end */}
-            {/* product - start */}
-            <div>
+            {/* product 3 - start */}
+            <Fade direction="right" cascade damping={0.09} triggerOnce={true}><div>
               <a
                 href="#"
                 className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg"
@@ -445,10 +445,10 @@ const Home = () => {
                   </span>
                 </div>
               </a>
-            </div>
+            </div></Fade>
             {/* product - end */}
-            {/* product - start */}
-            <div>
+            {/* product 4 - start */}
+            <Fade direction="right" cascade damping={0.1} triggerOnce={true}><div>
               <a
                 href="#"
                 className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg"
@@ -465,7 +465,7 @@ const Home = () => {
                   </span>
                 </div>
               </a>
-            </div>
+            </div></Fade>
             {/* product - end */}
           </div>
         </div>
@@ -473,12 +473,13 @@ const Home = () => {
       {/* collections - end */}
       <div className="bg-voilet-100 py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-xl px-4 md:px-8">
-          <h2 className="mb-8 text-center text-2xl font-bold text-black md:mb-12 lg:text-3xl">
+        <Fade direction="up"><h2 className="mb-8 text-center text-2xl font-bold text-black md:mb-12 lg:text-3xl">
             What others say about us
-          </h2>
+          </h2></Fade>
           <div className="grid gap-4 md:grid-cols-2 md:gap-8">
             {/* quote - start */}
-            <div className="flex flex-col items-center gap-4 rounded-lg bg-darkpurple px-8 py-6 md:gap-6">
+            <Fade direction="up " triggerOnce={true}>
+              <div className="flex flex-col items-center gap-4 rounded-lg bg-darkpurple px-8 py-6 md:gap-6">
               <div className="max-w-md text-center text-white lg:text-lg">
                 “Easy to use plaugins ready at your disposal. Very Helpfull.”
               </div>
@@ -500,10 +501,11 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </div></Fade>
             {/* quote - end */}
             {/* quote - start */}
-            <div className="flex flex-col items-center gap-4 rounded-lg bg-darkpurple px-8 py-6 md:gap-6">
+            <Fade direction="up" triggerOnce={true}>
+              <div className="flex flex-col items-center gap-4 rounded-lg bg-darkpurple px-8 py-6 md:gap-6">
               <div className="max-w-md text-center text-white lg:text-lg">
                 “Nice to have a helping hand, only need to copy and paste. Appreciate it.”
               </div>
@@ -525,7 +527,7 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </div></Fade>
             {/* quote - end */}
           </div>
         </div>
