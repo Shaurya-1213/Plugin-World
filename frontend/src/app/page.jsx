@@ -478,7 +478,7 @@ const Home = () => {
           </h2></Fade>
           <div className="grid gap-4 md:grid-cols-2 md:gap-8">
             {/* quote - start */}
-            <Fade direction="up " triggerOnce={true}>
+            <Fade direction="up" triggerOnce={true}>
               <div className="flex flex-col items-center gap-4 rounded-lg bg-darkpurple px-8 py-6 md:gap-6">
               <div className="max-w-md text-center text-white lg:text-lg">
                 “Easy to use plaugins ready at your disposal. Very Helpfull.”

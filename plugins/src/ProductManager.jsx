@@ -5,8 +5,11 @@ import BrowseProduct from './BrowseProduct'
 const ProductManager = () => {
   return (
     <div>
-      <AddProduct />
-      <BrowseProduct />
+      {/* <AddProduct />
+      <BrowseProduct /> */}
+
+<h1>Welcome to the product</h1>
+
     </div>
   )
 }

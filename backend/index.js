@@ -26,6 +26,8 @@ app.use('/product', ProductRouter)
 
 app.use('/util', UtilRouter)
 
+app.use(express.static('./static/uploads'));
+
 //end point
 app.get('/', (req, res) => {
   res.send('Response from express');
