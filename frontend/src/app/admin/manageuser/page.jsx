@@ -25,10 +25,11 @@ const ManageUser = () => {
 
   const displayUsers = () => {
     return userList.map(user => (
+      
       <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
         <th
           scope="row"
-          className="px-6 py-4 font-medium text-black whitespace-nowrap"
+          className="font-medium text-black whitespace-nowrap"
         >
           {user._id}
         </th>
@@ -48,7 +49,7 @@ const ManageUser = () => {
 
   return (
     <div>
-      <div className="mt-24 mx-10 relative overflow-x-auto shadow-md sm:rounded-lg">
+      <div className="mt-24 ml-72 mr-10 relative overflow-x-auto shadow-md sm:rounded-lg">
         <div className="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4">
           <div>
             <button
