@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 import Footer from './footer';
 import { Fade } from "react-awesome-reveal";
+import Link from 'next/link';
 
 const newsLetterSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required*')
@@ -14,9 +15,7 @@ const Home = () => {
 
   const newsLetter = useFormik({
     initialValues: {
-      username: '',
       email: '',
-      password: ''
     },
     onSubmit: (values) => {
       console.log(values);
@@ -140,33 +139,33 @@ const Home = () => {
             {/* logo - end */}
             {/* nav - start */}
             <nav className="hidden gap-12 lg:flex  2xl:ml-16 p-4">
-              <a href="/" className="text-lg font-semibold text-white">
+              <Link href="/" className="text-lg font-semibold text-white">
                 Home
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/login"
                 className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
                 Login
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/signup"
                 className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
                 Signup
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/about"
                 className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
                 About
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/contact"
                 className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
                 Contact Us
-              </a>
+              </Link>
             </nav>
             {/* nav - end */}
 
@@ -242,7 +241,7 @@ const Home = () => {
           <div className="grid gap-x-4 gap-y-8 sm:grid-cols-2 md:gap-x-6 lg:grid-cols-3 xl:grid-cols-4">
             {/* product - start */}
             <Fade direction="left" cascade damping={0.1} triggerOnce={true}> <div>
-            <a
+            <Link
                 href="#"
                 className="group relative mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
               >
@@ -252,22 +251,22 @@ const Home = () => {
                   alt="Cart Plugin"
                   className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 />
-              </a>
+              </Link>
               <div className="flex items-start justify-between gap-2 px-2">
                 <div className="flex flex-col">
-                  <a
+                  <Link
                     href="#"
                     className="text-center text-lg font-bold text-black transition duration-100 hover:text-gray-500 lg:text-xl"
                   >
                     Cart Plugin
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div></Fade>
             {/* product - end */}
             {/* product - start */}
             <Fade direction="left" cascade damping={0.09} triggerOnce={true}><div>
-              <a
+              <Link
                 href="#"
                 className="group relative mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
               >
@@ -277,21 +276,21 @@ const Home = () => {
                   alt="Live Chat Plugin"
                   className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 />
-              </a>
+              </Link>
               <div className="flex items-start justify-between gap-2 px-2">
                 <div className="flex flex-col">
-                  <a
+                  <Link
                     href="#"
                     className="text-lg font-bold text-black transition duration-100 hover:text-gray-500 lg:text-xl"
                   > Live Chat Plugin
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div></Fade>
             {/* product - end */}
             {/* product - start */}
             <Fade direction="right" cascade damping={0.09} triggerOnce={true}><div>
-              <a
+              <Link
                 href="#"
                 className="group relative mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
               >
@@ -301,21 +300,21 @@ const Home = () => {
                   alt="Pament Gateway Plugin"
                   className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 />
-              </a>
+              </Link>
               <div className="flex items-start justify-between gap-2 px-2">
                 <div className="flex flex-col">
-                  <a
+                  <Link
                     href="#"
                     className="text-lg font-bold text-black transition duration-100 hover:text-gray-500 lg:text-xl"
                   >Payment Gateway Plugin
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div></Fade>
             {/* product - end */}
             {/* product - start */}
             <Fade direction="right" cascade damping={0.1} triggerOnce={true}><div>
-              <a
+              <Link
                 href="#"
                 className="group relative mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
               >
@@ -325,14 +324,14 @@ const Home = () => {
                   alt="Browse Plugin"
                   className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 />
-              </a>
+              </Link>
               <div className="flex items-start justify-between gap-2 px-2">
                 <div className="flex flex-col">
-                  <a
+                  <Link
                     href="#"
                     className="text-lg font-bold text-black transition duration-100 hover:text-gray-500 lg:text-xl"
                   >Browse Plugin
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div></Fade>
@@ -357,12 +356,13 @@ const Home = () => {
                 E-commerce websites easier.
               </p></Fade>
               <div className="mt-auto">
-              <Fade direction="left" triggerOnce={true}><a
+              <Fade direction="left" triggerOnce={true}>
+                <Link
                   href="/signup"
                   className="inline-block rounded-lg bg-voilet-200 px-8 py-3 text-center text-sm font-semibold text-purple outline-none ring-indigo-300 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:text-base"
                 >
                   Sign Up
-                </a></Fade>
+                </Link></Fade>
               </div>
             </div>
             {/* content - end */}
@@ -389,7 +389,7 @@ const Home = () => {
           <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4">
             {/* product 1 - start */}
             <Fade direction="left" cascade damping={0.1} triggerOnce={true}><div>
-              <a
+              <Link
                 href="#"
                 className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg"
               >
@@ -404,12 +404,12 @@ const Home = () => {
                     SEO Plugin
                   </span>
                 </div>
-              </a>
+              </Link>
             </div></Fade>
             {/* product - end */}
             {/* product 2 - start */}
             <Fade direction="left" cascade damping={0.09} triggerOnce={true}><div>
-              <a
+              <Link
                 href="#"
                 className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg"
               >
@@ -424,12 +424,12 @@ const Home = () => {
                     Live Chat Plugin
                   </span>
                 </div>
-              </a>
+              </Link>
             </div></Fade>
             {/* product - end */}
             {/* product 3 - start */}
             <Fade direction="right" cascade damping={0.09} triggerOnce={true}><div>
-              <a
+              <Link
                 href="#"
                 className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg"
               >
@@ -444,12 +444,12 @@ const Home = () => {
                     Rating And Review Plugin
                   </span>
                 </div>
-              </a>
+              </Link>
             </div></Fade>
             {/* product - end */}
             {/* product 4 - start */}
             <Fade direction="right" cascade damping={0.1} triggerOnce={true}><div>
-              <a
+              <Link
                 href="#"
                 className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg"
               >
@@ -464,7 +464,7 @@ const Home = () => {
                     Email Marketing Plugin
                   </span>
                 </div>
-              </a>
+              </Link>
             </div></Fade>
             {/* product - end */}
           </div>
@@ -561,21 +561,21 @@ const Home = () => {
           </form>
           <p className="text-center text-xs text-gray-900 lg:text-right">
             By signing up to our newsletter you agree to our{" "}
-            <a
+            <Link
               href="#"
               className="underline transition duration-100 hover:text-indigo-500 active:text-indigo-600"
             >
               Term of Service
-            </a>{" "}
+            </Link>{" "}
             and{" "}
-            <a
+            <Link
               href="#"
               className="underline transition duration-100 hover:text-indigo-500 active:text-indigo-600"
             >
               Privacy Policy
-            </a>
+            </Link>
             .
-          </p>
+          </p> 
         </div>
       </div>
     </div>

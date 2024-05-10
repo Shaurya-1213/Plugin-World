@@ -4,6 +4,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
+import { Fade } from 'react-awesome-reveal';
 
 const LoginSchema = Yup.object().shape({
   username: Yup.string().min(4, 'Enter Full Name').required('Required*'),
@@ -62,6 +63,7 @@ const Login = () => {
       <>
         <div className="flex h-screen bg-voilet-50 ">
           <div className="w-full bg-gray-100 lg:w-1/2 flex items-center justify-center">
+           <Fade direction='left'>
             <div className="max-w-md w-full p-6">
               <h1 className="text-5xl font-semibold mb-6 text-black text-center">
                 Login
@@ -132,17 +134,19 @@ const Login = () => {
                   </a>
                 </p>
               </div>
-            </div>
+            </div></Fade> 
           </div>
           {/* component */}
 
-          {/* Left Pane */}
-          <div className="hidden lg:flex items-center justify-center flex-1 bg-white text-black">
+          {/* Right Pane */}
+            <div className="hidden lg:flex items-center justify-center flex-1 bg-white text-black">
+          <Fade direction='right'>
             <div className="max-w-md text-center">
               <img style={{ backgroundSize: "cover" }} src="/bglogin.webp" alt="" />
             </div>
+          </Fade>
           </div>
-          {/* left Pane */}
+          {/* Right Pane */}
 
         </div>
       </>

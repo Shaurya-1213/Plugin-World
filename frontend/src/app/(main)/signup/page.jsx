@@ -4,6 +4,7 @@ import { useFormik } from 'formik';
 import Link from 'next/link';
 import * as Yup from 'yup';
 import toast from 'react-hot-toast';
+import { Fade } from 'react-awesome-reveal';
 
 const SignupSchema = Yup.object().shape({
   username: Yup.string().min(4, 'Enter Full Name').required('Required*'),
@@ -64,6 +65,7 @@ const Signup = () => {
   <div className="flex h-screen bg-voilet-50 ">
     {/* Left Pane */}
     <div className="hidden lg:flex items-center justify-center flex-1 bg-white text-black">
+      <Fade direction='left'>
       <div className="max-w-md text-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -278,9 +280,11 @@ const Signup = () => {
           </g>
         </svg>
       </div>
+      </Fade>
     </div>
     {/* Right Pane */}
     <div className="w-full bg-gray-100 lg:w-1/2 flex items-center justify-center">
+      <Fade direction='right'>
       <div className="max-w-md w-full p-6">
         <h1 className="text-3xl font-semibold mb-6 text-black text-center">
           Sign Up
@@ -414,6 +418,7 @@ const Signup = () => {
           </p>
         </div>
       </div>
+      </Fade>
     </div>
   </div>
 </>
