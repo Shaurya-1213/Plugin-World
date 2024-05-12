@@ -19,7 +19,6 @@ if (browseElement) {
       <BrowseProduct />
     )
 }
-
 const manageElement = document.getElementById('manage-plugin');
 if (manageElement) {
   ReactDOM.createRoot(manageElement)

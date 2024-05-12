@@ -1,4 +1,6 @@
+'use client'
 import React from 'react'
+import { Fade } from 'react-awesome-reveal';
 
 const UserProfile = () => {
   return (
@@ -8,7 +10,7 @@ const UserProfile = () => {
       <main>
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center"
             style={{
-              minHeight: "75vh"
+              minHeight: "105vh"
             }}>
           <div className="absolute top-0 w-full h-full bg-center bg-cover"
               style={{
@@ -19,7 +21,8 @@ const UserProfile = () => {
           <div className="container relative mx-auto">
               <div className="items-center flex flex-wrap">
                 <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                  <div className="pr-12">
+                  <Fade direction='up'>
+                    <div className="pr-12">
                     <h1 className="text-white font-semibold text-5xl">
                       Your story starts with us.
                     </h1>
@@ -28,13 +31,14 @@ const UserProfile = () => {
                       Use our plugins to  create a website that is tailored for your needs.
                     </p>
                   </div>
+                  </Fade>
                 </div>
 
               </div>
           </div>
           <div
             className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
-            style={{ height: "70px" }}
+            style={{ height: "80px" }}
           >
             <svg
               className="absolute bottom-0 overflow-hidden"
@@ -57,6 +61,7 @@ const UserProfile = () => {
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+                  <Fade direction='up' triggerOnce={true}>
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-8 py-8 flex-auto">
                     <h4 className=" text-black text-xl font-bold mb-5">Easy-To-Use</h4>
@@ -65,8 +70,10 @@ const UserProfile = () => {
                     </p>
                   </div>
                 </div>
+                  </Fade>
               </div>
               <div className="w-full md:w-4/12 px-4 text-center">
+              <Fade direction='up' triggerOnce={true}>
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-8 py-8 flex-auto">
                     <h4 className="text-xl text-black font-bold mb-5 ">
@@ -77,8 +84,10 @@ const UserProfile = () => {
                     </p>
                   </div>
                 </div>
+                </Fade>
               </div>
               <div className="pt-6 w-full md:w-4/12 px-4 text-center">
+              <Fade direction='up' triggerOnce={true}>
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-8 py-8 flex-auto">
                     <h4 className="text-xl text-black font-bold mb-5">
@@ -89,21 +98,24 @@ const UserProfile = () => {
                     </p>
                   </div>
                 </div>
+                </Fade>
               </div>
             </div>
 
 
             <div className="flex flex-wrap items-center mt-20">
               <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
+            <Fade direction='left' triggerOnce={true}>
                 <h3 className="text-4xl text-white font-bold leading-normal">
                   Community Supported
                 </h3>
                 <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
                   Our community is active and always growing. You can find us on Discord, GitHub or join our  mailing list to get updates about new features and give suggestions about new plugins. 
                 </p>
+            </Fade>
               </div>
-
               <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
+              <Fade direction='right' triggerOnce={true}>
                 <div className="relative  flex flex-col min-w-0 break-words bg-voilet-800 w-full mb-6 shadow-lg rounded-lg bg-pink-600">
                   <img
                     alt="..."
@@ -134,6 +146,7 @@ const UserProfile = () => {
                     </p>
                   </blockquote>
                 </div>
+                </Fade>
               </div>
 
             </div>
@@ -160,18 +173,19 @@ const UserProfile = () => {
               ></polygon>
             </svg>
           </div>
-
           <div className="container mx-auto px-4">
             <div className="items-center flex flex-wrap">
               <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
+              <Fade direction='left' triggerOnce={true}>
                 <img
                   alt="..."
                   className="max-w-full rounded-lg shadow-lg"
                   src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
-                />
+                /></Fade>
               </div>
               <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
                 <div className="md:pr-12">
+                <Fade direction='right' triggerOnce={true}>
                   <h3 className="text-4xl text-white font-bold">
                     Created by Developers for Developers
                   </h3>
@@ -218,6 +232,7 @@ const UserProfile = () => {
                       </div>
                     </li>
                   </ul>
+                  </Fade>
                 </div>
               </div>
             </div>
@@ -248,38 +263,43 @@ const UserProfile = () => {
           <div className="container mx-auto px-4 lg:pt-24 lg:pb-64">
             <div className="flex flex-wrap text-center justify-center">
               <div className="w-full lg:w-6/12 px-4">
+              <Fade direction='up'>
                 <h2 className="text-4xl font-semibold text-white">
                   Create something
                 </h2>
                 <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
                   We will help you in establishing your E-Commerce website , by providing you with the best plugins for your websites.
-                </p>
+                </p></Fade>
               </div>
             </div>
             <div className="flex flex-wrap mt-12 justify-center">
               <div className="w-full lg:w-3/12 px-4 text-center">
+              <Fade direction='up'>
                 <h6 className="text-xl mt-5 font-semibold text-white">
                   Excelent Services
                 </h6>
                 <p className="mt-2 mb-4 text-gray-500">
                  Easy-to-use plugins that make it easy to create your own custom components, or use pre-built ones.
                 </p>
+                </Fade>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
+              <Fade direction='up'>
                 <h5 className="text-xl mt-5 font-semibold text-white">
                   Safe and Secure
                 </h5>
                 <p className="mt-2 mb-4 text-gray-500">
                   Our plugins  are safe to use, as they have been thoroughly tested by our team of experts.
-                </p>
+                </p></Fade>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
+              <Fade direction='up'>
                 <h5 className="text-xl mt-5 font-semibold text-white">
                 A growing company
                 </h5>
                 <p className="mt-2 mb-4 text-gray-500">
                 We are a team of professionals working together to build plugins that can be used in your E-Commerce website.
-                </p>
+                </p></Fade>
               </div>
             </div>
           </div>

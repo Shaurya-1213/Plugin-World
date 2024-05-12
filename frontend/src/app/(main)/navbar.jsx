@@ -1,5 +1,7 @@
 'use client'
 
+import Link from "next/link";
+
 const Navbar = () => {
 
   return (
@@ -8,38 +10,38 @@ const Navbar = () => {
           <div className="mx-auto flex max-w-screen-2xl items-center justify-between px-4 md:px-8">
             {/* logo - start */}
             <div className='flex'>
-            <a href="/"> <img style={{ height: 50 }} src="/shortlogowhite.png"  alt="" /></a>
+            <Link href="/"> <img style={{ height: 50 }} src="/shortlogowhite.png"  alt="" /></Link>
             </div>
             {/* logo - end */}
             {/* nav - start */}
             <nav className="hidden gap-12 lg:flex  2xl:ml-16 p-4">
-              <a href="/" className="text-lg font-semibold text-white">
+              <Link href="/" className="text-lg font-semibold text-white">
                 Home
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/login"
                 className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
                 Login
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/signup"
                 className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
                 Signup
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/about"
                 className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
                 About
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/contact"
                 className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
                 Contact Us
-              </a>
+              </Link>
             </nav>
             {/* nav - end */}
 

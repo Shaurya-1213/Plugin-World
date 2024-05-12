@@ -1,5 +1,7 @@
 'use client'
 
+import Link from "next/link";
+
 export const Nav = () => {
 
   return (
@@ -8,33 +10,33 @@ export const Nav = () => {
           <div className="mx-auto flex max-w-screen-xl  justify-end  ">
             {/* nav - start */}
             <nav className="hidden gap-10 lg:flex p-4">
-              <a href="/user/homepage" className="text-lg font-semibold text-white">
+              <Link href="/user/homepage" className="text-lg font-semibold text-white">
                 Home
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/user/profile"
                 className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
                 Profile
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/user/plugin"
                 className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
                 Plugin
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/user/feedback"
                 className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               >
                 Feedback
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/"
                 className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
               > 
                 Logout
-              </a>
+              </Link>
             </nav>
             {/* nav - end */}
 

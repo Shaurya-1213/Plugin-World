@@ -14,8 +14,6 @@ const ProductSchema = Yup.object().shape({
 
 const AddProduct = () => {
 
-
-
   const productForm = useFormik({
     initialValues: {
       title:'',

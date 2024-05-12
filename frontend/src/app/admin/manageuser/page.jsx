@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 
 const ManageUser = () => {
@@ -36,13 +37,6 @@ const ManageUser = () => {
         <td className="px-6 py-4">{user.username}</td>
         <td className="px-6 py-4">{user.email}</td>
         <td className="px-6 py-4">{user.createdAt}</td>
-        <td className="flex items-center px-6 py-4">
-          <a
-            href="#"
-            className="font-medium text-red dark:text-red-500 hover:underline ms-3">
-            Remove
-          </a>
-        </td>
       </tr>
     ))
   }

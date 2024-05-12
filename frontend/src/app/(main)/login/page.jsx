@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 import { Fade } from 'react-awesome-reveal';
+import Link from 'next/link';
 
 const LoginSchema = Yup.object().shape({
   username: Yup.string().min(4, 'Enter Full Name').required('Required*'),
@@ -113,9 +114,9 @@ const Login = () => {
                   )}
                 </div>
                 <div className="mt-4 text-l text-black">
-                  <a href="/signup" className="text-blue hover:underline">
+                  <Link href="/signup" className="text-blue hover:underline">
                     Forget Password?
-                  </a>
+                  </Link>
                 </div>
                 <div>
                   <button
@@ -129,9 +130,9 @@ const Login = () => {
               <div className="mt-4 text-sm text-black text-center">
                 <p>
                   Already have an account?{" "}
-                  <a href="/signup" className="text-blue hover:underline">
+                  <Link href="/signup" className="text-blue hover:underline">
                     Signup
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div></Fade> 

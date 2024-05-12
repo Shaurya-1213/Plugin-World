@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 const AdminNavbar = () => {
@@ -11,7 +12,7 @@ const AdminNavbar = () => {
       >
         <div className="me-5 lg:me-0 lg:hidden">
           {/* Logo */}
-          <a
+          <Link
             className="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-none focus:opacity-80"
             href="/admin/dasboard"
             aria-label="Preline"
@@ -49,7 +50,7 @@ const AdminNavbar = () => {
                 fill="currentColor"
               />
             </svg>
-          </a>
+          </Link>
           {/* End Logo */}
         </div>
         <div className="w-full flex items-center justify-end ms-auto sm:justify-between sm:gap-x-3 sm:order-3">

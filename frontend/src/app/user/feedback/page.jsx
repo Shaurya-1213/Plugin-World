@@ -3,6 +3,7 @@ import React from 'react'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import toast from 'react-hot-toast';
+import Link from 'next/link';
 
 const FeedbackSchema = Yup.object().shape({
   firstname: Yup.string().required('Required*'),
@@ -324,8 +325,8 @@ const feedback = () => {
       {/* End Col */}
       <div className="relative">
         {/* Card */}
-        <div className="flex flex-col border rounded-xl p-4 sm:p-6 lg:p-10 dark:border-neutral-700">
-          <h2 className="text-xl font-semibold text-gray-800 dark:text-neutral-200">
+        <div className="flex flex-col border rounded-xl p-4 bg-white sm:p-6 lg:p-10 dark:border-neutral-700">
+          <h2 className="text-xl font-semibold text-black ">
             Fill in the form
           </h2>
           <form>
@@ -334,93 +335,92 @@ const feedback = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
                 <div>
                   <label
-                    htmlFor="hs-firstname-hire-us-1"
-                    className="block mb-2 text-sm text-gray-700 font-medium dark:text-white"
+                    htmlFor="firstname"
+                    className="block mb-2 text-sm text-black font-medium"
                   >
                     First Name
                   </label>
                   <input
                     type="text"
-                    name="hs-firstname-hire-us-1"
-                    id="hs-firstname-hire-us-1"
-                    className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                    name="firstname"
+                    id="firstname"
+                    className="py-3 px-4 block w-full bg-white border-2 border-black rounded-lg text-sm"
                   />
                 </div>
                 <div>
                   <label
-                    htmlFor="hs-lastname-hire-us-1"
-                    className="block mb-2 text-sm text-gray-700 font-medium dark:text-white"
+                    htmlFor="lastname"
+                    className="block mb-2 text-sm text-black font-medium"
                   >
                     Last Name
                   </label>
                   <input
                     type="text"
-                    name="hs-lastname-hire-us-1"
-                    id="hs-lastname-hire-us-1"
-                    className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                    name="lastname"
+                    id="lastname"
+                    className="py-3 px-4 block w-full bg-white border-2 border-black rounded-lg text-sm"
                   />
                 </div>
               </div>
               {/* End Grid */}
               <div>
                 <label
-                  htmlFor="hs-work-email-hire-us-1"
-                  className="block mb-2 text-sm text-gray-700 font-medium dark:text-white"
+                  htmlFor="email"
+                  className="block mb-2 text-sm text-black font-medium"
                 >
                   Work Email
                 </label>
                 <input
                   type="email"
-                  name="hs-work-email-hire-us-1"
-                  id="hs-work-email-hire-us-1"
-                  autoComplete="email"
-                  className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                  name="email"
+                  id="email"
+                  className="py-3 px-4 block w-full bg-white border-2 border-black rounded-lg text-sm"
                 />
               </div>
               {/* Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
                 <div>
                   <label
-                    htmlFor="hs-company-hire-us-1"
-                    className="block mb-2 text-sm text-gray-700 font-medium dark:text-white"
+                    htmlFor="company"
+                    className="block mb-2 text-sm text-black font-medium"
                   >
                     Company
                   </label>
                   <input
                     type="text"
-                    name="hs-company-hire-us-1"
-                    id="hs-company-hire-us-1"
-                    className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                    name="company"
+                    id="company"
+                    className="py-3 px-4 block w-full bg-white border-2 border-black rounded-lg text-sm"
                   />
                 </div>
                 <div>
                   <label
-                    htmlFor="hs-company-website-hire-us-1"
-                    className="block mb-2 text-sm text-gray-700 font-medium dark:text-white"
+                    htmlFor="subject"
+                    className="block mb-2 text-sm text-black font-medium"
                   >
-                    Company Website
+                    Subject
                   </label>
                   <input
                     type="text"
-                    name="hs-company-website-hire-us-1"
-                    id="hs-company-website-hire-us-1"
-                    className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                    name="subject"
+                    id="subject"
+                    className="py-3 px-4 block w-full bg-white border-2 border-black rounded-lg text-sm "
                   />
                 </div>
               </div>
               {/* End Grid */}
               <div>
                 <label
-                  htmlFor="hs-about-hire-us-1"
-                  className="block mb-2 text-sm text-gray-700 font-medium dark:text-white"
+                  htmlFor="message"
+                  className="block mb-2 text-sm text-black font-medium"
                 >
-                  Details
+                  Message
                 </label>
                 <textarea
-                  id="hs-about-hire-us-1"
-                  name="hs-about-hire-us-1"
+                  id="message"
+                  name="message"
                   rows={4}
-                  className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                  className="py-3 px-4 block w-full border-2 border-black rounded-lg text-sm bg-white"
                   defaultValue={""}
                 />
               </div>
@@ -434,21 +434,21 @@ const feedback = () => {
                 id="remember-me"
                 name="remember-me"
                 type="checkbox"
-                className="shrink-0 mt-1.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                className="shrink-0 mt-1.5 bg-white border-gray-200 rounded text-blue-600 "
               />
             </div>
             <div className="ms-3">
               <label
                 htmlFor="remember-me"
-                className="text-sm text-gray-600 dark:text-neutral-400"
+                className="text-sm text-black "
               >
                 By submitting this form I have read and acknowledged the{" "}
-                <a
+                <Link
                   className="text-blue-600 decoration-2 hover:underline font-medium dark:text-blue-500"
                   href="#"
                 >
                   Privacy policy
-                </a>
+                </Link>
               </label>
             </div>
           </div>
@@ -456,13 +456,13 @@ const feedback = () => {
           <div className="mt-6 grid">
             <button
               type="submit"
-              className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+              className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue text-white"
             >
-              Send inquiry
+              Submit
             </button>
           </div>
           <div className="mt-3 text-center">
-            <p className="text-sm text-gray-500 dark:text-neutral-500">
+            <p className="text-sm text-black ">
               We'll get back to you in 1-2 business days.
             </p>
           </div>
