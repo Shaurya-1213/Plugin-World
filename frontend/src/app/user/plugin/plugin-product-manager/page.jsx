@@ -108,7 +108,39 @@ const PluginProductManager = () => {
                 </Fade>
               </div>
 
+          
 
+              <div className="w-full md:w-4/12 mb-10 px-4 mx-auto text-center z-40">
+              <Fade direction='up' triggerOnce={true}>
+                  <img
+                    src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?auto=format&q=75&fit=crop&w=1000"
+                    loading="lazy"
+                    alt="Photo by Fakurian Design"
+                    style={{height:"55vh" , width:"600px"}}
+                    className="block mx-auto rounded-lg -mt-48 z-50 object-cover object-center"
+                 />
+                </Fade>
+              </div><div className="w-full md:w-4/12 mb-10 px-4 mx-auto text-center z-40">
+              <Fade direction='up' triggerOnce={true}>
+                  <img
+                    src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?auto=format&q=75&fit=crop&w=1000"
+                    loading="lazy"
+                    alt="Photo by Fakurian Design"
+                    style={{height:"55vh" , width:"600px"}}
+                    className="block mx-auto rounded-lg -mt-48 z-50 object-cover object-center"
+                 />
+                </Fade>
+              </div><div className="w-full md:w-4/12 mb-10 px-4 mx-auto text-center z-40">
+              <Fade direction='up' triggerOnce={true}>
+                  <img
+                    src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?auto=format&q=75&fit=crop&w=1000"
+                    loading="lazy"
+                    alt="Photo by Fakurian Design"
+                    style={{height:"55vh" , width:"600px"}}
+                    className="block mx-auto rounded-lg -mt-48 z-50 object-cover object-center"
+                 />
+                </Fade>
+              </div>
         
 
         {/* component */}
