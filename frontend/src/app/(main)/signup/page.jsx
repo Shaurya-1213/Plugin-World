@@ -301,7 +301,7 @@ const Signup = () => {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
-                className="w-4"
+                className="w-5"
                 id="google"
               >
                 <path
