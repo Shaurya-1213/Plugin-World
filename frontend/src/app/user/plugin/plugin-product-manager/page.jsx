@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import { Fade } from 'react-awesome-reveal';
+import {MyCoolCodeBlock} from'./MyCoolCodeBlock'
 
 const PluginProductManager = () => {
 
@@ -41,6 +42,7 @@ const PluginProductManager = () => {
       </tr>
     ))
   }
+
 
   return (
     <div>
@@ -96,7 +98,7 @@ const PluginProductManager = () => {
           </div>
         </div>
         
-        <div className="w-full md:w-4/12 mb-10 px-4 mx-auto text-center z-40">
+        <div className=" w-full md:w-4/12 mb-10 px-4 mx-auto text-center z-40">
               <Fade direction='up' triggerOnce={true}>
                   <img
                     src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?auto=format&q=75&fit=crop&w=1000"
@@ -107,42 +109,43 @@ const PluginProductManager = () => {
                  />
                 </Fade>
               </div>
-
-          
-
-              <div className="w-full md:w-4/12 mb-10 px-4 mx-auto text-center z-40">
-              <Fade direction='up' triggerOnce={true}>
-                  <img
-                    src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?auto=format&q=75&fit=crop&w=1000"
-                    loading="lazy"
-                    alt="Photo by Fakurian Design"
-                    style={{height:"55vh" , width:"600px"}}
-                    className="block mx-auto rounded-lg -mt-48 z-50 object-cover object-center"
-                 />
-                </Fade>
-              </div><div className="w-full md:w-4/12 mb-10 px-4 mx-auto text-center z-40">
-              <Fade direction='up' triggerOnce={true}>
-                  <img
-                    src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?auto=format&q=75&fit=crop&w=1000"
-                    loading="lazy"
-                    alt="Photo by Fakurian Design"
-                    style={{height:"55vh" , width:"600px"}}
-                    className="block mx-auto rounded-lg -mt-48 z-50 object-cover object-center"
-                 />
-                </Fade>
-              </div><div className="w-full md:w-4/12 mb-10 px-4 mx-auto text-center z-40">
-              <Fade direction='up' triggerOnce={true}>
-                  <img
-                    src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?auto=format&q=75&fit=crop&w=1000"
-                    loading="lazy"
-                    alt="Photo by Fakurian Design"
-                    style={{height:"55vh" , width:"600px"}}
-                    className="block mx-auto rounded-lg -mt-48 z-50 object-cover object-center"
-                 />
-                </Fade>
+              
+      {/* call to action - start */}
+      <div className="bg-voilet-400 py-6 shadow-lg sm:py-8 lg:py-12">
+        <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+          <div className="flex flex-col overflow-hidden rounded-lg bg-gray-900 sm:flex-row md:h-80">
+            {/* content - start */}
+            <div className="flex w-full flex-col p-4 sm:w-1/2 sm:p-8 lg:w-2/5">
+             <Fade direction="left" triggerOnce={true}> <h2 className="mb-4 text-xl font-bold text-black md:text-2xl lg:text-3xl">
+                The Best Plugins You Can Get
+                <br />
+                For Your E-commerce Website
+              </h2></Fade>
+              <Fade direction="left" triggerOnce={true}><p className="mb-8 max-w-md text-black">
+                We're a group of developers who are passionate about creating plugins that makes adding functionality in <br />
+                E-commerce websites easier.
+              </p></Fade>
+              <div className="mt-auto">
+              <Fade direction="left" triggerOnce={true}>
+                <Link
+                  href="/signup"
+                  className="inline-block rounded-lg bg-voilet-200 px-8 py-3 text-center text-sm font-semibold text-purple outline-none ring-indigo-300 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:text-base"
+                >
+                  Sign Up
+                </Link></Fade>
               </div>
-        
-
+            </div>
+            {/* content - end */}
+            {/* image - start */}
+            <div className="order-first h-48 w-full bg-voilet-400 sm:order-none sm:h-auto sm:w-1/2 lg:w-3/5">
+            <MyCoolCodeBlock />
+            </div>
+            {/* image - end */}
+          </div>
+        </div>
+      </div>
+      {/* call to action - end */}
+      
         {/* component */}
         <link
           href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
