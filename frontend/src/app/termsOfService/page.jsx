@@ -159,6 +159,26 @@ const termsOfService = () => {
           placeholder text. It shares some characteristics of a real written
           text.
         </p>
+        <p className="text-gray-500">
+          This is a section of some simple filler text, also known as
+          placeholder text. It shares some characteristics of a real written
+          text.
+        </p>
+        <p className="text-gray-500">
+          This is a section of some simple filler text, also known as
+          placeholder text. It shares some characteristics of a real written
+          text.
+        </p>
+        <p className="text-gray-500">
+          This is a section of some simple filler text, also known as
+          placeholder text. It shares some characteristics of a real written
+          text.
+        </p>
+        <p className="text-gray-500">
+          This is a section of some simple filler text, also known as
+          placeholder text. It shares some characteristics of a real written
+          text.
+        </p>
       </div>
       {/* question - end */}
       {/* question - start */}
