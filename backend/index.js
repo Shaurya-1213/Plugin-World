@@ -27,22 +27,12 @@ app.use('/product', ProductRouter)
 app.use('/util', UtilRouter)
 
 app.use(express.static('./static/uploads'));
+app.use(express.static('./static/resources'));
 
 //end point
 app.get('/', (req, res) => {
   res.send('Response from express');
 })
 
-app.get('/add', (req, res) => {
-  res.send('Response from express add');
-})
-
-app.get('/update', (req, res) => {
-  res.send('Response from update');
-})
-
-app.get('/delete', (req, res) => {
-  res.send('Response from delete');
-})
 
 app.listen(port, () => { console.log('server added'); });

@@ -71,7 +71,7 @@ const plugin = () => {
             {/* product 4 - start */}
             <Fade direction="right" cascade damping={0.1} triggerOnce={true}><div>
               <Link
-                href="/user/plugin/plugin-product-manager"
+                href="/user/plugin-details/browse-product"
                 className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg"
               >
                 <img
