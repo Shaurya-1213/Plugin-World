@@ -26,3 +26,17 @@ if (manageElement) {
       <ProductManager />
     )
 }
+const cartElement = document.getElementById('cart-plugin');
+if (cartElement) {
+  ReactDOM.createRoot(cartElement)
+    .render(
+      <ProductManager />
+    )
+}
+const ratingElement = document.getElementById('rating-plugin');
+if (ratingElement) {
+  ReactDOM.createRoot(ratingElement)
+    .render(
+      <ProductManager />
+    )
+}

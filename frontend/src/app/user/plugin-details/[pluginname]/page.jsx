@@ -11,20 +11,37 @@ const pluginInfo = {
     code : `<div id="manage-plugin"></div>
     <script src="http://localhost:5000/main.js"></script>`,
     title: 'Product Manager',
-    description: 'Product Manager Description'
+    description: 'Product Manager Description',
+    price:"29"
   },
   "browse-product" : {
     banner: '',
     code : `<div id="browse-plugin"></div>
     <script src="http://localhost:5000/main.js"></script>`,
-    title: 'Product Manager',
-    description: 'Product Manager Description'
+    title: 'Browse Product',
+    description: 'Product Manager Description',
+    price:"29"
   },
+  "cart-product" : {
+    banner: '',
+    code : `<div id="cart-plugin"></div>
+    <script src="http://localhost:5000/main.js"></script>`,
+    title: 'Cart',
+    description: 'Cart Description',
+    price:"29"
+  },
+  "rating-product" : {
+    banner: '',
+    code : `<div id="rating-plugin"></div>
+    <script src="http://localhost:5000/main.js"></script>`,
+    title: 'Rating',
+    description: 'Rating Description',
+    price:"29"
+  }
 };
 
 const PluginProductManager = () => {
 
-  const [pluginsList, setPluginsList] = useState([]);
   const { pluginname } = useParams();
 
   const fetchPlugins = () => {
@@ -139,17 +156,14 @@ const PluginProductManager = () => {
                   {pluginInfo[pluginname].title}
                 </h2></Fade>
                 <Fade direction="left" triggerOnce={true}><p className="mb-8 max-w-md text-black">
-                  We're a group of developers who are passionate about creating plugins that makes adding functionality in <br />
-                  E-commerce websites easier.
+                  {pluginInfo[pluginname].description}
                 </p></Fade>
                 <div className="mt-auto">
                   <Fade direction="left" triggerOnce={true}>
-                    <Link
-                      href="/signup"
-                      className="inline-block rounded-lg bg-voilet-200 px-8 py-3 text-center text-sm font-semibold text-purple outline-none ring-indigo-300 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:text-base"
-                    >
-                      Sign Up
-                    </Link></Fade>
+                  <p className="mb-8 max-w-md text-black">
+                  {pluginInfo[pluginname].price}
+                </p>
+                    </Fade>
                 </div>
               </div>
               {/* content - end */}

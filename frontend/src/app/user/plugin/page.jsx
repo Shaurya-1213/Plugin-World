@@ -11,7 +11,7 @@ const plugin = () => {
             {/* product 1 - start */}
             <Fade direction="left" cascade damping={0.1} triggerOnce={true}><div>
               <Link
-                href="/user/plugin/plugin-product-manager"
+                href="/user/plugin-details/cart-product"
                 className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg"
               >
                 <img
@@ -22,7 +22,7 @@ const plugin = () => {
                 />
                 <div className="relative flex w-full flex-col rounded-lg bg-voilet-300 p-4 text-center">
                   <span className="text-lg font-bold text-white lg:text-xl">
-                    SEO Plugin
+                    Cart Plugin
                   </span>
                 </div>
               </Link>
@@ -31,7 +31,7 @@ const plugin = () => {
             {/* product 2 - start */}
             <Fade direction="left" cascade damping={0.09} triggerOnce={true}><div>
               <Link
-                href="/user/plugin/plugin-product-manager"
+                href="/user/plugin-details/rating-product"
                 className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg"
               >
                 <img
@@ -42,7 +42,7 @@ const plugin = () => {
                 />
                 <div className="relative flex w-full flex-col rounded-lg bg-voilet-300 p-4 text-center">
                   <span className="text-lg font-bold text-white lg:text-xl">
-                    Live Chat Plugin
+                    Rating Plugin
                   </span>
                 </div>
               </Link>
@@ -51,7 +51,7 @@ const plugin = () => {
             {/* product 3 - start */}
             <Fade direction="right" cascade damping={0.09} triggerOnce={true}><div>
               <Link
-                href="/user/plugin/plugin-product-manager"
+                href="/user/plugin-details/manage-product"
                 className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg"
               >
                 <img
@@ -62,7 +62,7 @@ const plugin = () => {
                 />
                 <div className="relative flex w-full flex-col rounded-lg bg-voilet-300 p-4 text-center">
                   <span className="text-lg font-bold text-white lg:text-xl">
-                    Rating And Review Plugin
+                    Browse Product Plugin
                   </span>
                 </div>
               </Link>
@@ -82,7 +82,7 @@ const plugin = () => {
                 />
                 <div className="relative flex w-full flex-col rounded-lg bg-voilet-300 p-4 text-center">
                   <span className="text-lg font-bold text-white lg:text-xl">
-                    Email Marketing Plugin
+                    Manage Product Plugin
                   </span>
                 </div>
               </Link>
