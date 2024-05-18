@@ -4,6 +4,10 @@ import App from './App.jsx'
 import './index.css'
 import BrowseProduct from './BrowseProduct.jsx';
 import ProductManager from './ProductManager.jsx';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ProductDetails from './ProductDetails.jsx';
+import { CartProvider } from './Context/Cartcontext.jsx';
+import Cart from './Cartpage.jsx';
 
 // ReactDOM.createRoot(document.getElementById('root')).render(
 //   <React.StrictMode>
@@ -16,7 +20,15 @@ const browseElement = document.getElementById('browse-plugin');
 if (browseElement) {
   ReactDOM.createRoot(browseElement)
     .render(
-      <BrowseProduct />
+      <BrowserRouter>
+        <CartProvider>
+          <Routes>
+            <Route element={<BrowseProduct />} path='/' />
+            <Route element={<ProductDetails />} path='productdetails/:id' />
+            <Route element={<Cart />} path='cart' />
+          </Routes>
+        </CartProvider>
+      </BrowserRouter>
     )
 }
 const manageElement = document.getElementById('manage-plugin');

@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const BrowseProduct = () => {
 
@@ -28,12 +29,12 @@ const BrowseProduct = () => {
       <>
         {/* product - start */}
         <div>
-          <a
-            href="#"
+          <Link
+            to={"/productdetails/" + plugin._id}
             className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg">
             <div
-              style={{backgroundImage: `url("http://localhost:5000/${plugin.images[0]}")`}}
-            className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+              style={{ backgroundImage: `url("http://localhost:5000/${plugin.images[0]}")` }}
+              className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
             ></div>
             <div className="relative flex w-full flex-col rounded-lg bg-voilet-300 text-center">
               <span className="text-lg font-bold text-white lg:text-xl">
@@ -43,7 +44,7 @@ const BrowseProduct = () => {
                 {plugin.price}
               </span>
             </div>
-          </a>
+          </Link>
         </div>
         {/* product - end */}
       </>
@@ -60,9 +61,9 @@ const BrowseProduct = () => {
               Plugins
             </h2>
           </div>
-            <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4">
-              {displayPlugins()}
-            </div>
+          <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4">
+            {displayPlugins()}
+          </div>
         </div>
       </div>
 

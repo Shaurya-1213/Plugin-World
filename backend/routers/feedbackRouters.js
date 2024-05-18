@@ -12,25 +12,5 @@ feedbackRouter.post('/add',(req,res)=>{
     res.status(500).json(err);
   });
 });
-  
-//getall
-feedbackRouter.get('/getall',(req,res)=>{
-  res.send('Response from user getall');
-});
-
-//getbyid
-feedbackRouter.get('/getbyid',(req,res)=>{
-  res.send('Response from user getbyid');
-});
-
-//delete
-feedbackRouter.get('/delete',(req,res)=>{
-  res.send('Response from user delete');
-});
-
-//update 
-feedbackRouter.get('/update',(req,res)=>{
-  res.send('Response from user update');
-});
 
 module.exports = feedbackRouter;
