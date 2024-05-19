@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import useCartContext from './Context/Cartcontext';
 
 const ProductDetails = () => {
@@ -31,8 +31,9 @@ const ProductDetails = () => {
 
   const displayPlugins = () => {
     if (productDetails !== null) {
-      return <div className="bg-white py-6 sm:py-8 lg:py-12">
+      return <div className="bg-indigo-100 py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-lg px-4 md:px-8">
+          <h2 className="text-center text-2xl font-bold text-gray-900 sm:text-3xl mt-5 mb-16">Plugins</h2>
           <div className="grid gap-8 md:grid-cols-2">
             {/* images - start */}
             <div className="space-y-4">
@@ -43,9 +44,6 @@ const ProductDetails = () => {
                   alt="Photo by Himanshu Dewangan"
                   className="h-full w-full object-cover object-center"
                 />
-                <span className="absolute left-0 top-0 rounded-br-lg bg-red-500 px-3 py-1.5 text-sm uppercase tracking-wider text-white">
-                  sale
-                </span>
               </div>
             </div>
             {/* images - end */}
@@ -104,12 +102,12 @@ const ProductDetails = () => {
                   </svg>
                 </div>
                 <span className="ml-2 text-sm text-gray-500">4.2</span>
-                <a
+                <Link
                   href="#"
                   className="ml-4 text-sm font-semibold text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700"
                 >
                   view all 47 reviews
-                </a>
+                </Link>
               </div>
               {/* rating - end */}
               
@@ -133,6 +131,28 @@ const ProductDetails = () => {
                 >
                   {isInCart(productDetails) ? 'Added to Cart' : 'Add to Cart'}
                 </button>
+                <Link to="/cart">
+                <svg  xmlns="http://www.w3.org/2000/svg"  
+                  width="38"  
+                  height="38"  
+                  viewBox="0 0 24 24"  
+                  fill="none"  
+                  stroke="currentColor"  
+                  stroke-width="2"  
+                  stroke-linecap="round"  
+                  stroke-linejoin="round"  
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart">
+                  <path 
+                  stroke="none" 
+                  d="M0 0h24v24H0z" 
+                  fill="none"/>
+                  <path 
+                  d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                  <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                  <path d="M17 17h-11v-14h-2" />
+                  <path d="M6 5l14 1l-1 7h-13" />
+                  </svg>
+                  </Link>
               </div>
               {/* buttons - end */}
               {/* description - start */}
@@ -140,7 +160,7 @@ const ProductDetails = () => {
                 <div className="mb-3 text-lg font-semibold text-gray-800">
                   Description
                 </div>
-                <p className="text-gray-500">
+                <p className="text-gray-500 mb-16">
                 {productDetails.description}
                 </p>
               </div>
