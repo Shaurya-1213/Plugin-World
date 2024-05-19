@@ -44,34 +44,6 @@ const Cart = () => {
     );
     return cartItems.map((item) => (
       <div key={item._id} className=" mb-4">
-
-
-
-        <div className="row mb-4 ">
-          <div className='flex'>
-          <div className="col-md-3 col-lg-3 col-xl-2">
-            <div className="">
-              <div className="input-group ">
-              <div className="col-md-3 col-lg-3 col-xl-3">
-            <h6 className="text-muted"></h6>
-            <h6 className="text-black mb-0">{item.brand}</h6>
-          </div>
-                
-
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-            <h2 className="my-2"> </h2>
-          </div>
-          <div className="col-md-1 col-lg-1 col-xl-1 text-end">
-            <a href="#!" className="text-muted">
-              <i className="fas fa-times" />
-            </a>
-          </div>
-        </div>
-        </div>
-        <hr className="my-4" />
         <div className="flex flex-col items-center justify-center w-full max-w-sm mx-auto">
   <img
     className="w-full h-64 bg-gray-300 bg-center bg-cover rounded-lg shadow-md"

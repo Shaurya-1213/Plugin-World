@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ProductDetails from './ProductDetails.jsx';
 import { CartProvider } from './Context/Cartcontext.jsx';
 import Cart from './Cartpage.jsx';
+import ReviewProduct from './ReviewProduct.jsx';
 
 // ReactDOM.createRoot(document.getElementById('root')).render(
 //   <React.StrictMode>
@@ -26,6 +27,7 @@ if (browseElement) {
             <Route element={<BrowseProduct />} path='/' />
             <Route element={<ProductDetails />} path='productdetails/:id' />
             <Route element={<Cart />} path='cart' />
+            <Route element={<ReviewProduct />} path='reviewproduct' />
           </Routes>
         </CartProvider>
       </BrowserRouter>
