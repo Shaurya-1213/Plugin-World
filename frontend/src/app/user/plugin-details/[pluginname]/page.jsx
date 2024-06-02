@@ -84,7 +84,7 @@ const PluginProductManager = () => {
     <div>
       <>
         {/* component */}
-
+      <div className='bg-voilet-400'>
         <div className="container relative mx-auto">
           <div className="relative pt-16 pb-32 flex content-center items-center justify-center"
             style={{
@@ -136,13 +136,10 @@ const PluginProductManager = () => {
 
         <div className=" w-full md:w-4/12 mb-10 px-4 mx-auto text-center z-40">
           <Fade direction='up' triggerOnce={true}>
-            <img
-              src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?auto=format&q=75&fit=crop&w=1000"
-              loading="lazy"
-              alt="Photo by Fakurian Design"
-              style={{ height: "55vh", width: "600px" }}
-              className="block mx-auto rounded-lg -mt-48 z-50 object-cover object-center"
-            />
+            <div
+            style={{ backgroundImage: `url("http://localhost:5000/${pluginInfo[pluginname].images}")`, height: "55vh", width: "600px" }}
+            className="block mx-auto rounded-lg -mt-48 z-50 object-cover object-center"
+            ></div>
           </Fade>
         </div>
 
@@ -191,6 +188,7 @@ const PluginProductManager = () => {
           rel="stylesheet"
         />
         {/* hero section */}
+        </div>
       </>
 
     </div>

@@ -53,6 +53,41 @@ const BrowseProduct = () => {
 
   return (
     <>
+    <div className="pt-0 bg-voilet">
+  <header className=" border-b">
+            {/* nav - start */}
+            <nav className="hidden gap-12 lg:flex text-black 2xl:ml-16 p-4">
+              <Link to="./AddProduct" className="text-lg font-semibold">
+                Add Plugin
+              </Link>
+              <Link
+                to="/"
+                className="text-lg font-semibold"
+              >
+                Browse Plugins
+              </Link>
+              <Link
+                to="/ReviewProduct"
+                className="text-lg font-semibold "
+              >
+                Review
+              </Link>
+              <Link
+                to="/ProductManager"
+                className="text-lg font-semibold "
+              >
+                Product Manager
+              </Link>
+              <Link
+                to="/ProductDetails"
+                className="text-lg font-semibold "
+              >
+                Product Details
+              </Link>
+            </nav>
+            {/* nav - end */}
+        </header>
+  </div>
       <div className="bg-white py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           {/* text - start */}

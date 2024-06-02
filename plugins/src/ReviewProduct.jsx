@@ -71,7 +71,7 @@ const ReviewProduct = () => {
     <div>
       <>
         {/* Hire Us */}
-        <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto align-center">
           {/* Grid */}
           <div className="grid md:grid-cols-2 items-center gap-12">
 
@@ -209,7 +209,7 @@ const ReviewProduct = () => {
                   <div className="mt-6 grid">
                     <button
                       type="submit"
-                      className="w-full bg-darkblue text-white p-2 rounded-md hover:bg-gray-800 focus:outline-none focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300"
+                      className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-gray-800 focus:outline-none focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300"
                     >
                       Submit
                     </button>

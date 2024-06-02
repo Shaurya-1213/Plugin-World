@@ -118,7 +118,6 @@ const ProductDetails = () => {
                   <span className="text-xl font-bold text-gray-800 md:text-2xl">
                   {productDetails.price}
                   </span>
-                  <span className="mb-0.5 text-red-500 line-through">₹599</span>
                 </div>
               </div>
               {/* price - end */}
@@ -177,6 +176,7 @@ const ProductDetails = () => {
 
   return (
     <>
+    
       {displayPlugins()}
     </>
   )
