@@ -28,8 +28,9 @@ const ProductManager = () => {
       <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
         <th
           scope="row"
-          className="w-16 h-16 rounded-full aspect-square"
-          style={{ backgroundImage: `url("http://localhost:5000/${plugin.images[0]}")` }}>
+          className='text-center'
+        >
+          <img className="h-16 block m-auto" src={`http://localhost:5000/${plugin.images[0]}`} alt="" />
         </th>
         <td className="px-6 py-4">{plugin.title}</td>
         <td className="px-6 py-4">{plugin.brand}</td>
@@ -44,8 +45,6 @@ const ProductManager = () => {
 
   return (
     <div>
-      <AddProduct />
-
       <h1>Welcome to the product</h1>
       <div>
         <div className="mt-24 mx-10 relative overflow-x-auto shadow-md sm:rounded-lg">

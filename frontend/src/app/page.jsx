@@ -44,9 +44,9 @@ const Home = () => {
   return (  
     <>
     {/*Hero*/}
-  <div className="pt-0 bg-voilet">
+  <div className="pt-0">
   <header className=" border-b">
-          <div className="mx-auto flex max-w-screen-2xl items-center justify-between px-4 md:px-8">
+          <div className="mx-auto bg-voilet-400 mb-0 mt-10 mx-10 rounded flex max-w-screen-2xl items-center justify-between px-4 md:px-8">
             {/* logo - start */}
             <div className='flex'>
             <Link href="/"> 
@@ -84,7 +84,6 @@ const Home = () => {
               </Link>
             </nav>
             {/* nav - end */}
-
           </div>
         </header>
     <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
@@ -104,7 +103,7 @@ const Home = () => {
       {/*Right Col end */}
     </div>
   </div>
-  <div className="relative mt-12 lg:-mt-24">
+  <div className="relative mt-0 lg:-mt-24">
     <svg
       viewBox="0 0 1428 174"
       version="1.1"
@@ -158,11 +157,11 @@ const Home = () => {
             {/* product - start */}
             <Fade direction="left" cascade damping={0.1} triggerOnce={true}> <div>
             <Link
-                href="#"
+                href="#signup-for-plugin"
                 className="group relative mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
               >
                 <img
-                  src="https://ideogram.ai/api/images/direct/uuhwRIiORqynsrRqcEcKrQ.png"
+                  src="/cart.webp"
                   loading="lazy"
                   alt="Cart Plugin"
                   className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
@@ -171,7 +170,7 @@ const Home = () => {
               <div className="flex items-start justify-between gap-2 px-2">
                 <div className="flex flex-col">
                   <Link
-                    href="#"
+                    href="#signup-for-plugin"
                     className="text-center text-lg font-bold text-black transition duration-100 hover:text-gray-500 lg:text-xl"
                   >
                     Cart Plugin
@@ -183,22 +182,22 @@ const Home = () => {
             {/* product - start */}
             <Fade direction="left" cascade damping={0.09} triggerOnce={true}><div>
               <Link
-                href="#"
+                href="#signup-for-plugin"
                 className="group relative mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
               >
                 <img
-                  src="https://ideogram.ai/api/images/direct/zvFeH5VvQv2JXievsEdoqA.jpg"
+                  src="/rating.webp"
                   loading="lazy"
-                  alt="Live Chat Plugin"
+                  alt="Rating Plugin"
                   className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 />
               </Link>
               <div className="flex items-start justify-between gap-2 px-2">
                 <div className="flex flex-col">
                   <Link
-                    href="#"
+                    href="#signup-for-plugin"
                     className="text-lg font-bold text-black transition duration-100 hover:text-gray-500 lg:text-xl"
-                  > Live Chat Plugin
+                  > Rating Plugin
                   </Link>
                 </div>
               </div>
@@ -207,22 +206,22 @@ const Home = () => {
             {/* product - start */}
             <Fade direction="right" cascade damping={0.09} triggerOnce={true}><div>
               <Link
-                href="#"
+                href="#signup-for-plugin"
                 className="group relative mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
               >
                 <img
-                  src="https://ideogram.ai/api/images/direct/ebwCrn1dRymZmOLeyST-rg.png"
+                  src="/browse.webp"
                   loading="lazy"
-                  alt="Pament Gateway Plugin"
+                  alt="Browse Product Plugin"
                   className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 />
               </Link>
               <div className="flex items-start justify-between gap-2 px-2">
                 <div className="flex flex-col">
                   <Link
-                    href="#"
+                    href="#signup-for-plugin"
                     className="text-lg font-bold text-black transition duration-100 hover:text-gray-500 lg:text-xl"
-                  >Payment Gateway Plugin
+                  >Browse Product Plugin
                   </Link>
                 </div>
               </div>
@@ -231,22 +230,22 @@ const Home = () => {
             {/* product - start */}
             <Fade direction="right" cascade damping={0.1} triggerOnce={true}><div>
               <Link
-                href="#"
+                href="#signup-for-plugin"
                 className="group relative mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
               >
                 <img
-                  src="https://ideogram.ai/api/images/direct/RvlZwyPwQDGEuiIkiQ7vhQ.png"
+                  src="/manage.webp"
                   loading="lazy"
-                  alt="Browse Plugin"
+                  alt="Manage Product Plugin"
                   className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 />
               </Link>
               <div className="flex items-start justify-between gap-2 px-2">
                 <div className="flex flex-col">
                   <Link
-                    href="#"
+                    href="#signup-for-plugin"
                     className="text-lg font-bold text-black transition duration-100 hover:text-gray-500 lg:text-xl"
-                  >Browse Plugin
+                  >Manage Product Plugin
                   </Link>
                 </div>
               </div>
@@ -300,90 +299,8 @@ const Home = () => {
       <div className="bg-voilet-100 py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
         <Fade direction="up"><h2 className="mb-8 text-center text-2xl font-bold text-black md:mb-12 lg:text-3xl">
-            Best Plugin Collection for your E-Commerce website
-          </h2></Fade>
-          <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4">
-            {/* product 1 - start */}
-            <Fade direction="left" cascade damping={0.1} triggerOnce={true}><div>
-              <Link
-                href="#"
-                className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg"
-              >
-                <img
-                  src="https://aira.net/wp-content/uploads/2021/08/best-wordpress-seo-plugins-1024x684.png"
-                  loading="lazy"
-                  alt="Photo by Austin Wade"
-                  className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-                />
-                <div className="relative flex w-full flex-col rounded-lg bg-voilet-300 p-4 text-center">
-                  <span className="text-lg font-bold text-white lg:text-xl">
-                    SEO Plugin
-                  </span>
-                </div>
-              </Link>
-            </div></Fade>
-            {/* product - end */}
-            {/* product 2 - start */}
-            <Fade direction="left" cascade damping={0.09} triggerOnce={true}><div>
-              <Link
-                href="#"
-                className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg"
-              >
-                <img
-                  src="https://ps.w.org/wp-live-chat-software-for-wordpress/assets/screenshot-4.png?rev=2659126"
-                  loading="lazy"
-                  alt="Photo by engin akyurt"
-                  className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-                />
-                <div className="relative flex w-full flex-col rounded-lg bg-voilet-300 p-4 text-center">
-                  <span className="text-lg font-bold text-white lg:text-xl">
-                    Live Chat Plugin
-                  </span>
-                </div>
-              </Link>
-            </div></Fade>
-            {/* product - end */}
-            {/* product 3 - start */}
-            <Fade direction="right" cascade damping={0.09} triggerOnce={true}><div>
-              <Link
-                href="#"
-                className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg"
-              >
-                <img
-                  src="https://wpsocialninja.com/wp-content/uploads/2022/07/Facebook-review-plugin-for-WordPress-01-1-1.jpg"
-                  loading="lazy"
-                  alt="Photo by Austin Wade"
-                  className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-                />
-                <div className="relative flex w-full flex-col rounded-lg bg-voilet-300 p-4 text-center">
-                  <span className="text-lg font-bold text-white lg:text-xl">
-                    Rating And Review Plugin
-                  </span>
-                </div>
-              </Link>
-            </div></Fade>
-            {/* product - end */}
-            {/* product 4 - start */}
-            <Fade direction="right" cascade damping={0.1} triggerOnce={true}><div>
-              <Link
-                href="#"
-                className="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg"
-              >
-                <img
-                  src="https://miro.medium.com/v2/resize:fit:1400/1*Ur6JZVnBL_oPI4-y96IUvg.jpeg"
-                  loading="lazy"
-                  alt="Photo by Austin Wade"
-                  className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-                />
-                <div className="relative flex w-full flex-col rounded-lg bg-voilet-300 p-4 text-center">
-                  <span className="text-lg font-bold text-white lg:text-xl">
-                    Email Marketing Plugin
-                  </span>
-                </div>
-              </Link>
-            </div></Fade>
-            {/* product - end */}
-          </div>
+            4 Easy Steps To Use Any Plugin
+          </h2></Fade> 
         </div>
       </div>
       {/* collections - end */}

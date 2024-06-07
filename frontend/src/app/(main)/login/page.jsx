@@ -8,10 +8,8 @@ import { Fade } from 'react-awesome-reveal';
 import Link from 'next/link';
 
 const LoginSchema = Yup.object().shape({
-  username: Yup.string().min(4, 'Enter Full Name').required('Required*'),
-  password: Yup.string().min(6, 'Password should be at least  6 characters').required('Required*')
-    .matches(/[a-z]/, 'Must Use Lowercase').matches(/[A-Z]/, 'Must Use Uppercase').matches(/[0-9]/, 'Must Use Number')
-    .matches(/\w/, 'Must Use Special Character'),
+  username: Yup.string().required('Required*'),
+  password: Yup.string().required('Required*')
 });
 
 const Login = () => {

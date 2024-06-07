@@ -1,16 +1,37 @@
 const express = require('express');
-const feedbackRouter = express.Router();
-const Model = require('../models/feedbackModel')
+const router = express.Router();
+const Model = require('../models/feedbackModel');
 
-feedbackRouter.post('/add',(req,res)=>{
-  console.log(req.body);
-  new Model(req.body).save()
-  .then((result) => {
-    res.status(200).json(result);
-  }).catch((err) => {
-    console.log(err);
-    res.status(500).json(err);
-  });
+router.post('/add', (req, res) => {
+    console.log(req.body);
+    new Model(req.body).save()
+        .then((result) => {
+            res.status(200).json(result);
+        }).catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 });
 
-module.exports = feedbackRouter;
+router.put('/update/:id', (req, res) => {
+    Model.findByIdAndUpdate(req.params.id, req.body, {new: true}).populate('profile')
+    .then((result) => {
+        console.log(result);
+        res.status(200).json(result);
+    }).catch((err) => {
+        res.status(500).json(err);
+    });
+});
+
+// getall
+router.get('/getall', (req, res) => {
+    Model.find().populate('user')
+        .then((result) => {
+            res.status(200).json(result);
+        }).catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+module.exports = router;

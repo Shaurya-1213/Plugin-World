@@ -71,18 +71,17 @@ const ReviewProduct = () => {
     <div>
       <>
         {/* Hire Us */}
-        <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto align-center">
+        <div className="max-w-[40rem] px-4 py-10  sm:px-6 lg:px-8 lg:py-14 mx-auto align-center">
           {/* Grid */}
-          <div className="grid md:grid-cols-2 items-center gap-12">
+          <div className="">
 
             {/* End Col */}
             <div className="relative">
               {/* Card */}
-              <div className="flex flex-col border rounded-xl p-4 bg-white sm:p-6 lg:p-10 dark:border-neutral-700">
+              <div className="flex flex-col border shadow-xl rounded-xl p-4 bg-white sm:p-6 lg:p-10 dark:border-neutral-700">
                 <h2 className="text-xl font-semibold text-black ">
                   Fill in the form
                 </h2>
-
                 <StarRatings
                   rating={rating}
                   starRatedColor="blue"

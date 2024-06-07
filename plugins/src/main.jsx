@@ -9,6 +9,7 @@ import ProductDetails from './ProductDetails.jsx';
 import { CartProvider } from './Context/Cartcontext.jsx';
 import Cart from './Cartpage.jsx';
 import ReviewProduct from './ReviewProduct.jsx';
+import AddProduct from './AddProduct.jsx';
 
 // ReactDOM.createRoot(document.getElementById('root')).render(
 //   <React.StrictMode>
@@ -26,8 +27,10 @@ if (browseElement) {
           <Routes>
             <Route element={<BrowseProduct />} path='/' />
             <Route element={<ProductDetails />} path='productdetails/:id' />
+            <Route element={<AddProduct />} path='addproduct' />
             <Route element={<Cart />} path='cart' />
             <Route element={<ReviewProduct />} path='reviewproduct' />
+            <Route element={<ProductManager />} path='ProductManager' />
           </Routes>
         </CartProvider>
       </BrowserRouter>
@@ -40,6 +43,7 @@ if (manageElement) {
       <ProductManager />
     )
 }
+
 const cartElement = document.getElementById('cart-plugin');
 if (cartElement) {
   ReactDOM.createRoot(cartElement)
