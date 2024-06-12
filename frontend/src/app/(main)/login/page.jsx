@@ -60,7 +60,7 @@ const Login = () => {
   return (
     <div>
       <>
-        <div className="flex h-screen bg-voilet-50 ">
+        <div className="flex h-screen bg-voilet-100 ">
           <div className="w-full bg-gray-100 lg:w-1/2 flex items-center justify-center">
            <Fade direction='left'>
             <div className="max-w-md w-full p-6">

@@ -7,80 +7,38 @@ import { CopyBlock, dracula } from 'react-code-blocks';
 
 const pluginInfo = {
   "manage-product": {
-    banner: '',
+    banner: '/manage1.webp',
     code: `<div id="manage-plugin"></div>
     <script src="http://localhost:5000/main.js"></script>`,
-    title: 'Product Manager',
-    description: 'Product Manager Description',
-    price: "29"
+    title: 'Manage Product Plugin',
+    description: 'Introducing React Manage Product Plugin: an efficient and customizable solution for e-commerce websites. Streamline product management with features for adding, editing, and organizing product listings. Enhance operational efficiency with a user-friendly interface, real-time updates, and seamless integration, making inventory management simpler and more effective.',
   },
   "browse-product": {
-    banner: '',
+    banner: '/browse1.webp',
     code: `<div id="browse-plugin"></div>
     <script src="http://localhost:5000/main.js"></script>`,
-    title: 'Browse Product',
-    description: 'Product Manager Description',
-    price: "29"
+    title: 'Browse Product Plugin',
+    description: 'Introducing React Browse Product Plugin: an intuitive and customizable solution for e-commerce websites. Seamlessly integrate product browsing features with advanced filtering, sorting options, and dynamic displays. Enhance user experience with a responsive design that allows customers to effortlessly explore your product catalog, leading to increased engagement and higher sales.',
   },
   "cart-product": {
-    banner: '/admin.jpg',
+    banner: '/cart1.webp',
     code: `<div id="cart-plugin"></div>
     <script src="http://localhost:5000/main.js"></script>`,
-    title: 'Cart',
-    description: 'Cart Description',
-    price: "29"
+    title: 'Cart Plugin',
+    description: 'Introducing React Cart Plugin: a powerful and flexible solution for e-commerce websites. Easily integrate seamless cart functionality with real-time updates, dynamic product listings, and smooth checkout processes. Enhance your user experience with customizable features and responsive design, ensuring a streamlined and efficient shopping experience for your customers.',
   },
   "rating-product": {
-    banner: '',
+    banner: '/rating1.webp',
     code: `<div id="rating-plugin"></div>
     <script src="http://localhost:5000/main.js"></script>`,
-    title: 'Rating',
-    description: 'Rating Description',
-    price: "29"
+    title: 'Rating Plugin',
+    description: 'Introducing React Rating Plugin: a versatile and user-friendly solution for e-commerce websites. Effortlessly integrate dynamic rating functionality, allowing customers to rate products and leave feedback. Customizable and responsive, this plugin enhances user engagement and trust, providing valuable insights for both shoppers and site owners.',
   }
 };
 
 const PluginProductManager = () => {
 
   const { pluginname } = useParams();
-
-  // const fetchPlugins = () => {
-  //   fetch('http://localhost:5000/product/getall')
-  //     .then((response) => {
-  //       return response.json()
-  //     })
-  //     .then((data) => {
-  //       console.log(data);
-  //       setPluginsList(data);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }
-
-  // console.log(pluginInfo[pluginname]);
-
-  // useEffect(() => {
-  //   fetchPlugins();
-  // }, []);
-
-  // const displayPlugins = () => {
-  //   return pluginsList.map(Plugins => (
-
-  //     <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-  //       <th
-  //         scope="row"
-  //         className="font-medium text-black whitespace-nowrap"
-  //       >
-  //         {plugins._id}
-  //       </th>
-  //       <td className="px-6 py-4">{plugins.username}</td>
-  //       <td className="px-6 py-4">{plugins.email}</td>
-  //       <td className="px-6 py-4">{plugins.createdAt}</td>
-  //     </tr>
-  //   ))
-  // }
-
 
   return (
     <div>
@@ -136,7 +94,7 @@ const PluginProductManager = () => {
           <div className=" w-full md:w-4/12 mb-10 px-4 mx-auto text-center z-40">
             <Fade direction='up' triggerOnce={true}>
               <div
-                style={{ backgroundImage: `url("http://localhost:5000/${pluginInfo[pluginname].banner}")`, height: "45vh", width: "500px" }}
+                style={{ backgroundImage: `url("http://localhost:5000/${pluginInfo[pluginname].banner}")`, height: "45vh", width: "500px" , backgroundSize: "cover" }}
                 className="block mx-auto rounded-lg -mt-48 z-50 object-cover object-center"
               ></div>
             </Fade>
@@ -166,9 +124,7 @@ const PluginProductManager = () => {
                 {/* image - start */}
                 <div className="order-first h-48 w-full bg-voilet-400 sm:order-none sm:h-auto sm:w-1/2 lg:w-3/5">
                   <CopyBlock
-                    text={`
-<div id="browse-plugin"></div>
-<script src="http://localhost:5000/main.js"></script>
+                    text={`${pluginInfo[pluginname].code}
                   `}
                     language={'html'}
                     showLineNumbers={true}

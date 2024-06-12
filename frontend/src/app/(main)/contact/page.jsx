@@ -7,7 +7,7 @@ const Contact = () => {
     <div>
       <>
   {/* component */}
-  <div className="py-4 bg-voilet-900 text-white">
+  <div className="py-4 bg-voilet-600 text-white">
     <div className="container mx-auto flex flex-col md:flex-row my-12 md:my-36 ">
       <div className="flex flex-col w-full lg:w-2/5 p-8 ">
       <Fade direction='left'>

@@ -39,13 +39,35 @@ const ProductManager = () => {
         <td className="px-6 py-4">{plugin.price}</td>
         <td className="px-6 py-4">{plugin.offer}</td>
         <td className="px-6 py-4">{plugin.description}</td>
+        <td className="px-6 py-4">
+          <button onClick={() => deleteProduct(plugin._id)}>
+            Delete
+          </button>
+        </td>
       </tr>
     ))
+  }
+
+  const deleteProduct = (id) => {
+    fetch(`http://localhost:5000/product/delete/${id}`, {
+      method: 'DELETE'
+    })
+      .then((response) => {
+        return response.json()
+      })
+      .then((data) => {
+        console.log(data);
+        fetchPlugins();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   return (
     <div>
       <h1>Welcome to the product</h1>
+      <AddProduct />
       <div>
         <div className="mt-24 mx-10 relative overflow-x-auto shadow-md sm:rounded-lg">
           <div className="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4">

@@ -27,23 +27,24 @@ const ManageUser = () => {
   const displayUsers = () => {
     return userList.map(user => (
       
-      <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+      <tr className="bg-white border-b ">
         <th
           scope="row"
-          className="font-medium text-black whitespace-nowrap"
+          className="px-6 font-medium text-black whitespace-nowrap"
         >
           {user._id}
         </th>
-        <td className="px-6 py-4">{user.username}</td>
-        <td className="px-6 py-4">{user.email}</td>
-        <td className="px-6 py-4">{user.createdAt}</td>
+        <td className="px-6 py-4 text-black">{user.username}</td>
+        <td className="px-6 py-4 text-black">{user.email}</td>
+        <td className="px-6 py-4 text-black">{user.createdAt}</td>
+        <td className="px-6 py-4 text-black"><button className='bg-red text-white p-3 rounded-lg'>Delete</button></td>
       </tr>
     ))
   }
 
   return (
     <div>
-      <div className="mt-24 ml-72 mr-10 relative overflow-x-auto shadow-md sm:rounded-lg">
+      <div className=" mt-24 ml-72 mr-10 relative overflow-x-auto shadow-md sm:rounded-lg">
         <div className="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4">
           <div>
             <button
@@ -185,13 +186,13 @@ const ManageUser = () => {
               </ul>
             </div>
           </div>
-          <label htmlFor="table-search" className="sr-only">
+          <label htmlFor="table-search" className="sr-only bg-white">
             Search
           </label>
           <div className="relative">
-            <div className="absolute inset-y-0 left-0 rtl:inset-r-0 rtl:right-0 flex items-center ps-3 pointer-events-none">
+            <div className="absolute  inset-y-0 left-0 rtl:inset-r-0 rtl:right-0 flex items-center ps-3 pointer-events-none">
               <svg
-                className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                className="w-5 h-5 bg-white text-black"
                 aria-hidden="true"
                 fill="currentColor"
                 viewBox="0 0 20 20"
@@ -207,7 +208,7 @@ const ManageUser = () => {
             <input
               type="text"
               id="table-search"
-              className="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block bg-white text-black p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Search for items"
             />
           </div>

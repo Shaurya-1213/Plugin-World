@@ -179,6 +179,7 @@ const UserProfile = () => {
               <Fade direction='left' triggerOnce={true}>
                 <img
                   alt="..."
+                  style={{height:'550px'}}
                   className="max-w-full rounded-lg shadow-lg"
                   src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
                 /></Fade>

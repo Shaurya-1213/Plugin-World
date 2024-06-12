@@ -46,11 +46,11 @@ const Feedback = () => {
   return (
     <div><>
       {/* Contact */}
-      <div className="bg-neutral-900">
-        <div className="max-w-5xl px-4 xl:px-0 py-10 lg:py-20 mx-auto">
+      <div className="bg-voilet-400 m-0 pt-48">
+        <div className="max-w-5xl px-4 mx-auto">
           {/* Title */}
-          <div className="max-w-3xl mb-10 lg:mb-14">
-            <h2 className="text-white font-semibold text-2xl md:text-4xl md:leading-tight">
+          <div className="max-w-3xl mb-10 ">
+            <h2 className="text-black font-semibold text-2xl md:text-4xl md:leading-tight">
               Feedback
             </h2>
 
@@ -76,7 +76,7 @@ const Feedback = () => {
                       id="feedback"
                       onChange={feedbackForm.handleChange}
                       value={feedbackForm.values.feedback}
-                      className="peer p-4 block w-full bg-neutral-800 border-transparent rounded-lg text-sm text-white placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
+                      className="peer p-4 block w-full bg-white border-transparent rounded-lg text-sm text-black placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
           focus:pt-6
           focus:pb-2
           [&:not(:placeholder-shown)]:pt-6
@@ -87,7 +87,7 @@ const Feedback = () => {
                     ></textarea>
                     <label
                       htmlFor="hs-tac-input-name"
-                      className="absolute top-0 start-0 p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                      className="absolute top-0 start-0 p-4 h-full text-black text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
             peer-focus:text-xs
             peer-focus:-translate-y-1.5
             peer-focus:text-neutral-400
@@ -100,7 +100,7 @@ const Feedback = () => {
                   </div>
                 </div>
                 <div className="mt-2">
-                  <p className="text-xs text-neutral-500">
+                  <p className="text-xs text-red">
                     All fields are required
                   </p>
                   <p className="mt-5">
@@ -149,8 +149,8 @@ const Feedback = () => {
                   <circle cx={12} cy={10} r={3} />
                 </svg>
                 <div className="grow">
-                  <h4 className="text-white font-semibold">Our address:</h4>
-                  <address className="mt-1 text-neutral-400 text-sm not-italic">
+                  <h4 className="text-black font-semibold">Our address:</h4>
+                  <address className="mt-1 text-black text-sm not-italic">
                     300 Bath Street, Tay House
                     <br />
                     Glasgow G2 4JR, United Kingdom
@@ -161,7 +161,7 @@ const Feedback = () => {
               {/* Item */}
               <div className="flex gap-x-5">
                 <svg
-                  className="flex-shrink-0 size-6 text-neutral-500"
+                  className="flex-shrink-0 size-6 text-black"
                   xmlns="http://www.w3.org/2000/svg"
                   width={24}
                   height={24}
@@ -176,9 +176,9 @@ const Feedback = () => {
                   <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10" />
                 </svg>
                 <div className="grow">
-                  <h4 className="text-white font-semibold">Email us:</h4>
+                  <h4 className="text-black font-semibold">Email us:</h4>
                   <a
-                    className="mt-1 text-neutral-400 text-sm"
+                    className="mt-1 text-black text-sm"
                     href="#mailto:example@site.co"
                     target="_blank"
                   >
@@ -190,7 +190,7 @@ const Feedback = () => {
               {/* Item */}
               <div className="flex gap-x-5">
                 <svg
-                  className="flex-shrink-0 size-6 text-neutral-500"
+                  className="flex-shrink-0 size-6 text-black"
                   xmlns="http://www.w3.org/2000/svg"
                   width={24}
                   height={24}
@@ -205,14 +205,14 @@ const Feedback = () => {
                   <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
                 </svg>
                 <div className="grow">
-                  <h4 className="text-white font-semibold">We're hiring</h4>
-                  <p className="mt-1 text-neutral-400">
+                  <h4 className="text-black font-semibold">We're hiring</h4>
+                  <p className="mt-1 text-black">
                     We're thrilled to announce that we're expanding our team and
                     looking for talented individuals like you to join us.
                   </p>
-                  <p className="mt-2">
+                  <p className="mt-8">
                     <a
-                      className="group inline-flex items-center gap-x-2 font-medium text-sm text-[#ff0] decoration-2 hover:underline focus:outline-none focus:underline"
+                      className="group inline-flex items-center gap-x-2 font-medium text-sm text-[#ff0] decoration-2 hover:underline focus:outline-none focus:underline mb-24"
                       href="#"
                     >
                       Job openings

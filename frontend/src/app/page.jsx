@@ -1,17 +1,97 @@
 'use client';
-import React from 'react';
+import React, { useRef , useEffect , useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 import Footer from './footer';
 import { Fade } from "react-awesome-reveal";
 import Link from 'next/link';
+import StarRatings from 'react-star-ratings';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import {Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 const newsLetterSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required*')
 });
 
 const Home = () => {
+  
+  const [feedbackList, setFeedbackList] = useState([]);
+
+  const fetchFeedbacks = () => {
+    fetch('http://localhost:5000/feedback/getall')
+      .then((response) => {
+        response.json()
+          .then((data) => {
+            console.log(data);
+            setFeedbackList(data);
+          })
+      })
+  }
+
+  useEffect(() => {
+    fetchFeedbacks();
+  }, [])
+
+  const carousal = () => {
+    return (
+      <>
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay,Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+      </Swiper>
+    </>
+    )
+  }
+
+  const displayFeedbacks = () => {
+    return feedbackList.map((feedback) => (
+      <div className="flex flex-col items-center gap-4 sm:px-4 md:gap-6 lg:px-8">
+        <StarRatings
+          rating={feedback.rating}
+          starRatedColor="yellow"
+          numberOfStars={5}
+          starDimension="30px"
+          starSpacing="15px"
+        />
+        <div className="text-center text-gray-600">
+          {feedback.feedback}
+        </div>
+        <div className="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
+          <div className="h-12 w-12 overflow-hidden rounded-full bg-gray-100 shadow-lg md:h-14 md:w-14">
+            <img
+              src=""
+              loading="lazy"
+              alt=""
+              className="h-full w-full object-cover object-center"
+            />
+          </div>
+          <div>
+            <div className="text-center text-sm font-bold text-indigo-500 sm:text-left md:text-base">
+              {feedback.user.name}
+            </div>
+          </div>
+        </div>
+      </div>
+    ))
+  }
 
   const newsLetter = useFormik({
     initialValues: {
@@ -44,11 +124,11 @@ const Home = () => {
   return (
     <>
       {/*Hero*/}
-      <div className="pt-0 ">
-        <div className="">
+      <div className="pt-10 bg-voilet-100 ">
+        <div className="mx-16">
 
         <header className='mt-10'>
-            <div style={{width:'90%'}} className="bg-voilet-400/50 fixed top-0 z-50 rounded-xl mb-0 mt-10 flex items-center justify-between">
+            <div style={{width:'90%'}} className="bg-voilet-900/75 fixed top-0 z-50 rounded-xl mb-0 mt-10 flex items-center justify-between">
               {/* logo - start */}
               <div className='flex'>
                 <Link href="/">
@@ -90,10 +170,13 @@ const Home = () => {
         </header>
         </div>
 
-        <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+        <>
+        <div className="bg-voilet-100 mt-24 flex justify-center">
+          <div className="py-24 shadow-2xl max-w-screen-xl m-0 bg-voilet-900 shadow sm:rounded-xl flex justify-center flex-1">
+          <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
           {/*Left Col*/}
           <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-            <Fade direction="down"><h1 className="mt-16 mb-4 text-4xl font-bold text-white ps-10 sm:text-5xl md:mb-8 md:text-6xl">
+            <Fade direction="down"><h1 className="text-4xl mb-4 font-bold text-white ps-10 sm:text-5xl md:text-6xl">
               Find the
               <br />
               perfect fit
@@ -104,46 +187,17 @@ const Home = () => {
             </p></Fade>
           </div>
           {/*Right Col start*/}
+          <div className="h-88 flex flex-col w-88 md:w-2/5 justify-center rounded-xl items-start text-center md:text-left">
+          <img src="/bgone.webp" alt="" />
+           
+          </div>
           {/*Right Col end */}
         </div>
+          </div>
+        </div>
+      </>        
       </div>
-      <div className="relative mt-0 lg:-mt-24">
-        <svg
-          viewBox="0 0 1428 174"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-        >
-          <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
-            <g
-              transform="translate(-2.000000, 44.000000)"
-              fill="#FFFFFF"
-              fillRule="nonzero"
-            >
-              <path
-                d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
-                opacity="0.100000001"
-              />
-              <path
-                d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
-                opacity="0.100000001"
-              />
-              <path
-                d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
-                id="Path-4"
-                opacity="0.200000003"
-              />
-            </g>
-            <g
-              transform="translate(-4.000000, 76.000000)"
-              fill="#D3D3D3"
-              fillRule="nonzero"
-            >
-              <path d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z" />
-            </g>
-          </g>
-        </svg>
-      </div>
+
       {/* product-grid - start */}
       <div className="bg-voilet-100 py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
@@ -305,70 +359,76 @@ const Home = () => {
           <Fade direction="up"><h2 className="mb-8 text-center text-2xl font-bold text-black md:mb-12 lg:text-3xl">
             4 Easy Steps To Use Any Plugin
           </h2></Fade>
+          <div className="grid gap-x-4 gap-y-8 sm:grid-cols-2 md:gap-x-6 lg:grid-cols-7 xl:grid-cols-7">
+            {/* product - start */}
+            <Fade direction="left" cascade damping={0.1} triggerOnce={true}> <div>
+                <img
+                  src="/step1.webp"
+                  loading="lazy"
+                  alt="Cart Plugin"
+                  className="h-48 w-48 rounded-full object-cover object-center transition duration-200 group-hover:scale-110"
+                /></div></Fade>
+            {/* product - end */}
+            <div style={{display:'flex' ,justifyContent:'center',alignItems:'center'}}>
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="88"  height="88"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" /><path d="M16 12l-4 -4" /><path d="M16 12h-8" /><path d="M12 16l4 -4" /></svg>
+            </div>
+            {/* product - start */}
+            <Fade direction="left" cascade damping={2.1} triggerOnce={true}><div>
+                <img
+                  src="/step2.webp"
+                  loading="lazy"
+                  alt="Rating Plugin"
+                  className="h-48 w-48 rounded-full object-cover object-center transition duration-200 group-hover:scale-110"
+                />
+             </div></Fade>
+            {/* product - end */}
+            <div style={{display:'flex' ,justifyContent:'center',alignItems:'center'}}>
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="88"  height="88"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" /><path d="M16 12l-4 -4" /><path d="M16 12h-8" /><path d="M12 16l4 -4" /></svg>
+            {/* product - start */}
+            </div>
+            <Fade direction="left" cascade damping={4.1} triggerOnce={true}><div>             
+                <img
+                  src="/step3.webp"
+                  loading="lazy"
+                  alt="Browse Product Plugin"
+                  className="h-48 w-48 rounded-full object-cover object-center transition duration-200 group-hover:scale-110"
+                />
+            </div></Fade>
+            {/* product - end */}
+            <div style={{display:'flex' ,justifyContent:'center',alignItems:'center'}}>
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="88"  height="88"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18" /><path d="M16 12l-4 -4" /><path d="M16 12h-8" /><path d="M12 16l4 -4" /></svg>
+            {/* product - start */}
+            </div>
+            <Fade direction="left" cascade damping={6.1} triggerOnce={true}><div>
+                <img
+                  src="/step4.webp"
+                  loading="lazy"
+                  alt="Manage Product Plugin"
+                  className="h-48 w-48 rounded-full object-cover object-center transition duration-200 group-hover:scale-110"
+                />
+            </div></Fade>
+            {/* product - end */}
+          </div>
         </div>
       </div>
-      {/* collections - end */}
-      <div className="bg-voilet-100 py-6 sm:py-8 lg:py-12">
+    {/* collections - end */}
+      {/*<div className="bg-voilet-100 py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-xl px-4 md:px-8">
           <Fade direction="up"><h2 className="mb-8 text-center text-2xl font-bold text-black md:mb-12 lg:text-3xl">
             What others say about us
           </h2></Fade>
           <div className="grid gap-4 md:grid-cols-2 md:gap-8">
             {/* quote - start */}
-            <Fade direction="up" triggerOnce={true}>
-              <div className="flex flex-col items-center gap-4 rounded-lg bg-darkpurple px-8 py-6 md:gap-6">
-                <div className="max-w-md text-center text-white lg:text-lg">
-                  “Easy to use plaugins ready at your disposal. Very Helpfull.”
-                </div>
-                <div className="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
-                  <div className="h-12 w-12 overflow-hidden rounded-full border-2 border-indigo-100 bg-gray-100 md:h-14 md:w-14">
-                    <img
-                      src="https://images.unsplash.com/photo-1567515004624-219c11d31f2e??auto=format&q=75&fit=crop&w=112"
-                      loading="lazy"
-                      alt="Photo by Radu Florin"
-                      className="h-full w-full object-cover object-center"
-                    />
-                  </div>
-                  <div>
-                    <div className="text-center text-sm font-bold text-indigo-50 sm:text-left md:text-base">
-                      Avijeet Yadav
-                    </div>
-                    <p className="text-center text-sm text-indigo-200 sm:text-left md:text-sm">
-                      CEO / Datadrift
-                    </p>
-                  </div>
-                </div>
-              </div></Fade>
-            {/* quote - end */}
-            {/* quote - start */}
-            <Fade direction="up" triggerOnce={true}>
-              <div className="flex flex-col items-center gap-4 rounded-lg bg-darkpurple px-8 py-6 md:gap-6">
-                <div className="max-w-md text-center text-white lg:text-lg">
-                  “Nice to have a helping hand, only need to copy and paste. Appreciate it.”
-                </div>
-                <div className="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
-                  <div className="h-12 w-12 overflow-hidden rounded-full border-2 border-indigo-100 bg-gray-100 md:h-14 md:w-14">
-                    <img
-                      src="https://images.unsplash.com/photo-1567515004624-219c11d31f2e??auto=format&q=75&fit=crop&w=112"
-                      loading="lazy"
-                      alt="Photo by christian ferrer"
-                      className="h-full w-full object-cover object-center"
-                    />
-                  </div>
-                  <div>
-                    <div className="text-center text-sm font-bold text-indigo-50 sm:text-left md:text-base">
-                      Abhay Gupta
-                    </div>
-                    <p className="text-center text-sm text-indigo-200 sm:text-left md:text-sm">
-                      CFO / Dashdash
-                    </p>
-                  </div>
-                </div>
-              </div></Fade>
-            {/* quote - end */}
+          {/*  <Fade direction="up" triggerOnce={true}>
+            <div className="grid gap-y-10 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-3 lg:divide-x">
+              {/* quote - start */}
+             {/*} {displayFeedbacks()}
+            </div></Fade>
+            {/* quote - end 
           </div>
         </div>
-      </div>
+      </div> */} 
+      {/* collections - end */}
       {/* newsletter - start */}
       <div className="bg-voilet-500 text-black">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">

@@ -6,42 +6,46 @@ export const Nav = () => {
 
   return (
     <>
-    <header className=" border-none">
-          <div className="mx-auto flex max-w-screen-xl  justify-end  ">
-            {/* nav - start */}
-            <nav className="hidden gap-10 lg:flex p-4">
-              <Link href="/user/homepage" className="text-lg font-semibold text-white">
-                Home
-              </Link>
-              <Link
-                href="/user/profile"
-                className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
-              >
-                Profile
-              </Link>
-              <Link
-                href="/user/plugin"
-                className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
-              >
-                Plugin
-              </Link>
-              <Link
-                href="/user/feedback"
-                className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
-              >
-                Feedback
-              </Link>
-              <Link
-                href="/"
-                className="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700"
-              > 
-                Logout
-              </Link>
-            </nav>
-            {/* nav - end */}
+        <div className="mx-16">
 
-          </div>
+        <header className=''>
+            <div style={{width:'90%'}} className="bg-white/75 fixed top-0 z-50 rounded-xl mb-0 mt-10 flex items-center justify-between">
+              {/* logo - start */}
+              <div className='flex'>
+                <Link href="/">
+                  <img style={{ height: 45 }} src="/shortlogoblack.png" alt="" /></Link>
+              </div>
+              {/* logo - end */}
+              {/* nav - start */}
+              <nav className="hidden gap-12 lg:flex  2xl:ml-16 p-4">
+                <Link href="/user/homepage" className="text-lg font-semibold text-black">
+                  Home
+                </Link>
+                <Link
+                  href="/user/profile" className="text-lg font-semibold text-black"
+                >
+                  Profile
+                </Link>
+                <Link
+                  href="/user/plugin" className="text-lg font-semibold text-black"
+                >
+                  Plugin
+                </Link>
+                <Link
+                  href="/user/feedback" className="text-lg font-semibold text-black"
+                >
+                  Feedback
+                </Link>
+                <Link
+                  href="/" className="text-lg font-semibold text-black"
+                >
+                  Logout
+                </Link>
+              </nav>
+              {/* nav - end */}
+            </div>
         </header>
+        </div>
     </>
   );
 };

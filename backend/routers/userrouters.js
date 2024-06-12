@@ -36,20 +36,4 @@ userRouter.get('/getall', (req, res) => {
       res.status(500).json(err)
     });
 });
-
-//getbyid
-userRouter.get('/getbyid', (req, res) => {
-  res.send('Response from user getbyid');
-});
-
-//delete
-userRouter.get('/delete', (req, res) => {
-  res.send('Response from user delete');
-});
-
-//update 
-userRouter.get('/update', (req, res) => {
-  res.send('Response from user update');
-});
-
 module.exports = userRouter;

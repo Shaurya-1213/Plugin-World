@@ -24,17 +24,6 @@ const Signup = () => {
     },
     onSubmit: (values) => {
       console.log(values);
-      /*1- send request to backend
-        2- recieve request at backend
-        3- process the request
-        4- send response back to frontend
-        {
-          1-GET: Data is sent with URL.(to fetch data)
-          2-POST: Data is sent in request body.(to store data)
-          3-PUT:To upload data.
-          4-DELETE:To delete data.
-        }
-        */
         fetch('http://localhost:5000/user/add',
       {
         method:'POST',
