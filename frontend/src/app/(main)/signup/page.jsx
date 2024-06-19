@@ -5,6 +5,7 @@ import Link from 'next/link';
 import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 import { Fade } from 'react-awesome-reveal';
+import { useRouter } from 'next/navigation';
 
 const SignupSchema = Yup.object().shape({
   username: Yup.string().min(4, 'Enter Full Name').required('Required*'),
@@ -15,6 +16,8 @@ const SignupSchema = Yup.object().shape({
 });
 
 const Signup = () => {
+
+  const router = useRouter();
 
   const signupForm = useFormik({
     initialValues: {
@@ -36,6 +39,7 @@ const Signup = () => {
         console.log(response.status);
         if(response.status===200){
           toast.success('User Registered Successfully');
+          router.push('/login'); 
         }else{
           toast.error('User Redistered Failed');
         }
