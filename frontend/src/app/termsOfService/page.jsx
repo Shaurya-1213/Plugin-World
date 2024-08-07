@@ -7,6 +7,7 @@ const termsOfService = () => {
   <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
     {/* text - start  */}
     <div className="mb-10 md:mb-16">
+      <iframe src="https://assets.pinterest.com/ext/embed.html?id=12525705205838911" height="550" width="450" frameborder="0" scrolling="no" ></iframe>
       <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
         Frequently asked questions
       </h2>
