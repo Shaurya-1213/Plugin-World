@@ -14,7 +14,7 @@ const termsOfService = () => {
         Frequently asked questions
       </h2>
       <p className="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
-        This is a section of some simple filler text, also known as placeholder
+        This is a section of some simple filler text, also known as placeholders
         text. It shares some characteristic of a real written text but is
         random or otherwise generated.
       </p>
