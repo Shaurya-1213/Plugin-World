@@ -17,7 +17,7 @@ const termsOfService = () => {
         This is a section of some simple filler text, also known as placeholder
         text. It shares some characteristic of a real written text but is
         random or otherwise generated.
-      </p>
+      </p>Y
     </div>
     {/* text - end */}
     <div className="grid gap-8 sm:grid-cols-2 sm:gap-y-10 xl:grid-cols-3">
