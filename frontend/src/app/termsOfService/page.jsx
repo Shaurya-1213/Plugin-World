@@ -9,7 +9,7 @@ const termsOfService = () => {
     <div className="mb-10 md:mb-16">
       <iframe src="https://assets.pinterest.com/ext/embed.html?id=12525705205838911" height="550" width="450" frameborder="0" scrolling="no" ></iframe>
 
-      <iframe src="https://assets.pinterest.com/ext/embed.html?id=10485011645136426" height="439" width="600" frameborder="0" scrolling="no" ></iframe>
+      <iframe src="https://assets.pinterest.com/ext/embed.html?id=10485011645136426" heifght="439" width="600" frameborder="0" scrolling="no" ></iframe>
       <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
         Frequently asked questions
       </h2>
