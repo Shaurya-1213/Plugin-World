@@ -11,7 +11,7 @@ const termsOfService = () => {
 
       <iframe src="https://assets.pinterest.com/ext/embed.html?id=10485011645136426" height="439" width="600" frameborder="0" scrolling="no" ></iframe>
       <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
-        Frequently asked questions
+        Frequently asked questionshg
       </h2>
       <p className="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
         This is a section of some simple filler text, also known as placeholder
